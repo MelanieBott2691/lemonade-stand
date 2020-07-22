@@ -1,1 +1,1 @@
-# shift-manager
+# Lemonade Stand
