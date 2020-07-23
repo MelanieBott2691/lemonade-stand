@@ -1,4 +1,9 @@
 .jumbotron {
-  min-height: 300px;
+  min-height: 600px;
   padding-top: 100px;
+  background-image: url("../../assets/images/jumboheadedited.jpg");
+  background-size: cover;
+  background-color: rgb(12, 176, 209);
+  color: white;
+  font-family: 'Special Elite', cursive;
 }
