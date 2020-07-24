@@ -1,4 +1,6 @@
 import React from 'react'
+import './Contact.css'
+
 import { useForm, ValidationError } from '@statickit/react'
 
 function ContactForm () {

@@ -3,3 +3,17 @@
     background-image: url("/client/src/assets/images/jumbohead.jpg");
     background-size: cover;
 } */
+
+.form-group {
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.contact-btn {
+    padding-right: 20px;
+    background-color: teal;
+    color: white;
+    position: relative;
+}

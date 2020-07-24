@@ -3,6 +3,7 @@ import API from '../utils/API'
 import Nav from '../components/Nav/Nav.js'
 import Results from '../components/Results/Results.js'
 import Footer from '../components/Footer/Footer.js'
+import '../assets/css/style.css'
 
 export default class Contact extends Component {
   state = {
@@ -36,7 +37,7 @@ export default class Contact extends Component {
               rows='3'
             ></textarea>
           </div>
-          <button type='submit' class='btn btn-primary'>
+          <button type='submit' class='contact-btn'>
             Submit
           </button>
         </form>
