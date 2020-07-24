@@ -20,27 +20,54 @@ export default class Contact extends Component {
       <div>
         <Nav />
         <form>
-          <div class='form-group'>
-            <label for='exampleFormControlInput1'>Email address</label>
-            <input
-              type='email'
-              class='form-control'
-              id='exampleFormControlInput1'
-              placeholder='name@example.com'
-            ></input>
+          <div class='container'>
+            <div class='form-group'>
+              <label for='exampleFormControlInput1'>First Name:</label>
+              <input
+                type='text'
+                class='form-control'
+                id='exampleFormControlInput1'
+                placeholder='Enter First Name'
+              ></input>
+            </div>
+
+            <div class='form-group'>
+              <label for='exampleFormControlInput1'>Last Name:</label>
+              <input
+                type='text'
+                class='form-control'
+                id='exampleFormControlInput1'
+                placeholder='Enter Last Name'
+              ></input>
+            </div>
+
+            <div class='form-group'>
+              <label for='exampleFormControlInput1'>Email address:</label>
+              <input
+                type='email'
+                class='form-control'
+                id='exampleFormControlInput1'
+                placeholder='name@example.com'
+              ></input>
+            </div>
+
+            <div class='form-group'>
+              <label for='exampleFormControlTextarea1'>Message:</label>
+              <textarea
+                class='form-control'
+                id='exampleFormControlTextarea1'
+                rows='3'
+              ></textarea>
+            </div>
+            <div class='form-group'>
+              <div class='col-sm-offset-2 col-sm-10'>
+                <button type='submit' class='btn btn-default'>
+                  Submit
+                </button>
+              </div>
+            </div>
           </div>
-          <div class='form-group'>
-            <label for='exampleFormControlTextarea1'>Example textarea</label>
-            <textarea
-              class='form-control'
-              id='exampleFormControlTextarea1'
-              rows='3'
-            ></textarea>
-          </div>
-          <button type='submit' class='contact-btn'>
-            Submit
-          </button>
-        </form>
+        </form>{' '}
         <Footer />
       </div>
     )

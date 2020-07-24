@@ -3,17 +3,33 @@
     background-image: url("/client/src/assets/images/jumbohead.jpg");
     background-size: cover;
 } */
-
+ 
+/* CONTACT FORM */
+.container {
+    margin-top: 50px;
+}
 .form-group {
-    padding-top: 50px;
+    padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    padding-right: 50px;
-    padding-left: 50px;
-}
+    padding-right: 100px;
+    padding-left: 100px;
+    width: 650px;
+} 
 .contact-btn {
     padding-right: 20px;
     background-color: teal;
     color: white;
     position: relative;
 }
+
+
+.contact-form button{
+    background: #25274d;
+    color: #fff;
+    font-weight: 600;
+    width: 25%;
+}
+.contact-form button:focus{
+    box-shadow:none;
+} 
