@@ -15,6 +15,9 @@ export default function Nav () {
         <a className='navbar-brand saved' href='/saved'>
           Profile
         </a>
+        <a className='navbar-brand saved' href='/cart'>
+          Cart
+        </a>
       </ul>
       <Search />
     </nav>
