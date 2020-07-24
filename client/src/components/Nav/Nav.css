@@ -5,14 +5,17 @@
   height: 150px;
   top: 0;
   left: 0;
+  /* logo centered */
+  background-image: url("../../assets/images/lemonadestandlogo.png");
+  background-repeat: no-repeat;
+  background-size: 90px 110px;
+  background-position: center;
+  overflow: hidden;
 }
-.navbar-brand {
+.navbar {
   color: black;
   text-decoration: none;
   font-size: 1rem;
-}
-.spacer {
-  flex: 1;
 }
 .navbar__navigation {
   display: flex;
@@ -26,25 +29,30 @@
 }
 .navbar__logo a {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-decoration: none;
 }
-.navbar__navigation-items ul {
+
+.spacer {
+  flex: 1;
+}
+.navbar_navigation-items ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
-.navbar__navigation-items li {
+.navbar_navigation-items li {
   padding: 0 0.5rem;
 
 }
-.navbar__navigation-items a {
+.navbar_navigation-items a {
   color: white;
   text-decoration: none;
+  margin-left: 20px;
 }
-.navbar__navigation-items a:hover,
-.navbar__navigation-items a:active {
+.navbar_navigation-items a:hover,
+.navbar_navigation-items a:active {
   color: orange;
 
 }
