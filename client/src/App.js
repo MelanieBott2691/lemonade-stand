@@ -5,6 +5,42 @@ import React, { Component } from 'react'
 // import Cart from './components/Cart/Cart.js'
 // import Cart from './pages/cart/Cart.js'
 import Nav from './components/Nav/Nav'
+import SideDrawer from './components/SideDrawer/SideDrawer'
+import Backdrop from './components/Backdrop/Backdrop'
+import backdrop from './components/Backdrop/Backdrop'
+
+class App extends Component {
+  state = {
+    sideDrawerOpen: false
+  }
+  drawerToggleClickHandler = () => {
+    this.setState(prevState => {
+      return { SideDrawerOpen: !prevState.sideDrawerOpen }
+    })
+  }
+  backdropClickHandler = () => {
+    this.setState({ sideDrawerOpen: false })
+  }
+  render () {
+    let backdrop
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />
+    }
+    return (
+      <div style={{ height: '100%' }}>
+        <Nav drawerClickHandler={this.drawerToggleClickHandler} />
+        <SideDrawer show={this.state.sideDrawerOpen} />
+        {backdrop}
+        <main style={{ marginTop: '64px' }}>
+          <p>Search Bar Here</p>
+        </main>
+      </div>
+    )
+  }
+}
+export default App
+
 // import Cart from './components/Cart/Cart.js'
 
 // function App () {
@@ -22,17 +58,3 @@ import Nav from './components/Nav/Nav'
 //     </Router>
 //   )
 // }
-
-class App extends Component {
-  render () {
-    return (
-      <div className='App'>
-        <Nav />
-        <main style={{ marginTop: '64px' }}>
-          <p>Search Bar Here</p>
-        </main>
-      </div>
-    )
-  }
-}
-export default App

@@ -16,15 +16,13 @@
 }
 .navbar__navigation {
   display: flex;
-  color: white;
   align-items: center;
   height: 100%;
-  height: 150px;
   padding: 0 1rem;
 }
 .navbar__logo {
-  color: white;
-  font-size: 2rem;
+  margin-left: 1rem;
+
 }
 .navbar__logo a {
   color: white;
@@ -49,6 +47,19 @@
 .navbar__navigation-items a:active {
   color: orange;
 
+}
+@media (max-width: 768px) {
+  .navbar_navigation-items {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .navbar__toggle-button {
+    display: none;
+  }
+  .navbar__logo {
+    margin-left: 0;
+  }
 }
 /* .navbar {
   background-color: rgb(13, 183, 202);

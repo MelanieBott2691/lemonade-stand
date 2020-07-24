@@ -6,28 +6,22 @@ const navbar = props => (
   <header className='navbar'>
     <nav className='navbar__navigation'>
       <div>
-        <DrawerToggleButton />
+        <DrawerToggleButton click={props.drawerClickHandler} />
       </div>
       <div className='navbar__logo'>
         <a href='/'>Lemonade Stand</a>
       </div>
-      <div className='spacer'></div>
-      <div className='navbar__navigation-items'>
+      <div className='spacer' />
+      <div className='navbar_navigation-items'>
         <ul>
           <li>
-            <a className='navbar-brand contact' href='/contact'>
-              Contact
-            </a>
+            <a href='/Contact'>Contact</a>
           </li>
           <li>
-            <a className='navbar-brand profile' href='/saved'>
-              Profile
-            </a>
+            <a href='/Profile'>Profile</a>
           </li>
           <li>
-            <a className='navbar-brand cart' href='/cart'>
-              Cart
-            </a>
+            <a href='/Cart'>Cart</a>
           </li>
         </ul>
       </div>
