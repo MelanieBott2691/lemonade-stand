@@ -24,7 +24,8 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.9.25",
     "path": "^0.12.7",
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "repository": {
     "type": "git",

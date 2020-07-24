@@ -1,49 +1,49 @@
-import React, { Component } from 'react';
-import Jumbotron from '../components/Jumbotron';
-import API from '../utils/API';
-import { RecipeList, RecipeListItem } from '../components/RecipeList';
-import { Container, Row, Col } from '../components/Grid';
-import Search from '../components/Search/Search';
+import React, { Component } from 'react'
+import Jumbotron from '../components/Jumbotron'
+import API from '../utils/API'
+import { RecipeList, RecipeListItem } from '../components/RecipeList'
+import { Container, Row, Col } from '../components/Grid'
+import Search from '../components/Search/Search'
 
 class Books extends Component {
   state = {
     books: [],
     bookSearch: ''
-  };
+  }
 
-  handleInputChange = (event) => {
-    const { name, value } = event.target;
+  handleInputChange = event => {
+    const { name, value } = event.target
     this.setState({
       [name]: value
-    });
-  };
+    })
+  }
 
-  handleFormSubmit = (event) => {
-    event.preventDefault();
+  handleFormSubmit = event => {
+    event.preventDefault()
     API.getBooks(this.state.bookSearch)
-      .then((res) => this.setState({ books: res.data }))
-      .catch((err) => console.log(err));
-    console.log(this.state.books);
-  };
+      .then(res => this.setState({ books: res.data }))
+      .catch(err => console.log(err))
+    console.log(this.state.books)
+  }
 
   handleSave = ({ target }) => {
-    const parent = target.parentElement;
-    console.log(parent);
-    const title = parent.getElementsByClassName('title')[0].innerHTML;
-    const synopsys = parent.getElementsByClassName('synopsys')[0].innerHTML;
-    const link = parent.getElementsByClassName('link')[0].innerHTML;
-    console.log(title);
-    console.log(synopsys);
-    console.log(link);
-  };
+    const parent = target.parentElement
+    console.log(parent)
+    const title = parent.getElementsByClassName('title')[0].innerHTML
+    const synopsys = parent.getElementsByClassName('synopsys')[0].innerHTML
+    const link = parent.getElementsByClassName('link')[0].innerHTML
+    console.log(title)
+    console.log(synopsys)
+    console.log(link)
+  }
 
-  render() {
+  render () {
     return (
       <div>
         <Jumbotron />
         <Container>
           <Row>
-            <Col size="md-12">
+            <Col size='md-12'>
               <Search
                 bookSearch={this.state.bookSearch}
                 handleInputChange={this.handleInputChange}
@@ -52,12 +52,12 @@ class Books extends Component {
             </Col>
           </Row>
           <Row>
-            <Col size="xs-12">
+            <Col size='xs-12'>
               {!this.state.books.length ? (
-                <h1 className="text-center">No Recipes to Display</h1>
+                <h1 className='text-center'>Search For An Item or Charity</h1>
               ) : (
                 <RecipeList>
-                  {this.state.books.map((recipe) => {
+                  {this.state.books.map(recipe => {
                     return (
                       <RecipeListItem
                         key={recipe.id}
@@ -67,7 +67,7 @@ class Books extends Component {
                         thumbnail={recipe.volumeInfo.imageLinks.smallThumbnail}
                         handleSave={this.handleSave}
                       />
-                    );
+                    )
                   })}
                 </RecipeList>
               )}
@@ -75,8 +75,8 @@ class Books extends Component {
           </Row>
         </Container>
       </div>
-    );
+    )
   }
 }
 
-export default Books;
+export default Books
