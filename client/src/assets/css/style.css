@@ -16,19 +16,10 @@
     padding-left: 100px;
     width: 650px;
 } 
-.contact-btn {
-    padding-right: 20px;
-    background-color: teal;
+
+.form-group button {
+    background-color: rgb(13, 183, 202);
     color: white;
-    position: relative;
-}
-
-
-.contact-form button{
-    background: #25274d;
-    color: #fff;
-    font-weight: 600;
-    width: 25%;
 }
 .contact-form button:focus{
     box-shadow:none;
