@@ -2,16 +2,41 @@ nav.navbar {
   margin-bottom: 0;
 }
 
-.brand {
+.navbar-brand.brand {
   font-size: x-large;
   font-weight: bolder;
+  color: white;
+}
+.navbar-brand.contact {
+  color: black;
+  font-size: medium;
+}
+.navbar-brand.contact:hover {
+  color: rgb(153, 34, 213);
+  font-size: large;
+}
+.navbar-brand.profile {
+  color: black;
+  font-size: medium;
+}
+.navbar-brand.profile:hover {
+  color: rgb(153, 34, 213);
+  font-size: large;
+}
+.navbar-brand.cart {
+  color: black;
+  font-size: medium;
+}
+.navbar-brand.cart:hover {
+  color: rgb(153, 34, 213);
+  font-size: large;
 }
 .navbar {
   background-color: rgb(13, 183, 202);
-  height: 100px;
+  height: 150px;
   background-image: url("../../assets/images/lemonadestandlogo.png");
   background-repeat: no-repeat;
-  background-size: 70px 90px;
+  background-size: 90px 110px;
   background-position: center;
 
 }

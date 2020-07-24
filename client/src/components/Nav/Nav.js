@@ -4,7 +4,7 @@ import Search from '../Search/Search'
 
 export default function Nav () {
   return (
-    <nav className='navbar navbar-dark bg-dark'>
+    <nav className='navbar'>
       <ul>
         <a className='navbar-brand brand' href='/'>
           Lemonade Stand
@@ -12,10 +12,10 @@ export default function Nav () {
         <a className='navbar-brand contact' href='/contact'>
           Contact
         </a>
-        <a className='navbar-brand saved' href='/saved'>
+        <a className='navbar-brand profile' href='/saved'>
           Profile
         </a>
-        <a className='navbar-brand saved' href='/cart'>
+        <a className='navbar-brand cart' href='/cart'>
           Cart
         </a>
       </ul>
