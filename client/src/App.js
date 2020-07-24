@@ -1,22 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Nav from './components/Nav/Nav'
-import Home from './pages/Home'
-// import Saved from './pages/Saved'
-// import SignIn from './pages/SignIn/SignIn'
-
-// import NoMatch from './pages/Books';
+import Home from './pages/Home.js'
+import Contact from './pages/Contact.js'
 
 function App () {
   return (
     <Router>
       <div>
-        <Nav />
         <Switch>
           <Route exact path='/' component={Home} />
-          {/* <Route exact path='/saved' component={Saved} /> */}
-          {/* <Route exact path='/SignIn' component={SignIn} /> */}
-
+          <Route exact path='/contact' component={Contact} />
           {/* <Route exact path="/books/:id" component={Detail} /> */}
           {/* <Route component={NoMatch} /> */}
         </Switch>
