@@ -6,3 +6,12 @@ nav.navbar {
   font-size: x-large;
   font-weight: bolder;
 }
+.navbar {
+  background-color: rgb(13, 183, 202);
+  height: 100px;
+  background-image: url("../../assets/images/lemonadestandlogo.png");
+  background-repeat: no-repeat;
+  background-size: 70px 90px;
+  background-position: center;
+
+}
