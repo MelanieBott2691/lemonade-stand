@@ -14,7 +14,7 @@ const navbar = props => (
       </div>
 
       <div className='navbar__logo'>
-        <a href='/'>Lemonade Stand</a>
+        <a href='/'></a>
       </div>
       <div className='spacer' />
       <div className='navbar_navigation-items'>

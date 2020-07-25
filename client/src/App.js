@@ -4,9 +4,12 @@ import React, { Component } from 'react'
 // import Contact from './pages/Contact.js'
 // import Cart from './components/Cart/Cart.js'
 // import Cart from './pages/cart/Cart.js'
+import Carousel from './components/Carousel/Carousel'
+
 import Nav from './components/Nav/Nav'
 import SideDrawer from './components/SideDrawer/SideDrawer'
 import Backdrop from './components/Backdrop/Backdrop'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component {
   state = {
@@ -31,9 +34,9 @@ class App extends Component {
         <Nav drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
-        <main style={{ marginTop: '64px' }}>
+        {/* <main style={{ marginTop: '64px' }}>
           <p>Search Bar Here</p>
-        </main>
+        </main> */}
       </div>
     )
   }
