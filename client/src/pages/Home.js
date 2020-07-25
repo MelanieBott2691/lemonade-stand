@@ -12,11 +12,6 @@ export default class Home extends Component {
         id: 1,
         name: 'test1',
         price: 42.0
-      },
-      {
-        id: 2,
-        name: 'test2',
-        price: 2.0
       }
     ],
     inputSearch: ''
