@@ -21,7 +21,7 @@ export default class Home extends Component {
       }
     ],
     inputSearch: ''
-  };
+  }
 
   // handleInputChange = (event) => {
   //   const { name, value } = event.target;
@@ -49,7 +49,7 @@ export default class Home extends Component {
   //   console.log(link);
   // };
 
-  render() {
+  render () {
     return (
       <div>
         <Nav />
@@ -57,6 +57,6 @@ export default class Home extends Component {
         <Results data={this.state.data} />
         {/* <Footer /> */}
       </div>
-    );
+    )
   }
 }

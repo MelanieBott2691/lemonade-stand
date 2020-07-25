@@ -1,0 +1,12 @@
+input.form-control {
+    position: relative;
+    height: auto;
+    float: left;
+    align-items: left;
+    text-align: left;
+    border-color: purple;
+}
+button.btn {
+    color: white;
+    background-color: purple;
+}

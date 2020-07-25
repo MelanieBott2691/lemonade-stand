@@ -1,8 +1,187 @@
-nav.navbar {
-  margin-bottom: 0;
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(13, 183, 202);
+  height: 150px;
+  top: 0;
+  left: 0;
+  /* background-image: url("../../assets/images/lemonadestandlogo.png");
+  background-repeat: no-repeat;
+  background-size: 90px 110px;
+  background-position: left; */
+  /* overflow: hidden; */
+  
+}
+.navbar__logo {
+  float: left; 
+  margin: 0px 15px 15px 0px;
+  margin-left: 1rem;
+  backface-visibility: visible;
+}
+.navbar {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.navbar__navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+  padding-right: 0%;
+}
+/* .navbar__logo {
+  margin-left: 1rem;
+
+} */
+/* .navbar__logo a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+} */
+
+.spacer {
+  flex: 1;
+}
+.navbar_navigation-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  float: right;
+}
+.navbar_navigation-items li {
+  padding: 0 0.5rem;
+  float: right;
+
+}
+.navbar_navigation-items a {
+  color: white;
+  text-decoration: none;
+  margin-left: 60px;
+}
+.navbar_navigation-items a:hover,
+.navbar_navigation-items a:active {
+  color: orange;
+
+}
+@media (max-width: 768px) {
+  .navbar_navigation-items {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .navbar__toggle-button {
+    display: none;
+  }
+  .navbar__logo {
+    margin-left: 0;
+  }
+}
+/* .navbar {
+  background-color: rgb(13, 183, 202);
+  height: 150px;
+  background-image: url("../../assets/images/lemonadestandlogo.png");
+  background-repeat: no-repeat;
+  background-size: 90px 110px;
+  background-position: center;
+  overflow: hidden;
 }
 
-.brand {
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+.navbar-brand ul.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.navbar-brand .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand.contact ul:not(:first-child) {display: none;}
+  .navbar-brand.contact ul.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand.responsive {position: relative;}
+  .navbar-brand.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar-brand.responsive {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+nav.navbar {
+  margin-bottom: 20px;
+}
+.navbar-brand.brand {
   font-size: x-large;
   font-weight: bolder;
+  color: white;
 }
+.navbar-brand.contact {
+  float: right;
+  display: block;
+  color: #020202;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar-brand.cart {
+  float: right;
+  display: block;
+  color: #020202;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar-brand.profile {
+  float: right;
+  display: block;
+  color: #020202;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/*  */
+
+
+/* .navbar-brand.contact:hover {
+  color: rgb(153, 34, 213);
+  font-size: large;
+} */
+/* .navbar-brand.profile {
+  color: black;
+  font-size: medium;
+} */
+/* .navbar-brand.profile:hover {
+  color: rgb(153, 34, 213);
+  font-size: large;
+} */
+/* 
+.navbar-brand.cart:hover {
+  color: rgb(153, 34, 213);
+  font-size: large;
+} */ 
+
+ 
