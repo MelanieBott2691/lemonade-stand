@@ -5,11 +5,16 @@
   height: 150px;
   top: 0;
   left: 0;
-  background-image: url("../../assets/images/lemonadestandlogo.png");
+  /* background-image: url("../../assets/images/lemonadestandlogo.png");
   background-repeat: no-repeat;
   background-size: 90px 110px;
-  background-position: left;
+  background-position: left; */
   /* overflow: hidden; */
+  
+}
+.navbar__logo {
+  float: left; 
+  margin: 0px 15px 15px 0px;
   margin-left: 1rem;
   backface-visibility: visible;
 }

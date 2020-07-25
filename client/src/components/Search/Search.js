@@ -7,12 +7,12 @@ export default function Search (props) {
       <div className='container'>
         <div className='row'>
           <div className='col-xs-9 col-sm-10'>
-            <div className='input-group input-group-lg'>
+            <div className='input-group input-group-md'>
               <input
                 className='form-control'
                 type='text'
                 name='bookSearch'
-                placeholder='Search For a Book'
+                placeholder='Search For Item or Charity'
                 value={props.bookSearch}
                 onChange={props.handleInputChange}
               ></input>
@@ -20,7 +20,7 @@ export default function Search (props) {
           </div>
           <div className='col-xs-3 col-sm-2'>
             <button
-              className='btn btn-lg btn-success input-lg'
+              className='btn btn-md input-md'
               onClick={props.handleFormSubmit}
               type='success'
             >

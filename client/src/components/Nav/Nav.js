@@ -9,13 +9,17 @@ const navbar = props => (
       <div className='navbar__toggle-button'>
         <DrawerToggleButton click={props.drawerClickHandler} />
       </div>
+      <div className='navbar__logo'>
+        <img
+          src='../../assets/images/lemonadestandlogo.png'
+          alt='Lemonade Stand Logo'
+        />
+        <a href='/'></a>
+      </div>
       <div className='search-bar'>
         <Search click={props.search} />
       </div>
 
-      <div className='navbar__logo'>
-        <a href='/'></a>
-      </div>
       <div className='spacer' />
       <div className='navbar_navigation-items'>
         <ul>
@@ -24,9 +28,6 @@ const navbar = props => (
           </li>
           <li>
             <a href='/Contact'>Contact</a>
-          </li>
-          <li>
-            <a href='/Profile'>Profile</a>
           </li>
           <li>
             <a href='/Cart'>Cart</a>
