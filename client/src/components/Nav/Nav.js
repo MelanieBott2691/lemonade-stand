@@ -11,7 +11,7 @@ const navbar = props => (
       </div>
       <div className='navbar__logo'>
         <img
-          src='../../assets/images/lemonadestandlogo.png'
+          src='./src/assets/images/lemonadestandlogo.png'
           alt='Lemonade Stand Logo'
         />
         <a href='/'></a>
