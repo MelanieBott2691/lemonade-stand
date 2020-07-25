@@ -1,6 +1,7 @@
 import React from 'react'
 import './Nav.css'
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
+import Search from '../Search/Search'
 
 const navbar = props => (
   <header className='navbar'>
@@ -8,12 +9,19 @@ const navbar = props => (
       <div className='navbar__toggle-button'>
         <DrawerToggleButton click={props.drawerClickHandler} />
       </div>
+      <div className='search-bar'>
+        <Search click={props.search} />
+      </div>
+
       <div className='navbar__logo'>
         <a href='/'>Lemonade Stand</a>
       </div>
       <div className='spacer' />
       <div className='navbar_navigation-items'>
         <ul>
+          <li>
+            <a href='/Contact'>About</a>
+          </li>
           <li>
             <a href='/Contact'>Contact</a>
           </li>

@@ -7,7 +7,6 @@ import React, { Component } from 'react'
 import Nav from './components/Nav/Nav'
 import SideDrawer from './components/SideDrawer/SideDrawer'
 import Backdrop from './components/Backdrop/Backdrop'
-import backdrop from './components/Backdrop/Backdrop'
 
 class App extends Component {
   state = {
@@ -15,7 +14,7 @@ class App extends Component {
   }
   drawerToggleClickHandler = () => {
     this.setState(prevState => {
-      return { SideDrawerOpen: !prevState.sideDrawerOpen }
+      return { sideDrawerOpen: !prevState.sideDrawerOpen }
     })
   }
   backdropClickHandler = () => {

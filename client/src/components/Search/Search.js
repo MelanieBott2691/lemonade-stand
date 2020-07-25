@@ -1,31 +1,34 @@
-import React from 'react';
+import React from 'react'
+import './Search.css'
 
-export default function Search(props) {
+export default function Search (props) {
   return (
     <form>
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-9 col-sm-10">
-            <div className="input-group input-group-lg">
+      <div className='container'>
+        <div className='row'>
+          <div className='col-xs-9 col-sm-10'>
+            <div className='input-group input-group-lg'>
               <input
-                className="form-control"
-                type="text"
-                name="bookSearch"
-                placeholder="Search For a Book"
+                className='form-control'
+                type='text'
+                name='bookSearch'
+                placeholder='Search For a Book'
                 value={props.bookSearch}
-                onChange={props.handleInputChange}></input>
+                onChange={props.handleInputChange}
+              ></input>
             </div>
           </div>
-          <div className="col-xs-3 col-sm-2">
+          <div className='col-xs-3 col-sm-2'>
             <button
-              className="btn btn-lg btn-success input-lg"
+              className='btn btn-lg btn-success input-lg'
               onClick={props.handleFormSubmit}
-              type="success">
+              type='success'
+            >
               Search
             </button>
           </div>
         </div>
       </div>
     </form>
-  );
+  )
 }
