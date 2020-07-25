@@ -1,7 +1,8 @@
 import React from 'react';
 import './Carousel.css';
+import Carousel from 'react-bootstrap/Carousel'
 
-export default function Carousel() {
+export default function Carouselbanner() {
   return (
     <Carousel>
     <Carousel.Item>
