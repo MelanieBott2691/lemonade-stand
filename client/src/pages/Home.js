@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
 import Nav from '../components/Nav/Nav.js';
+import Carousel from '../components/Carousel/Carousel.js';
 import Results from '../components/Results/Results.js';
-import Footer from '../components/Footer/Footer.js';
+// import Footer from '../components/Footer/Footer.js';
+
 
 export default class Home extends Component {
   state = {
@@ -51,8 +53,9 @@ export default class Home extends Component {
     return (
       <div>
         <Nav />
+        <Carousel />
         <Results data={this.state.data} />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
