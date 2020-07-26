@@ -1,187 +1,140 @@
+
+/*  Navigation Bar*/
 .navbar {
-  position: fixed;
-  width: 100%;
-  background-color: rgb(13, 183, 202);
-  height: 150px;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-size: 90px 110px;
-  background-position: left;
-  /* overflow: hidden; */
-  
+  /* height: var(--nav-size); */
+  height: 100px;
+  background-color: var(--bg);
+  padding: 0 1rem;
+  border-bottom: var(--border);
 }
-.navbar__logo {
-  float: left; 
-  margin: 0px 15px 15px 0px;
-  margin-left: 1rem;
-  backface-visibility: visible;
-  /* background-image: url("../../assets/images/lemonadestandlogo.png"); */
+.navbar img.logo {
+  align-items: left;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-.navbar {
-  color: black;
-  text-decoration: none;
-  font-size: 1rem;
+/* <ul> */
+.navbar-nav {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  /* all children start on right side instead of default left side */
+  justify-content: flex-end;
 }
-.navbar__navigation {
+/* <li> */
+.nav-item {
+  /* calculate width dinamically with calc function */
+  /* multiply with the navbar variable 60px */
+  width: calc(var(--nav-size) * 0.8);
+  /* display the children directly in the center  */
   display: flex;
   align-items: center;
-  height: 100%;
-  padding: 0 1rem;
-  padding-right: 0%;
+  justify-content: center;
 }
-/* .navbar__logo {
-  margin-left: 1rem;
 
-} */
-/* .navbar__logo a {
-  color: white;
-  font-size: 2rem;
-  text-decoration: none;
-} */
-
-.spacer {
-  flex: 1;
-}
-.navbar_navigation-items ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.icon-button {
+  /* icon button with circular shape  */
+  /* 50% of the navbar size above */
+  --button-size: calc(var(--nav-size) * 0.5);
+  width: var(--button-size);
+  height: var(--button-size);
+  background-color: #525357;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
   display: flex;
-  float: right;
+  align-items: center;
+  justify-content: center;
+  transition: filter 1000ms;
 }
-.navbar_navigation-items li {
-  padding: 0 0.5rem;
-  float: right;
+/* hover affect make lighter*/
+.icon-button:hover {
+  filter: brightness(1.2)
+}
+.icon-button svg {
+  fill: var(--text-color);
+  width: 20px;
+  height: 20px;
+}
 
-}
-.navbar_navigation-items a {
-  color: white;
-  text-decoration: none;
-  margin-left: 60px;
-}
-.navbar_navigation-items a:hover,
-.navbar_navigation-items a:active {
-  color: orange;
-
-}
-@media (max-width: 768px) {
-  .navbar_navigation-items {
-    display: none;
-  }
-}
-@media (min-width: 769px) {
-  .navbar__toggle-button {
-    display: none;
-  }
-  .navbar__logo {
-    margin-left: 0;
-  }
-}
-/* .navbar {
-  background-color: rgb(13, 183, 202);
-  height: 150px;
-  background-image: url("../../assets/images/lemonadestandlogo.png");
-  background-repeat: no-repeat;
-  background-size: 90px 110px;
-  background-position: center;
+/* Dropdown Menu */
+.dropdown {
+  position: absolute;
+  top: 58px;
+  width: 300px;
+  /* move to the left by translating (move) */
+  transform: translate(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
   overflow: hidden;
+  transition: height var(--speed) ease;
+  background-color: white;
+
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+.menu {
+  width: 100%;
 }
 
-.navbar-brand:hover {
-  color: white;
+.menu-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: background var(--speed);
+  padding: 0.5rem;
+  color: #525357;
 }
 
-.navbar-brand ul.active {
-  background-color: #4CAF50;
-  color: white;
+.menu-item .icon-button {
+  margin-right: 0.5rem;
+}
+.menu-item .icon-button:hover {
+  filter: none;
 }
 
-.navbar-brand .icon {
-  display: none;
+.menu-item:hover {
+  /* background-color: #525357; */
+  background-color: #17a0b0;
 }
 
-@media screen and (max-width: 600px) {
-  .navbar-brand.contact ul:not(:first-child) {display: none;}
-  .navbar-brand.contact ul.icon {
-    float: right;
-    display: block;
-  }
+.icon-right {
+  /* margin-left: auto; */
+
+}
+/* CSSTransition */
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+/* animate out in opposite direction */
+.menu-primary-exit {
+  position: absolute;
+  
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
 }
 
-@media screen and (max-width: 600px) {
-  .navbar-brand.responsive {position: relative;}
-  .navbar-brand.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navbar-brand.responsive {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+/* secondary menu slider */
+.menu-secondary-enter {
+  transform: translateX(110%);
 }
-nav.navbar {
-  margin-bottom: 20px;
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
 }
-.navbar-brand.brand {
-  font-size: x-large;
-  font-weight: bolder;
-  color: white;
-}
-.navbar-brand.contact {
-  float: right;
-  display: block;
-  color: #020202;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.navbar-brand.cart {
-  float: right;
-  display: block;
-  color: #020202;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.navbar-brand.profile {
-  float: right;
-  display: block;
-  color: #020202;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+/* animate out in opposite direction */
+.menu-secondary-exit {
 
-/*  */
-
-
-/* .navbar-brand.contact:hover {
-  color: rgb(153, 34, 213);
-  font-size: large;
-} */
-/* .navbar-brand.profile {
-  color: black;
-  font-size: medium;
-} */
-/* .navbar-brand.profile:hover {
-  color: rgb(153, 34, 213);
-  font-size: large;
-} */
-/* 
-.navbar-brand.cart:hover {
-  color: rgb(153, 34, 213);
-  font-size: large;
-} */ 
-
- 
+}
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}
