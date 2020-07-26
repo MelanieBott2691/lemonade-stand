@@ -1,43 +1,43 @@
-import React from 'react'
-import './Nav.css'
-import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
-import Search from '../Search/Search'
+import React from 'react';
+import './Nav.css';
+import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
+import Search from '../Search/Search';
 
-const navbar = props => (
-  <header className='navbar'>
-    <nav className='navbar__navigation'>
-      <div className='navbar__toggle-button'>
+const navbar = (props) => (
+  <header className="navbar">
+    <nav className="navbar__navigation">
+      <div className="navbar__toggle-button">
         <DrawerToggleButton click={props.drawerClickHandler} />
       </div>
-      <div className='navbar__logo'>
+      <div className="navbar__logo">
         <img
-          src='../../assets/images/lemonadestandlogo.png'
-          alt='Lemonade Stand Logo'
+          src="../../assets/images/lemonadestandlogo.png"
+          alt="Lemonade Stand Logo"
         />
-        <a href='/'></a>
+        <a href="/"></a>
       </div>
-      <div className='search-bar'>
+      <div className="search-bar">
         <Search click={props.search} />
       </div>
 
-      <div className='spacer' />
-      <div className='navbar_navigation-items'>
+      <div className="spacer" />
+      <div className="navbar_navigation-items">
         <ul>
           <li>
-            <a href='/Contact'>About</a>
+            <a href="/Contact">About</a>
           </li>
           <li>
-            <a href='/Contact'>Contact</a>
+            <a href="/Contact">Contact</a>
           </li>
           <li>
-            <a href='/Cart'>Cart</a>
+            <a href="/Cart">Cart</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
-)
-export default navbar
+);
+export default navbar;
 
 // import Search from '../Search/Search'
 

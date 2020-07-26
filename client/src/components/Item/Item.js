@@ -75,7 +75,6 @@ export default class Item extends React.Component {
       <Button href="#">Add to Cart</Button> <Button href="#">Store</Button>{' '}
     </Card.Body>
   </Card>
-  
   <Card>
     <Card.Img variant="top" src="https://www.happinessishomemade.net/wp-content/uploads/2018/04/Tissue-Paper-Snail-9.jpg" />
     <Card.Body>
@@ -86,7 +85,6 @@ export default class Item extends React.Component {
     </Card.Body>
   </Card>
 </CardColumns>
-
     );
   }
 }
