@@ -1,5 +1,5 @@
 import './Nav.css';
-// import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 // import Contact from './pages/Contact'
 // import EmailIcon from '@material-ui/icons/Email'
@@ -11,7 +11,7 @@ import './Nav.css';
 // import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 // import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 
-// import { CSSTransition } from 'react-transition-group'
+import { CSSTransition } from 'react-transition-group'
 // import Search from './components/Search/Search'
 import { ReactComponent as logo } from './assets/lemonadestandlogo.png'
 
@@ -43,24 +43,23 @@ function Nav () {
 //   )
 // }
 
-// function NavItem (props) {
-//   const [open, setOpen] = useState(false)
+function NavItem (props) {
+  const [open, setOpen] = useState(false)
 
   return (
     <li className='nav-item'>
       <a href='#' className='icon-button' onClick={() => setOpen(!open)}>
-//         {props.icon}
-//       </a>
+        {props.icon}
+      </a>
+      {open && props.children}
+    </li>
+  )
+ }
 
-//       {open && props.children}
-//     </li>
-//   )
-// }
-
-// function DropdownMenu () {
-//   const [activeMenu, setActiveMenu] = useState('main')
-//   const [menuHeight, setMenuHeight] = useState(null)
-//   const dropdownRef = useRef(null)
+function DropdownMenu () {
+  const [activeMenu, setActiveMenu] = useState('main')
+  const [menuHeight, setMenuHeight] = useState(null)
+  const dropdownRef = useRef(null)
 
 //   useEffect(() => {
 //     setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
@@ -71,29 +70,27 @@ function Nav () {
 //     setMenuHeight(height)
 //   }
 
-//   function DropdownItem (props) {
-//     return (
-//       <a
-//         href='#'
-//         className='menu-item'
-//         onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
-//       >
-//         <span className='icon-button'>{props.leftIcon}</span>
-//         {props.children}
-//         <span className='icon-right'>{props.rightIcon}</span>
-//       </a>
-//     )
-//   }
+  function DropdownItem (props) {
+    return (
+      <a
+        href='#'
+        className='menu-item'
+        onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
+      >
+       <span className='icon-button'>{props.leftIcon}</span>{props.children}
+  <span className='icon-right'>{props.rightIcon}</span></a>
+)
+}
 
-//   return (
-//     <div className='dropdown' style={{ height: menuHeight }} ref={dropdownRef}>
-//       <CSSTransition
-//         in={activeMenu === 'main'}
-//         timeout={500}
-//         classNames='menu-primary'
-//         unmountOnExit
-//         onEnter={calcHeight}
-//       >
+  return (
+    <div className='dropdown' style={{ height: menuHeight }} ref={dropdownRef}>
+      <CSSTransition
+        in={activeMenu === 'main'}
+        timeout={500}
+        classNames='menu-primary'
+        unmountOnExit
+        onEnter={calcHeight}
+      >
 //         <div className='menu'>
 //           <DropdownItem leftIcon={<PersonIcon />} goToMenu='profile'>
 //             My Profile
