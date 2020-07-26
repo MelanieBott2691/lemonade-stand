@@ -30,7 +30,8 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.9.25",
     "prettier": "^2.0.5",
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "react-transition-group": "^4.4.1"
   },
   "repository": {
     "type": "git",
