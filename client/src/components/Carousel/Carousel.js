@@ -6,7 +6,7 @@ export default function Carouselbanner() {
   return (
     <Carousel>
       <Carousel.Item>
-        <img className="d-block w-100" src="" alt="First slide" />
+        <img className='d-block w-100' src='https://i.pinimg.com/originals/f9/45/c8/f945c8f2d72a538a8165f3b1be0ce1af.jpg' alt='First slide' />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -14,11 +14,10 @@ export default function Carouselbanner() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
-          alt="Third slide"
+          className='d-block w-100'
+          src='https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
+          alt='Third slide'
         />
-
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -26,11 +25,10 @@ export default function Carouselbanner() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
-          alt="Third slide"
+          className='d-block w-100'
+          src='https://images.pexels.com/photos/3913426/pexels-photo-3913426.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+          alt='Third slide'
         />
-
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>

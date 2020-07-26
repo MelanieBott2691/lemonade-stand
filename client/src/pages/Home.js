@@ -67,7 +67,9 @@ export default class Home extends Component {
     return (
       <div>
         <Nav />
+        <br></br>
         <Carouselbanner />
+        <br></br>
         <Results data={this.state.data} />
         {/* <Footer /> */}
       </div>
