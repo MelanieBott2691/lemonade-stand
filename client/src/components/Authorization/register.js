@@ -1,7 +1,14 @@
-import React from 'react'
-import { Button, Form, Grid, Message, Segment, Header } from 'semantic-ui-react'
-import { ApiClient } from '../../utils/ApiClient'
-import { Redirect } from 'react-router-dom'
+import React from 'react';
+import {
+  Button,
+  Form,
+  Grid,
+  Message,
+  Segment,
+  Header
+} from 'semantic-ui-react';
+import { ApiClient } from '../../utils/ApiClient';
+import { Redirect } from 'react-router-dom';
 
 class Register extends React.Component {
   state = {
@@ -10,68 +17,68 @@ class Register extends React.Component {
     confirm_password: null,
     registrationSuccessfull: false,
     error: null
-  }
+  };
 
-  handleChange = event => {
-    const { email, password } = event.target
+  handleChange = (event) => {
+    const { email, password } = event.target;
     switch (event.target.name) {
       case 'email':
-        this.setState({ email: event.target.value })
-        break
+        this.setState({ email: event.target.value });
+        break;
       case 'password':
-        this.setState({ password: event.target.value })
-        break
+        this.setState({ password: event.target.value });
+        break;
       case 'confirm_password':
-        this.setState({ confirm_password: event.target.value })
-        break
+        this.setState({ confirm_password: event.target.value });
+        break;
       default:
-        break
+        break;
     }
-  }
+  };
 
   validate = async () => {
-    const { password, confirm_password } = this.state
+    const { password, confirm_password } = this.state;
 
     if (password === confirm_password) {
-      return Promise.resolve()
+      return Promise.resolve();
     }
-    return Promise.reject("Passwords don't matach")
-  }
+    return Promise.reject("Passwords don't matach");
+  };
 
-  handleSubmit = event => {
-    console.log('this.state: ', this.state)
-    const { email, password, error } = this.state
-    const self = this
+  handleSubmit = (event) => {
+    console.log('this.state: ', this.state);
+    const { email, password, error } = this.state;
+    const self = this;
     this.validate()
       .then(() => {
         ApiClient.register(email, password)
-          .then(res => {
+          .then((res) => {
             self.setState({
               registrationSuccessfull: res.data.success,
               error: res.data.message
-            })
+            });
           })
-          .catch(e =>
+          .catch((e) =>
             this.setState(() => ({
               error: e.data.message,
               registrationSuccessful: false
             }))
-          )
+          );
       })
-      .catch(e => {
-        console.log(e)
+      .catch((e) => {
+        console.log(e);
         // this.setState({ error: e })
-      })
-  }
+      });
+  };
 
-  render () {
-    const { registrationSuccessfull } = this.state
+  render() {
+    const { registrationSuccessfull } = this.state;
 
     if (registrationSuccessfull) {
-      return <Redirect to='/login' />
+      return <Redirect to="/login" />;
     } else {
       return (
-        <div className='login-form'>
+        <div className="login-form">
           {/*
 						Heads up! The styles below are necessary for the correct render of this example.
 						You can do same with CSS, the main idea is that all the elements up to the `Grid`
@@ -85,52 +92,51 @@ class Register extends React.Component {
 						}
 					`}</style> */}
           <Grid
-            textAlign='center'
+            textAlign="center"
             style={{ height: '100%' }}
-            verticalAlign='middle'
-          >
+            verticalAlign="middle">
             <Grid.Column style={{ maxWidth: 450 }}>
-              <Header as='h3' textAlign='center'>
+              <Header as="h3" textAlign="center">
                 Register
               </Header>
               {this.state.error && (
-                <Message color='red'>{this.state.error}</Message>
+                <Message color="red">{this.state.error}</Message>
               )}
-              <Form size='large' onSubmit={this.handleSubmit}>
+              <Form size="large" onSubmit={this.handleSubmit}>
                 <Segment stacked>
                   <Form.Input
-                    name='email'
+                    name="email"
                     fluid
-                    icon='user'
-                    iconPosition='left'
-                    placeholder='E-mail address'
+                    icon="user"
+                    iconPosition="left"
+                    placeholder="E-mail address"
                     required
-                    type='email'
+                    type="email"
                     onChange={this.handleChange}
                   />
                   <Form.Input
-                    name='password'
+                    name="password"
                     fluid
-                    icon='lock'
-                    iconPosition='left'
-                    placeholder='Password'
-                    type='password'
+                    icon="lock"
+                    iconPosition="left"
+                    placeholder="Password"
+                    type="password"
                     required
                     onChange={this.handleChange}
                   />
 
                   <Form.Input
-                    name='confirm_password'
+                    name="confirm_password"
                     fluid
-                    icon='lock'
-                    iconPosition='left'
-                    placeholder='Confirm the password'
-                    type='password'
+                    icon="lock"
+                    iconPosition="left"
+                    placeholder="Confirm the password"
+                    type="password"
                     required
                     onChange={this.handleChange}
                   />
 
-                  <Button color='teal' fluid size='large'>
+                  <Button color="teal" fluid size="large">
                     Register
                   </Button>
                 </Segment>
@@ -138,9 +144,9 @@ class Register extends React.Component {
             </Grid.Column>
           </Grid>
         </div>
-      )
+      );
     }
   }
 }
 
-export default Register
+export default Register;
