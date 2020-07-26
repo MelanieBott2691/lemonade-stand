@@ -1,67 +1,149 @@
-import React from 'react';
-import './Nav.css';
-import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
-import Search from '../Search/Search';
+import './Nav.css'
+import Contact from './pages/Contact'
+import EmailIcon from '@material-ui/icons/Email'
+import BuildIcon from '@material-ui/icons/Build'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
+import SettingsIcon from '@material-ui/icons/Settings'
+import PersonIcon from '@material-ui/icons/Person'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
+import React, { useState, useEffect, useRef } from 'react'
+import { CSSTransition } from 'react-transition-group'
+import Search from './components/Search/Search'
+import logo from './assets/lemonadestandlogo.png'
 
-const navbar = (props) => (
-  <header className="navbar">
-    <nav className="navbar__navigation">
-      <div className="navbar__toggle-button">
-        <DrawerToggleButton click={props.drawerClickHandler} />
-      </div>
-      <div className="navbar__logo">
-        <img
-          src="../../assets/images/lemonadestandlogo.png"
-          alt="Lemonade Stand Logo"
-        />
-        <a href="/"></a>
-      </div>
-      <div className="search-bar">
-        <Search click={props.search} />
-      </div>
+function Nav () {
+  return (
+    <Navbar>
+      <img
+        alt='Lemonade Stand'
+        src={logo}
+        width='70'
+        height='90'
+        className='navbar--logo'
+        alignItems='left'
+      />
+      <Search />
+      <NavItem icon={<AddShoppingCartIcon />} />
+      <NavItem icon={<ExpandMoreIcon />}>
+        <DropdownMenu></DropdownMenu>
+      </NavItem>
+    </Navbar>
+  )
+}
 
-      <div className="spacer" />
-      <div className="navbar_navigation-items">
-        <ul>
-          <li>
-            <a href="/Contact">About</a>
-          </li>
-          <li>
-            <a href="/Contact">Contact</a>
-          </li>
-          <li>
-            <a href="/Cart">Cart</a>
-          </li>
-        </ul>
-      </div>
+function Navbar (props) {
+  return (
+    <nav className='navbar'>
+      <ul className='navbar-nav'>{props.children}</ul>
     </nav>
-  </header>
-);
-export default navbar;
+  )
+}
 
-// import Search from '../Search/Search'
+function NavItem (props) {
+  const [open, setOpen] = useState(false)
 
-// export default function Nav () {
-//   return (
-//     <nav className='navbar' id='navBar'>
-// <ul>
-//   <a className='navbar-brand brand' href='/'>
-//     Lemonade Stand
-//   </a>
-//   <a className='navbar-brand contact' href='/contact'>
-//     Contact
-//   </a>
-//   <a className='navbar-brand profile' href='/saved'>
-//     Profile
-//   </a>
-//   <a className='navbar-brand cart' href='/cart'>
-//     Cart
-//   </a>
-//   <a href='javascript:void(0);' class='icon' onclick='myFunction()'>
-//     <i class='fa fa-bars'></i>
-//   </a>
-// </ul>
-//       <Search />
-//     </nav>
-//   )
-// }
+  return (
+    <li className='nav-item'>
+      <a href='#' className='icon-button' onClick={() => setOpen(!open)}>
+        {props.icon}
+      </a>
+
+      {open && props.children}
+    </li>
+  )
+}
+
+function DropdownMenu () {
+  const [activeMenu, setActiveMenu] = useState('main')
+  const [menuHeight, setMenuHeight] = useState(null)
+  const dropdownRef = useRef(null)
+
+  useEffect(() => {
+    setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
+  }, [])
+
+  function calcHeight (el) {
+    const height = el.offsetHeight
+    setMenuHeight(height)
+  }
+
+  function DropdownItem (props) {
+    return (
+      <a
+        href='#'
+        className='menu-item'
+        onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
+      >
+        <span className='icon-button'>{props.leftIcon}</span>
+        {props.children}
+        <span className='icon-right'>{props.rightIcon}</span>
+      </a>
+    )
+  }
+
+  return (
+    <div className='dropdown' style={{ height: menuHeight }} ref={dropdownRef}>
+      <CSSTransition
+        in={activeMenu === 'main'}
+        timeout={500}
+        classNames='menu-primary'
+        unmountOnExit
+        onEnter={calcHeight}
+      >
+        <div className='menu'>
+          <DropdownItem leftIcon={<PersonIcon />} goToMenu='profile'>
+            My Profile
+          </DropdownItem>
+          <DropdownItem leftIcon={<SettingsIcon />} goToMenu='settings'>
+            Settings
+          </DropdownItem>
+          <DropdownItem leftIcon={<EmailIcon />} goToMenu={Contact}>
+            Contact
+          </DropdownItem>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={activeMenu === 'settings'}
+        timeout={500}
+        classNames='menu-secondary'
+        unmountOnExit
+        onEnter={calcHeight}
+      >
+        <div className='menu'>
+          <DropdownItem goToMenu='main' leftIcon={<ChevronLeftIcon />}>
+            <h2>Main Menu</h2>
+          </DropdownItem>
+          <DropdownItem leftIcon={<BuildIcon />}>HTML</DropdownItem>
+          <DropdownItem leftIcon={<BuildIcon />}>CSS</DropdownItem>
+          <DropdownItem leftIcon={<BuildIcon />}>JavaScript</DropdownItem>;
+          <DropdownItem leftIcon={<EmailIcon />} goToMenu={Contact}>
+            Contact
+          </DropdownItem>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={activeMenu === 'animals'}
+        timeout={500}
+        classNames='menu-secondary'
+        unmountOnExit
+        onEnter={calcHeight}
+      >
+        <div className='menu'>
+          <DropdownItem goToMenu='main' leftIcon={<KeyboardArrowDownIcon />}>
+            <h2>Animals</h2>
+          </DropdownItem>
+          <DropdownItem leftIcon='🦘'>Kangaroo</DropdownItem>
+          <DropdownItem leftIcon='🐸'>Frog</DropdownItem>
+          <DropdownItem leftIcon='🦋'>Horse?</DropdownItem>
+          <DropdownItem leftIcon='🦔'>Hedgehog</DropdownItem>
+        </div>
+      </CSSTransition>
+    </div>
+  )
+}
+
+export default Nav
