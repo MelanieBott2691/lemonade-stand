@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import { connect } from 'react-redux'
 import { getNumbers } from '../../actions/getAction'
 import ShoppingCart from '../ShoppingCart/ShoppingCart'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import './Navbar.css'
 import logo from '../../images/logo.png'
 import Search from '../Search/Search'
@@ -181,44 +181,3 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps, { getNumbers })(Navigation)
-
-// import React from 'react';
-// import './Nav.css';
-// import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
-// import Search from '../Search/Search';
-
-// const navbar = (props) => (
-//   <header className="navbar">
-//     <nav className="navbar__navigation">
-//       <div className="navbar__toggle-button">
-//         <DrawerToggleButton click={props.drawerClickHandler} />
-//       </div>
-//       <div className="navbar__logo">
-//         <img
-//           src="../../assets/images/lemonadestandlogo.png"
-//           alt="Lemonade Stand Logo"
-//         />
-//         <a href="/"></a>
-//       </div>
-//       <div className="search-bar">
-//         <Search click={props.search} />
-//       </div>
-
-//       <div className="spacer" />
-//       <div className="navbar_navigation-items">
-//         <ul>
-//           <li>
-//             <a href="/Contact">About</a>
-//           </li>
-//           <li>
-//             <a href="/Contact">Contact</a>
-//           </li>
-//           <li>
-//             <a href="/Cart">Cart</a>
-//           </li>
-//         </ul>
-//       </div>
-//     </nav>
-//   </header>
-// );
-// export default navbar;
