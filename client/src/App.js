@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home.js'
 import Contact from './pages/Contact.js'
 import { Provider } from 'react-redux'
+// import Navbar from './components/Navbar/Navbar'
+import './App.css'
 
 function App () {
   return (
