@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import API from '../utils/API'
-import Nav from '../components/Nav/Nav.js'
+// import API from '../utils/API'
+import Navbar from '../components/Navbar/Navbar.js'
 import Results from '../components/Results/Results.js'
 import Carouselbanner from '../components/Carousel/Carousel.js'
 // import Footer from '../components/Footer/Footer.js';
@@ -35,7 +35,7 @@ export default class Home extends Component {
       }
     ],
     inputSearch: ''
-  };
+  }
 
   // handleInputChange = (event) => {
   //   const { name, value } = event.target;
@@ -63,16 +63,16 @@ export default class Home extends Component {
   //   console.log(link);
   // };
 
-  render() {
+  render () {
     return (
       <div>
-        <Nav />
+        <Navbar />
         <br></br>
         <Carouselbanner />
         <br></br>
         <Results data={this.state.data} />
         {/* <Footer /> */}
       </div>
-    );
+    )
   }
 }
