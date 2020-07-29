@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Nav from '../components/Nav/Nav'
-import CartResults from '../components/CartResults/CartResults'
+import React, { Component } from 'react';
+import Nav from '../components/Nav/Nav';
+import CartResults from '../components/CartResults/CartResults';
 
 export default class Cart extends Component {
   state = {
@@ -32,14 +32,14 @@ export default class Cart extends Component {
       }
     ],
     inputSearch: ''
-  }
+  };
 
-  render () {
+  render() {
     return (
       <>
         <Nav />
-        <CartResults />
+        <CartResults data={this.state.data} />
       </>
-    )
+    );
   }
 }
