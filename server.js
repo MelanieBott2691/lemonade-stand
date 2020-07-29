@@ -1,11 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const app = express();
+const routes = require('./routes');
+const session = require('express-session');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
 
 const PORT = process.env.PORT || 3001;
-const app = express();
-// const apiRoutes = require('./routes/apiRoutes');
-const routes = require('./routes');
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -16,8 +18,20 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Use apiRoutes
-// app.use('/api', apiRoutes);
 app.use(routes);
+
+// Use Session
+app.use(
+  session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+  })
+);
+
+//Use Passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Send every request to the React app
 // Define any API routes before this runs
