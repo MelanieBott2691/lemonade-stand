@@ -22,13 +22,16 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "axios": "^0.18.0",
+    "bcrypt": "^5.0.0",
     "bootstrap": "^4.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.9.25",
+<<<<<<< HEAD
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -38,6 +41,11 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
+=======
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "prettier": "^2.0.5"
+>>>>>>> 196d03acc448046f09987aaa763e91062708af45
   },
   "repository": {
     "type": "git",
