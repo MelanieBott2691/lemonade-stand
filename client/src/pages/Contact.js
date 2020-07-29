@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 // import Results from '../components/Results/Results.js'
 import Footer from '../components/Footer/Footer.js'
 import '../assets/css/style.css'
+import './Pages.css'
 
 export default class Contact extends Component {
   state = {

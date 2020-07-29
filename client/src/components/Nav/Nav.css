@@ -1,0 +1,10 @@
+.btn-group button {
+    align-items: flex-end;
+    background-color: teal;
+    border: none;
+}
+.btn-group button:hover {
+    align-items: flex-end;
+    background-color: purple;
+    border: none;
+}
