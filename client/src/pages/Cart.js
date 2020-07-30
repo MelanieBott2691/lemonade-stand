@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Nav from '../components/Nav/Nav'
 import CartResults from '../components/CartResults/CartResults'
-import CheckoutSteps from '../components/Checkout/CheckoutSteps'
+import CheckoutModal from '../components/Checkout/CheckoutModal'
 // import ShoppingCart from '../components/ShoppingCart/ShoppingCart'
 
 export default class Cart extends Component {
@@ -40,7 +40,7 @@ export default class Cart extends Component {
     return (
       <>
         <Nav />
-        <CheckoutSteps />
+        <CheckoutModal />
         <CartResults data={this.state.data} />
       </>
     )
