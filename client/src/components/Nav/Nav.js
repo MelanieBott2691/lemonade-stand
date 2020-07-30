@@ -89,7 +89,7 @@ class Navigation extends React.Component {
         {/* Dropdown */}
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav mr-auto'>
-            <NavItem id='navitem' path='/Home' name='Home' />
+            <NavItem id='navitem' path='/' name='Home' />
             <NavItem id='navitem' path='/page2' name='About' />
             <NavItem
               id='navitem'
@@ -99,14 +99,18 @@ class Navigation extends React.Component {
             />
 
             <NavDropdown id='navitem' name='Menu'>
-              <a className='dropdown-item' href='/Login'>
+              <a className='dropdown-item' href='/login'>
                 Sign In
               </a>
               <a className='dropdown-item' href='/'>
                 Profile
               </a>
+              <a className='dropdown-item' href='/contact'>
+                Contact
+              </a>
+
               <div className='dropdown-divider'></div>
-              <a className='dropdown-item' href='/'>
+              <a className='dropdown-item' href='/cart'>
                 Cart
               </a>
             </NavDropdown>
