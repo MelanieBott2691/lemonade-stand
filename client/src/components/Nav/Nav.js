@@ -89,13 +89,16 @@ class Navigation extends React.Component {
         {/* Dropdown */}
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav mr-auto'>
-            <NavItem path='/Home' name='' i className='fa fa-envelope fa-fw'>
-              <i className='fa fa-envelope fa-fw'></i>
-            </NavItem>
-            <NavItem path='/page2' name='About' />
-            <NavItem path='/page3' name='Disabled' disabled='true' />
+            <NavItem id='navitem' path='/Home' name='Home' />
+            <NavItem id='navitem' path='/page2' name='About' />
+            <NavItem
+              id='navitem'
+              path='/page3'
+              name='Disabled'
+              disabled='true'
+            />
 
-            <NavDropdown name=''>
+            <NavDropdown id='navitem' name='Menu'>
               <a className='dropdown-item' href='/Login'>
                 Sign In
               </a>
