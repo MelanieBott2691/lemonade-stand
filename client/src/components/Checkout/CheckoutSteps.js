@@ -1,62 +1,56 @@
-import { React, useState } from 'react'
-import { Form, Modal, Button } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 
-function CheckoutSteps () {
-  const [show, setShow] = useState(false)
+import React, { Component } from 'react'
+import PayModal from '../Checkout/Modal'
+// import TriggerButton from '../TriggerButton'
 
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
-
-  return (
-    <Modal.Dialog>
-      <Button variant='primary' onClick={handleShow}>
-        Pay
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Checkout</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group controlId='exampleForm.ControlInput1'>
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type='email' placeholder='name@example.com' />
-            </Form.Group>
-            <Form.Group controlId='exampleForm.ControlSelect1'>
-              <Form.Label>Example select</Form.Label>
-              <Form.Control as='select'>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </Form.Control>
-            </Form.Group>
-            <Form.Group controlId='exampleForm.ControlSelect2'>
-              <Form.Label>Example multiple select</Form.Label>
-              <Form.Control as='select' multiple>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </Form.Control>
-            </Form.Group>
-            <Form.Group controlId='exampleForm.ControlTextarea1'>
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as='textarea' rows='3' />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant='primary' onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </Modal.Dialog>
-  )
+export class CheckoutSteps extends Component {
+  state = { isShown: false }
+  showModal = () => {
+    this.setState({ isShown: true }, () => {
+      this.closeButton.focus()
+    })
+    this.toggleScrollLock()
+  }
+  closeModal = () => {
+    this.setState({ isShown: false })
+    this.focus()
+    this.toggleScrollLock()
+  }
+  onKeyDown = event => {
+    if (event.keyCode === 27) {
+      this.closeModal()
+    }
+  }
+  onClickOutside = event => {
+    if (this.modal && this.modal.contains(event.target)) return
+    this.closeModal()
+  }
+  toggleScrollLock = () => {
+    document.querySelector('html').classList.toggle('scroll-lock')
+  }
+  render () {
+    return (
+      <React.Fragment>
+        {/* <TriggerButton */}
+        <button onClick={PayModal}>
+          Pay
+          {/* showModal={this.showModal}
+          buttonRef={n => (this.TriggerButton = n)}
+          triggerText={this.props.triggerText} */}
+        </button>
+        {this.state.isShown ? (
+          <Modal
+            onSubmit={this.props.onSubmit}
+            modalRef={n => (this.modal = n)}
+            buttonRef={n => (this.closeButton = n)}
+            closeModal={this.closeModal}
+            onKeyDown={this.onKeyDown}
+            onClickOutside={this.onClickOutside}
+          />
+        ) : null}
+      </React.Fragment>
+    )
+  }
 }
-
 export default CheckoutSteps

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import API from '../utils/API'
-// import Navbar from '../components/Navbar/Navbar.js'
+import Navbar from '../components/Nav/Nav'
 
 // import Results from '../components/Results/Results.js'
 import Footer from '../components/Footer/Footer.js'
@@ -19,7 +19,7 @@ export default class Contact extends Component {
   render () {
     return (
       <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <form>
           <div class='container'>
             <div class='form-group'>
