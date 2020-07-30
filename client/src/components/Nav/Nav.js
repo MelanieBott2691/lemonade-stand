@@ -1,8 +1,6 @@
-import React from 'react'
-import { Nav } from 'react-bootstrap'
 import './Nav.css'
-// import Search from '../Search/Search'
-// import { logo } from '../../assets/images/lemonadestandlogo.png'
+import { logo } from '../Nav/logo.png'
+import React from 'react'
 
 const NavItem = props => {
   const pageURI = window.location.pathname + window.location.search
@@ -22,21 +20,114 @@ const NavItem = props => {
   )
 }
 
-class Navigation extends React.Component {
+class NavDropdown extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      isToggleOn: false
+    }
+  }
+  showDropdown (e) {
+    e.preventDefault()
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }))
+  }
   render () {
+    const classDropdownMenu =
+      'dropdown-menu' + (this.state.isToggleOn ? ' show' : '')
     return (
-      <div className='container'>
-        {/* <nav className='navbar'> */}
-        {/* <div className='container'> */}
-        <div className='row'>
-          <div className='col-sm'>One of three columns</div>
-          <div className='col-sm'>One of three columns</div>
-          <div className='col-sm'>One of three columns</div>
+      <li className='nav-item dropdown'>
+        <a
+          className='nav-link dropdown-toggle'
+          href='/'
+          id='navbarDropdown'
+          role='button'
+          data-toggle='dropdown'
+          aria-haspopup='true'
+          aria-expanded='false'
+          onClick={e => {
+            this.showDropdown(e)
+          }}
+        >
+          {this.props.name}
+        </a>
+        <div className={classDropdownMenu} aria-labelledby='navbarDropdown'>
+          {this.props.children}
         </div>
-        {/* </div> */}
-        {/* </nav> */}
-      </div>
+      </li>
     )
   }
 }
+
+class Navigation extends React.Component {
+  render () {
+    return (
+      <nav className='navbar navbar-expand-lg'>
+        <a className='navbar-brand' href='/Home'>
+          <img
+            className='nav-image'
+            src={logo}
+            alt='logo'
+            width='70'
+            height='90'
+            alignItems='left'
+          />
+        </a>
+
+        <button
+          className='navbar-toggler'
+          type='button'
+          data-toggle='collapse'
+          data-target='#navbarSupportedContent'
+          aria-controls='navbarSupportedContent'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+        >
+          <span className='navbar-toggler-icon'></span>
+        </button>
+        {/* Dropdown */}
+        <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+          <ul className='navbar-nav mr-auto'>
+            <NavItem path='/Home' name='' i className='fa fa-envelope fa-fw'>
+              <i className='fa fa-envelope fa-fw'></i>
+            </NavItem>
+            <NavItem path='/page2' name='About' />
+            <NavItem path='/page3' name='Disabled' disabled='true' />
+
+            <NavDropdown name=''>
+              <a className='dropdown-item' href='/Login'>
+                Sign In
+              </a>
+              <a className='dropdown-item' href='/'>
+                Profile
+              </a>
+              <div className='dropdown-divider'></div>
+              <a className='dropdown-item' href='/'>
+                Cart
+              </a>
+            </NavDropdown>
+          </ul>
+          {/* Search Bar */}
+
+          <form className='form-inline my-2 my-lg-0'>
+            <input
+              className='form-control mr-sm-2'
+              type='search'
+              placeholder='Search...'
+              aria-label='Search'
+            />
+            <button
+              className='btn btn-outline-success my-2 my-sm-0'
+              type='submit'
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+    )
+  }
+}
+
 export default Navigation
