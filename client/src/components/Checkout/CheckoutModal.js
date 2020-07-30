@@ -9,7 +9,7 @@ function CheckoutModal () {
       </Modal.Header>
 
       <Modal.Body>
-        <p>Checkout Form HERE....</p>;
+        <p>Checkout Form HERE....</p>
         <Form>
           <Form.Group controlId='exampleForm.ControlInput1'>
             <Form.Label>Email address</Form.Label>
