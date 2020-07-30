@@ -64,7 +64,7 @@ class Navigation extends React.Component {
   render () {
     return (
       <nav className='navbar navbar-expand-lg'>
-        <a className='navbar-brand' href='/Home'>
+        <a className='navbar-brand' href='/'>
           <img
             src={logo}
             alt='logo'
