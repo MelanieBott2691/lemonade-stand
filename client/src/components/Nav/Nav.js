@@ -1,5 +1,5 @@
 import './Nav.css'
-import { logo } from '../Nav/logo.png'
+import logo from '../Nav/logo.png'
 import React from 'react'
 
 const NavItem = props => {
@@ -66,11 +66,11 @@ class Navigation extends React.Component {
       <nav className='navbar navbar-expand-lg'>
         <a className='navbar-brand' href='/Home'>
           <img
-            className='nav-image'
             src={logo}
             alt='logo'
-            width='70'
-            height='90'
+            className='nav-image'
+            width='100'
+            height='120'
             alignItems='left'
           />
         </a>

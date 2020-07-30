@@ -23,9 +23,10 @@
 .navbar-brand img
 img.nav-image {
     /* margin-right: 20px; */
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-left: 20px;
     float: left;
-    background-image: url("../../assets/images/logo.png");
+    /* background-image: url("../../assets/images/logo.png"); */
     background-repeat: no-repeat;
     z-index: 1;
     position: absolute;
@@ -33,8 +34,8 @@ img.nav-image {
     align-items: left;
     top: 0;
     left: 0;
-    height: 90px;
-    width: 70px;
+    height: 110px;
+    width: 90px;
     vertical-align: middle;
     display: flex;
     padding-left: 10px;
@@ -42,6 +43,7 @@ img.nav-image {
 }
 .nav-link {
   color: white !important;
+  font-size: 20px;
 }
 
 button.btn {
