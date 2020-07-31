@@ -9,11 +9,11 @@ export default function StoreInfo() {
     <Card>
       <Card.Img className="logo"
         variant="top"
-        src={logo}
+        src="nothingfornow"
       />
       <Card.Body>
         <Card.Title>My Stands</Card.Title>
-        <Button href="#">
+        <Button href="/createstore">
           Create New Stand
         </Button> <Button href="#">Edit Stand</Button>{' '}
       </Card.Body>
