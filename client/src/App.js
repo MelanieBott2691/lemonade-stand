@@ -8,7 +8,7 @@ import Cart from './pages/Cart.js'
 import Profile from './pages/Profile.js'
 import CreateStore from './pages/CreateStore.js'
 import StoreItem from './components/Store/StoreItem.js'
-// import Store from './components/Store/Store'
+import Store from './pages/Store'
 
 function App () {
   return (
@@ -23,7 +23,7 @@ function App () {
           <Route exact path='/profile' component={Profile} />
           <Route exact path='/createstore' component={CreateStore} />
           <Route exact path='/storeitem' component={StoreItem} />
-          {/* <Route exact path='/storetest' component={Store} /> */}
+          <Route exact path='/storetest' component={Store} />
 
           {/* <Route exact path="/books/:id" component={Detail} /> */}
           {/* <Route component={NoMatch} /> */}
