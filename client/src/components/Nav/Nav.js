@@ -123,10 +123,14 @@ class Navigation extends React.Component {
               type='search'
               placeholder='Search...'
               aria-label='Search'
-            />
+              value={this.props.Search}
+              onChange={this.props.handleInputChange}
+            ></input>
+
             <button
               className='btn btn-outline-success my-2 my-sm-0'
               type='submit'
+              onClick={this.props.handleFormSubmit}
             >
               Search
             </button>
