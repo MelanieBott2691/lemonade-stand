@@ -4,26 +4,16 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 // import StoreInfo from '../StoreInfo/StoreInfo'
 import { Container, Row, Col } from 'react-bootstrap'
+import './StoreItem.css'
 
 export default function StoreItem () {
   return (
     <Container>
       <Row>
         <h1 className='my-4'>Items</h1>
-        {/* <div className='list-group'>
-          <a href='#' className='list-group-item active'>
-            Category 1
-          </a>
-          <a href='#' className='list-group-item'>
-            Category 2
-          </a>
-          <a href='#' className='list-group-item'>
-            Category 3
-          </a>
-        </div> */}
       </Row>
       <Col>
-        <Row>
+        <Row className='card-row'>
           <Card>
             <Card.Img
               className='logo'
@@ -52,7 +42,10 @@ export default function StoreItem () {
             </Card.Body>
           </Card>
         </Row>
-        <Row>
+        <br></br>
+        <br></br>
+
+        <Row className='card-row'>
           <Card>
             <Card.Header>Product Reviews</Card.Header>
             <Card.Body>
