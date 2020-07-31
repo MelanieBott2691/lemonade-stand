@@ -6,6 +6,7 @@ import Login from './pages/Login.js';
 import Register from './pages/Register.js';
 import Cart from './pages/Cart.js';
 import Profile from './pages/Profile.js';
+import CreateStore from './pages/CreateStore.js';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/register" component={Register} />
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/profile" component={Profile} />
+          <Route exact path="/createstore" component={CreateStore} />
           {/* <Route exact path="/books/:id" component={Detail} /> */}
           {/* <Route component={NoMatch} /> */}
         </Switch>
