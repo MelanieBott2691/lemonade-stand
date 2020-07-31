@@ -100,7 +100,7 @@ class Navigation extends React.Component {
               <a className="dropdown-item" href="/login">
                 Sign In
               </a>
-              <a className="dropdown-item" href="/">
+              <a className="dropdown-item" href="/profile">
                 Profile
               </a>
               <a className="dropdown-item" href="/contact">

@@ -3,13 +3,10 @@ import axios from 'axios';
 // The getRecipes method retrieves recipes from the server
 // It accepts a "query" or term to search the recipe api for
 export default {
-  getBooks: function (query) {
-    return axios.get('/api/books/search', { params: { q: query } });
+  getSearch: function (query) {
+    return axios.get('/api/items', { query: { name: query.name } });
   },
-  getSaved: function () {
-    return axios.get('/api/books');
-  },
-  saveBook: function () {
-    return axios.post('/api/books');
+  getItems: function () {
+    return axios.get('/api/items');
   }
 };

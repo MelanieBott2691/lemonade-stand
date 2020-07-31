@@ -7,66 +7,41 @@ import Carouselbanner from '../components/Carousel/Carousel.js';
 
 export default class Home extends Component {
   state = {
-    data: [
-      {
-        id: 1,
-        name: 'test1',
-        price: 47.0
-      },
-      {
-        id: 2,
-        name: 'test2',
-        price: 54.0
-      },
-      {
-        id: 3,
-        name: 'test3',
-        price: 24.0
-      },
-      {
-        id: 4,
-        name: 'test4',
-        price: 14.0
-      },
-      {
-        id: 5,
-        name: 'test5',
-        price: 53.0
-      }
-    ],
+    data: [],
     inputSearch: ''
   };
 
-  // handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // };
+  componentDidMount() {
+    API.getItems()
+      .then((res) => this.setState({ data: res.data }))
+      .catch((err) => console.log(err));
+    console.log(this.state.data);
+  }
 
-  // handleFormSubmit = (event) => {
-  //   event.preventDefault();
-  //   API.getBooks(this.state.bookSearch)
-  //     .then((res) => this.setState({ books: res.data }))
-  //     .catch((err) => console.log(err));
-  //   console.log(this.state.books);
-  // };
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
 
-  // handleSave = ({ target }) => {
-  //   const parent = target.parentElement;
-  //   console.log(parent);
-  //   const title = parent.getElementsByClassName('title')[0].innerHTML;
-  //   const synopsys = parent.getElementsByClassName('synopsys')[0].innerHTML;
-  //   const link = parent.getElementsByClassName('link')[0].innerHTML;
-  //   console.log(title);
-  //   console.log(synopsys);
-  //   console.log(link);
-  // };
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log(this.state.inputSearch);
+    API.getSearch(this.state.inputSearch)
+      .then((res) => this.setState({ data: res.data }))
+      .catch((err) => console.log(err));
+    console.log(this.state.data);
+  };
 
   render() {
     return (
       <div>
-        <Nav />
+        <Nav
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
+          inputSearch={this.state.inputSearch}
+        />
         <br></br>
         <Carouselbanner />
         <br></br>
