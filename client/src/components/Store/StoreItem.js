@@ -65,7 +65,6 @@ export default function StoreItem () {
               </p>
               <div className='text-muted'>Posted by Anonymous on 3/1/17</div>
               <hr></hr>
-
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
                 et enim aperiam inventore, similique necessitatibus neque non!
@@ -74,9 +73,7 @@ export default function StoreItem () {
               </p>
               <div className='text-muted'>Posted by Anonymous on 3/1/17</div>
               <hr></hr>
-              <button onclick='' className='btn'>
-                Leave a Review
-              </button>
+              <Button>Leave a Review</Button>
             </Card.Body>
           </Card>
         </Row>
