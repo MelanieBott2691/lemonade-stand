@@ -91,12 +91,7 @@ class Navigation extends React.Component {
           <ul className='navbar-nav mr-auto'>
             <NavItem id='navitem' path='/' name='Home' />
             <NavItem id='navitem' path='/page2' name='About' />
-            <NavItem
-              id='navitem'
-              path='/page3'
-              name='Disabled'
-              disabled='true'
-            />
+            <NavItem id='navitem' path='/page3' name='Store' disabled='false' />
 
             <NavDropdown id='navitem' name='Menu'>
               <a className='dropdown-item' href='/login'>
