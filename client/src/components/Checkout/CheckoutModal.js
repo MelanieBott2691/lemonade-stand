@@ -31,25 +31,43 @@ class CheckoutModal extends React.Component {
             <Modal.Title>Checkout</Modal.Title>
           </Modal.Header>
           <Modal.Body className='modal-container'>
-            <div className='row'>
+            {/* <div className='row'>
               <div id='modal' className='col-2 text-left text-capitalize p-5'>
-                <Form>
-                  <Container>
-                    Checkout
-                    <Row>
-                      <Col>PRODUCTS</Col>
-                      <Col>NAME OF PRODUCTS</Col>
-                      <Col>PRICE</Col>
-
-                      <Col>QUANTITY</Col>
-
-                      <Col>TOTAL</Col>
-                      <Col>REMOVE</Col>
-                    </Row>
-                  </Container>
-                </Form>
-              </div>
-            </div>
+                <Form> */}
+            <Container>
+              Checkout
+              <Row>
+                <Col>PRODUCTS</Col>
+                <Col>NAME OF PRODUCTS</Col>
+                <Col>PRICE</Col>
+                <Col>QUANTITY</Col>
+                <Col>TOTAL</Col>
+                <Col>REMOVE</Col>
+              </Row>
+              <Row>
+                <Col>
+                  <h5>Products{}</h5>
+                </Col>
+                <Col>
+                  <h5>Products{}</h5>
+                </Col>
+                <Col>
+                  <h5>Products{}</h5>
+                </Col>
+                <Col>
+                  <h5>Products{}</h5>
+                </Col>
+                <Col>
+                  <h5>Products{}</h5>
+                </Col>
+                <Col>
+                  <h5>Products{}</h5>
+                </Col>
+              </Row>
+            </Container>
+            {/* </Form> */}
+            {/* </div>
+            </div> */}
           </Modal.Body>
           <Modal.Footer>
             <Button
