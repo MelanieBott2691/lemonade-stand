@@ -7,7 +7,7 @@ export default class Results extends React.Component {
     return (
       <CardColumns>
         {this.props.data.map((item) => (
-          <Item key={item.id} {...item} />
+          <Item key={item._id} {...item} />
         ))}
       </CardColumns>
     );

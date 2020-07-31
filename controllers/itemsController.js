@@ -8,6 +8,12 @@ module.exports = {
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
+  find: function (req, res) {
+    console.log(req);
+    db.Item.find({ name: req.params.query })
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
+  },
   findById: function (req, res) {
     db.Item.findById(req.params.id)
       .then((dbModel) => res.json(dbModel))

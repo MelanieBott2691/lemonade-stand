@@ -12,7 +12,7 @@ export default class Item extends React.Component {
         <Card.Body>
           <Card.Title>{this.props.name}</Card.Title>
           <Card.Title>Price:{this.props.price}</Card.Title>
-          <Card.Title>id:{this.props.id}</Card.Title>
+          <Card.Title>id:{this.props._id}</Card.Title>
           <Button href="#">
             Add to Cart
           </Button> <Button href="#">Store</Button>{' '}
