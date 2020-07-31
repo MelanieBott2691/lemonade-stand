@@ -2,9 +2,10 @@ import React from 'react'
 // import styled from 'styled-components'
 // import { ProductConsumer } from '../context'
 // import { ButtonContainer } from './Button'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 // import { Modal } from 'react-bootstrap'
 import { Modal, Button, Container, Row, Col, Form } from 'react-bootstrap'
+import './CheckoutModal.css'
 
 // import React, { Component } from 'react'
 
@@ -29,26 +30,24 @@ class CheckoutModal extends React.Component {
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
             <Modal.Title>Checkout</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <div className='container'>
-              <div className='row'>
-                <div id='modal' className='col-2 text-left text-capitalize p-5'>
-                  <Form>
-                    <Container>
-                      Checkout
-                      <Row>
-                        <Col>PRODUCTS</Col>
-                        <Col>NAME OF PRODUCTS</Col>
-                        <Col>PRICE</Col>
+          <Modal.Body className='modal-container'>
+            <div className='row'>
+              <div id='modal' className='col-2 text-left text-capitalize p-5'>
+                <Form>
+                  <Container>
+                    Checkout
+                    <Row>
+                      <Col>PRODUCTS</Col>
+                      <Col>NAME OF PRODUCTS</Col>
+                      <Col>PRICE</Col>
 
-                        <Col>QUANTITY</Col>
+                      <Col>QUANTITY</Col>
 
-                        <Col>TOTAL</Col>
-                        <Col>REMOVE</Col>
-                      </Row>
-                    </Container>
-                  </Form>
-                </div>
+                      <Col>TOTAL</Col>
+                      <Col>REMOVE</Col>
+                    </Row>
+                  </Container>
+                </Form>
               </div>
             </div>
           </Modal.Body>
