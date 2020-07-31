@@ -8,40 +8,45 @@ import Carouselbanner from '../components/Carousel/Carousel.js'
 
 export default class Home extends Component {
   state = {
-    data: [
-      {
-        id: 1,
-        name: 'test1',
-        price: 47.0
-      },
-      {
-        id: 2,
-        name: 'test2',
-        price: 54.0
-      },
-      {
-        id: 3,
-        name: 'test3',
-        price: 24.0
-      },
-      {
-        id: 4,
-        name: 'test4',
-        price: 14.0
-      },
-      {
-        id: 5,
-        name: 'test5',
-        price: 53.0
-      }
-    ],
+    data: [],
     inputSearch: ''
+<<<<<<< HEAD
   }
+=======
+  };
+
+  componentDidMount() {
+    API.getItems()
+      .then((res) => this.setState({ data: res.data }))
+      .catch((err) => console.log(err));
+    console.log(this.state.data);
+  }
+
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log(this.state.inputSearch);
+    API.getSearch(this.state.inputSearch)
+      .then((res) => this.setState({ data: res.data }))
+      .catch((err) => console.log(err));
+    console.log(this.state.data);
+  };
+>>>>>>> 44c9dfc9e10b10a5ce920899c1ce67a7cd631c3a
 
   render () {
     return (
       <div>
-        <Nav />
+        <Nav
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
+          inputSearch={this.state.inputSearch}
+        />
         <br></br>
         <Carouselbanner />
         <Results data={this.state.data} />
