@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-// import API from '../utils/API'
 import Navbar from '../components/Nav/Nav'
-
-// import Results from '../components/Results/Results.js'
 import Footer from '../components/Footer/Footer.js'
 import '../assets/css/style.css'
 
