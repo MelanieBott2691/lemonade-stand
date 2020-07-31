@@ -3,7 +3,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 // import StoreInfo from '../StoreInfo/StoreInfo'
-import { Container, Row, Col, CardGroup } from 'react-bootstrap'
+import { Container, Row, CardDeck } from 'react-bootstrap'
 import './StoreItem.css'
 
 export default function StoreItem () {
@@ -13,10 +13,11 @@ export default function StoreItem () {
         <h1 className='my-4'>Item</h1>
       </Row>
       {/* image card */}
-      <CardGroup>
+      <CardDeck>
         <Card style={{ width: '24rem' }}>
           <Card.Img src='holder.js/171x180' fluid />
-
+        </Card>
+        <Card>
           <Card.Body>
             <Card.Title>Product Name</Card.Title>
             <Card.Text>$24.99</Card.Text>
@@ -37,38 +38,37 @@ export default function StoreItem () {
             4.0 stars
           </Card.Body>
         </Card>
-
-        <Card>
-          <Card.Header>Product Reviews</Card.Header>
-          <Card.Body>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
-              enim aperiam inventore, similique necessitatibus neque non!
-              Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
-              mollitia, necessitatibus quae sint natus.
-            </p>
-            <div className='text-muted'>Posted by Anonymous on 3/1/17</div>
-            <hr></hr>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
-              enim aperiam inventore, similique necessitatibus neque non!
-              Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
-              mollitia, necessitatibus quae sint natus.
-            </p>
-            <div className='text-muted'>Posted by Anonymous on 3/1/17</div>
-            <hr></hr>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
-              enim aperiam inventore, similique necessitatibus neque non!
-              Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
-              mollitia, necessitatibus quae sint natus.
-            </p>
-            <div className='text-muted'>Posted by Anonymous on 3/1/17</div>
-            <hr></hr>
-            <Button>Leave a Review</Button>
-          </Card.Body>
-        </Card>
-      </CardGroup>
+      </CardDeck>
+      <Card className='reviews-card'>
+        <Card.Header>Product Reviews</Card.Header>
+        <Card.Body>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
+            enim aperiam inventore, similique necessitatibus neque non!
+            Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
+            mollitia, necessitatibus quae sint natus.
+          </p>
+          <div className='text-muted'>Posted by Anonymous on 3/1/2017</div>
+          <hr></hr>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
+            enim aperiam inventore, similique necessitatibus neque non!
+            Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
+            mollitia, necessitatibus quae sint natus.
+          </p>
+          <div className='text-muted'>Posted by Anonymous on 3/1/2020</div>
+          <hr></hr>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et
+            enim aperiam inventore, similique necessitatibus neque non!
+            Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi
+            mollitia, necessitatibus quae sint natus.
+          </p>
+          <div className='text-muted'>Posted by Anonymous on 5/1/2020</div>
+          <hr></hr>
+          <Button>Leave a Review</Button>
+        </Card.Body>
+      </Card>
     </Container>
   )
 }
