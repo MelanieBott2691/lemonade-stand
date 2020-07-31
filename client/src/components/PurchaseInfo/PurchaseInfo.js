@@ -2,7 +2,7 @@ import React from 'react'
 import './PurchaseInfo.css'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-// import ListGroup.Item from 'react-bootstrap/ListGroupItem'
+import ListGroupItem from 'react-bootstrap/ListGroupItem'
 import ListGroup from 'react-bootstrap/ListGroup'
 
 export default function PurchaseInfo (props) {
@@ -24,7 +24,7 @@ export default function PurchaseInfo (props) {
             Status: Order Processing
           </ListGroup.Item>
         </ListGroup>
-        <Button variant='primary'>Go somewhere</Button>
+        {/* <Button variant="primary">Go somewhere</Button> */}
       </Card.Body>
     </Card>
   )
