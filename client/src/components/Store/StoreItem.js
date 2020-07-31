@@ -29,6 +29,9 @@ export default function StoreItem () {
               ></img>
               <Card.Title>Product Name</Card.Title>
               <h4>$24.99</h4>
+              {/* add to cart button */}
+              {/* quantity */}
+              {/* total depending on quantity */}
               <p className='card-text'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta.
