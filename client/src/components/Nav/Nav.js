@@ -108,6 +108,12 @@ class Navigation extends React.Component {
               <a className='dropdown-item' href='/contact'>
                 Contact
               </a>
+              <a className='dropdown-item' href='/storeitem'>
+                TestItem
+              </a>
+              <a className='dropdown-item' href='/storetest'>
+                TestStore
+              </a>
 
               <div className='dropdown-divider'></div>
               <a className='dropdown-item' href='/cart'>

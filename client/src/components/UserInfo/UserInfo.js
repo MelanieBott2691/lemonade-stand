@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ListGroupItem from 'react-bootstrap/ListGroupItem'
 import ListGroup from 'react-bootstrap/ListGroup'
-import Image from 'react-bootstrap/Image'
+// import Image from 'react-bootstrap/Image'
 
 export default function UserInfo (props) {
   //   return (

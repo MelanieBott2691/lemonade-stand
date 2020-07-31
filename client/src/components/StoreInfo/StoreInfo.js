@@ -2,7 +2,7 @@ import React from 'react'
 import './StoreInfo.css'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import logo from '../StoreInfo/logo.png'
+// import logo from '../StoreInfo/logo.png'
 
 export default function StoreInfo () {
   return (

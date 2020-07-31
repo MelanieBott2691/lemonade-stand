@@ -4,7 +4,7 @@ import React from 'react'
 // import { ButtonContainer } from './Button'
 // import { Link } from 'react-router-dom'
 // import { Modal } from 'react-bootstrap'
-import { Modal, Button, Container, Row, Col, Form } from 'react-bootstrap'
+import { Modal, Button, Container, Row, Col } from 'react-bootstrap'
 import './CheckoutModal.css'
 
 // import React, { Component } from 'react'
