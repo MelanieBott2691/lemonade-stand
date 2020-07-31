@@ -9,8 +9,8 @@ export default function StoreItem () {
   return (
     <Container>
       <Row>
-        <h1 className='my-4'>Shop Name</h1>
-        <div className='list-group'>
+        <h1 className='my-4'>Items</h1>
+        {/* <div className='list-group'>
           <a href='#' className='list-group-item active'>
             Category 1
           </a>
@@ -20,7 +20,7 @@ export default function StoreItem () {
           <a href='#' className='list-group-item'>
             Category 3
           </a>
-        </div>
+        </div> */}
       </Row>
       <Col>
         <Row>
@@ -32,6 +32,11 @@ export default function StoreItem () {
               alt=''
             />
             <Card.Body>
+              <img
+                class='card-img-top img-fluid'
+                src='http://placehold.it/900x400'
+                alt=''
+              ></img>
               <Card.Title>Product Name</Card.Title>
               <h4>$24.99</h4>
               <p className='card-text'>
@@ -44,8 +49,41 @@ export default function StoreItem () {
                 &#9733; &#9733; &#9733; &#9733; &#9734;
               </span>
               4.0 stars
-              <Button href='/createstore'>Create New Stand</Button>{' '}
-              <Button href='#'>Edit Stand</Button>{' '}
+            </Card.Body>
+          </Card>
+        </Row>
+        <Row>
+          <Card>
+            <Card.Header>Product Reviews</Card.Header>
+            <Card.Body>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
+                et enim aperiam inventore, similique necessitatibus neque non!
+                Doloribus, modi sapiente laboriosam aperiam fugiat laborum.
+                Sequi mollitia, necessitatibus quae sint natus.
+              </p>
+              <div className='text-muted'>Posted by Anonymous on 3/1/17</div>
+              <hr></hr>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
+                et enim aperiam inventore, similique necessitatibus neque non!
+                Doloribus, modi sapiente laboriosam aperiam fugiat laborum.
+                Sequi mollitia, necessitatibus quae sint natus.
+              </p>
+              <div className='text-muted'>Posted by Anonymous on 3/1/17</div>
+              <hr></hr>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
+                et enim aperiam inventore, similique necessitatibus neque non!
+                Doloribus, modi sapiente laboriosam aperiam fugiat laborum.
+                Sequi mollitia, necessitatibus quae sint natus.
+              </p>
+              <div className='text-muted'>Posted by Anonymous on 3/1/17</div>
+              <hr></hr>
+              <button onclick='' className='btn'>
+                Leave a Review
+              </button>
             </Card.Body>
           </Card>
         </Row>
