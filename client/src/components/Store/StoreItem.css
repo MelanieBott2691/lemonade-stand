@@ -1,3 +1,9 @@
 .card-row {
     margin-bottom: 10px;
+   
+}
+.product-description {
+    margin-right: 10px;
+    margin-left: 10px;
+    align-content: flex-start;
 }
