@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import Nav from '../components/Nav/Nav'
-import LoginForm from '../components/LoginForm/LoginForm'
+import StoreItem from '../components/Store/StoreItem'
 
-export default class Login extends Component {
+export default class Register extends Component {
   render () {
     return (
       <>
         <Nav />
-        <LoginForm />
+        <StoreItem />
       </>
     )
   }

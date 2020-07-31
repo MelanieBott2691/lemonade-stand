@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import Nav from '../components/Nav/Nav';
-import CartResults from '../components/CartResults/CartResults';
-import CheckoutModal from '../components/Checkout/CheckoutModal';
-// import ShoppingCart from '../components/ShoppingCart/ShoppingCart'
+import React, { Component } from 'react'
+import Nav from '../components/Nav/Nav'
+import CartResults from '../components/CartResults/CartResults'
+import CheckoutModal from '../components/Checkout/CheckoutModal'
+// import { Link } from 'react-router-dom'
+// import { Button } from 'react-bootstrap'
 
 export default class Cart extends Component {
   state = {
@@ -34,15 +35,15 @@ export default class Cart extends Component {
       }
     ],
     inputSearch: ''
-  };
+  }
 
-  render() {
+  render () {
     return (
       <>
         <Nav />
         <CheckoutModal />
         <CartResults data={this.state.data} />
       </>
-    );
+    )
   }
 }

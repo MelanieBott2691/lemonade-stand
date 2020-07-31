@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import Nav from '../components/Nav/Nav';
-import UserInfo from '../components/UserInfo/UserInfo';
-import StoreInfo from '../components/StoreInfo/StoreInfo';
-import PurchaseInfo from '../components/PurchaseInfo/PurchaseInfo';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React, { Component } from 'react'
+import Nav from '../components/Nav/Nav'
+import UserInfo from '../components/UserInfo/UserInfo'
+import StoreInfo from '../components/StoreInfo/StoreInfo'
+import PurchaseInfo from '../components/PurchaseInfo/PurchaseInfo'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 export default class Profile extends Component {
   state = {
@@ -16,31 +16,30 @@ export default class Profile extends Component {
     stores: [],
     purchases: [],
     inputSearch: ''
-  };
+  }
 
-  render() {
+  render () {
     return (
       <>
         <Nav />
         <Container>
-          <Row> 
-            <Col>         
+          <Row>
+            <Col>
               <UserInfo user={this.state.user} />
-            </Col> 
-          </Row>  
+            </Col>
+          </Row>
           <Row>
             <Col>
               <StoreInfo />
             </Col>
-          </Row>  
+          </Row>
           <Row>
             <Col>
               <PurchaseInfo />
             </Col>
-          </Row>  
-          
+          </Row>
         </Container>
       </>
-    );
+    )
   }
 }

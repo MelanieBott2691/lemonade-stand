@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import Nav from '../components/Nav/Nav';
-import UserInfo from '../components/UserInfo/UserInfo';
-import StoreInfo from '../components/StoreInfo/StoreInfo';
-import NewStore from '../components/NewStore/NewStore';
-
+import React, { Component } from 'react'
+import Nav from '../components/Nav/Nav'
+import UserInfo from '../components/UserInfo/UserInfo'
+import StoreInfo from '../components/StoreInfo/StoreInfo'
+import NewStore from '../components/NewStore/NewStore'
 
 export default class CreateStore extends Component {
   state = {
@@ -14,9 +13,9 @@ export default class CreateStore extends Component {
     stores: [],
     purchases: [],
     inputSearch: ''
-  };
+  }
 
-  render() {
+  render () {
     return (
       <>
         <Nav />
@@ -24,6 +23,6 @@ export default class CreateStore extends Component {
         <NewStore />
         <StoreInfo />
       </>
-    );
+    )
   }
 }
