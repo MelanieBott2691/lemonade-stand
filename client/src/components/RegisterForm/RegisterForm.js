@@ -1,7 +1,7 @@
 import React from 'react';
 import './RegisterForm.css';
 
-export default function RegisterForm() {
+export default function RegisterForm(props) {
   return (
     <div className="wrapper">
       <form className="form-register">
@@ -9,40 +9,68 @@ export default function RegisterForm() {
         <input
           type="text"
           className="form-control"
-          name="firstname"
           placeholder="First Name"
           required=""
-          autofocus=""></input>
+          autofocus=""
+          name="firstName"
+          value={props.firstName}
+          onChange={props.handleInputChange}
+        />
         <input
           type="text"
           className="form-control"
-          name="lastname"
           placeholder="Last Name"
           required=""
-          autofocus=""></input>
+          autofocus=""
+          name="lastName"
+          value={props.lastName}
+          onChange={props.handleInputChange}
+        />
         <input
           type="text"
           className="form-control"
-          name="username"
           placeholder="Username"
           required=""
-          autofocus=""></input>
+          autofocus=""
+          name="userName"
+          value={props.userName}
+          onChange={props.handleInputChange}
+        />
         <input
           type="text"
           className="form-control"
-          name="email"
+          placeholder="Image URL"
+          required=""
+          autofocus=""
+          name="imageUrl"
+          value={props.imageUrl}
+          onChange={props.handleInputChange}
+        />
+        <input
+          type="text"
+          className="form-control"
           placeholder="Email Address"
           required=""
-          autofocus=""></input>
+          autofocus=""
+          name="email"
+          value={props.email}
+          onChange={props.handleInputChange}
+        />
         <input
           type="password"
           className="form-control"
-          name="password"
           placeholder="Password"
-          required=""></input>
+          required=""
+          name="password"
+          value={props.password}
+          onChange={props.handleInputChange}
+        />
 
-        <button className="btn btn-lg btn-primary btn-block" type="submit">
-          Login
+        <button
+          onClick={props.handleRegistration}
+          className="btn btn-lg btn-primary btn-block"
+          type="submit">
+          Register
         </button>
       </form>
     </div>
