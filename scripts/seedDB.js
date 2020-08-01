@@ -56,6 +56,57 @@ const storeSeed = [
   }
 ];
 
+const itemSeed = [
+  {
+    storeId: '',
+    name: 'Stuffed Animal 1',
+    description: 'Stuffed animal that your kids will love!',
+    price: 12.99,
+    quantity: 34,
+    imgUrl: ''
+  },
+  {
+    storeId: '',
+    name: 'Stuffed Animal 2',
+    description: 'Stuffed animal that your kids will love!',
+    price: 12.99,
+    quantity: 34,
+    imgUrl: ''
+  },
+  {
+    storeId: '',
+    name: 'Stuffed Animal 3',
+    description: 'Stuffed animal that your kids will love!',
+    price: 12.99,
+    quantity: 34,
+    imgUrl: ''
+  },
+  {
+    storeId: '',
+    name: 'Stuffed Animal 4',
+    description: 'Stuffed animal that your kids will love!',
+    price: 12.99,
+    quantity: 34,
+    imgUrl: ''
+  },
+  {
+    storeId: '',
+    name: 'Stuffed Animal 5',
+    description: 'Stuffed animal that your kids will love!',
+    price: 12.99,
+    quantity: 34,
+    imgUrl: ''
+  },
+  {
+    storeId: '',
+    name: 'Stuffed Animal 6',
+    description: 'Stuffed animal that your kids will love!',
+    price: 12.99,
+    quantity: 34,
+    imgUrl: ''
+  }
+];
+
 db.User.remove({})
   .then(() => db.User.collection.insertMany(userSeed))
   .then((data) => {
@@ -71,6 +122,17 @@ db.Store.remove({})
   .then(() => db.Store.collection.insertMany(storeSeed))
   .then((data) => {
     console.log(data.result.n + ' store records inserted!');
+    process.exit(0);
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+
+db.Item.remove({})
+  .then(() => db.Item.collection.insertMany(itemSeed))
+  .then((data) => {
+    console.log(data.result.n + ' item records inserted!');
     process.exit(0);
   })
   .catch((err) => {
