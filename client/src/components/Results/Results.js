@@ -1,15 +1,15 @@
-import React from 'react'
-import CardColumns from 'react-bootstrap/CardColumns'
-import Item from '../Item/Item.js'
+import React from 'react';
+import CardColumns from 'react-bootstrap/CardColumns';
+import Item from '../Item/Item.js';
 
 export default class Results extends React.Component {
-  render () {
+  render() {
     return (
       <CardColumns>
-        {this.props.data.map(item => (
+        {this.props.data.map((item) => (
           <Item key={item._id} {...item} />
         ))}
       </CardColumns>
-    )
+    );
   }
 }
