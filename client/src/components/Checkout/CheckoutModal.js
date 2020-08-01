@@ -36,13 +36,16 @@ class CheckoutModal extends React.Component {
 
         <Modal show={this.state.showHide}>
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
-            <Modal.Title>How You'll Pay</Modal.Title>
             <Container>
-              <Row>
-                <Col>
-                  <RadioButton />
-                </Col>
-              </Row>
+              <Col>
+                <Row>
+                  <Modal.Title>How You'll Pay</Modal.Title>
+                </Row>
+              </Col>
+
+              <Col>
+                <RadioButton />
+              </Col>
             </Container>
           </Modal.Header>
           <Modal.Body className="modal-container">

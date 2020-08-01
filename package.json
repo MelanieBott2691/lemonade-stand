@@ -36,7 +36,8 @@
     "passport-local": "^1.0.0",
     "prettier": "^2.0.5",
     "react-bootstrap": "^1.3.0",
-    "react-strapmenu": "^0.1.2"
+    "react-strapmenu": "^0.1.2",
+    "square-connect": "^4.20200722.1"
   },
   "repository": {
     "type": "git",
