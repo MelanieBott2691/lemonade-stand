@@ -1,7 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-export default function Footer() {
-  return <div class="container">
-    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-  </div>;
+export default function Footer () {
+  return (
+    <div class='container'>
+      <p class='m-0 text-center text-white'>
+        Copyright &copy; Your Website 2020
+      </p>
+    </div>
+  )
 }

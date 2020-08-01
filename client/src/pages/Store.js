@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
 import Nav from '../components/Nav/Nav'
 import StoreItem from '../components/Store/StoreItem'
-import { Container, Row, Col, ListGroup, ListGroupItem, Card } from 'react-bootstrap'
+import {
+  Container,
+  Row,
+  Col,
+  ListGroup,
+  ListGroupItem,
+  Card
+} from 'react-bootstrap'
 import Footer from '../components/Footer/Footer'
 import Form from 'react-bootstrap/Form'
 
@@ -13,33 +20,24 @@ export default class Store extends Component {
         {/* <StoreItem /> */}
 
         <Container>
-
           <Row>
-
             <Col xs={6} md={4}>
-
-              <h1 class="my-4">Stand Name</h1>
+              <h1 class='my-4'>Stand Name</h1>
               <ListGroup>
-                <ListGroupItem href="#">Category 1</ListGroupItem>
-                <ListGroupItem href="#">Category 2</ListGroupItem>
-                <ListGroupItem href="#">Category 3</ListGroupItem>
+                <ListGroupItem href='#'>Category 1</ListGroupItem>
+                <ListGroupItem href='#'>Category 2</ListGroupItem>
+                <ListGroupItem href='#'>Category 3</ListGroupItem>
               </ListGroup>
-
             </Col>
 
             <Col xs={12} md={8}>
-    
-
-              <h1 class="my-4">What we STAND for!</h1>
+              <h1 class='my-4'>What we STAND for!</h1>
               <ListGroup>
-                <ListGroupItem href="#">Stand Description</ListGroupItem>
+                <ListGroupItem href='#'>Stand Description</ListGroupItem>
               </ListGroup>
-
             </Col>
-  
 
-            <Col md="auto">
-
+            <Col md='auto'>
               {/* <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -68,7 +66,6 @@ export default class Store extends Component {
     </div> */}
 
               <Row>
-
                 <Col lg={4} md={6} mb={4}>
                   <Card>
                     <Card.Img
@@ -77,13 +74,18 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href='#'>Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                      <p class='card-text'>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Amet numquam aspernatur!
+                      </p>
                     </Card.Body>
-                    <div class="card-footer">
-                      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                    <div class='card-footer'>
+                      <small class='text-muted'>
+                        &#9733; &#9733; &#9733; &#9733; &#9734;
+                      </small>
                     </div>
                   </Card>
                 </Col>
@@ -96,13 +98,18 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href='#'>Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                      <p class='card-text'>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Amet numquam aspernatur!
+                      </p>
                     </Card.Body>
-                    <div class="card-footer">
-                      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                    <div class='card-footer'>
+                      <small class='text-muted'>
+                        &#9733; &#9733; &#9733; &#9733; &#9734;
+                      </small>
                     </div>
                   </Card>
                 </Col>
@@ -115,13 +122,18 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href='#'>Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                      <p class='card-text'>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Amet numquam aspernatur!
+                      </p>
                     </Card.Body>
-                    <div class="card-footer">
-                      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                    <div class='card-footer'>
+                      <small class='text-muted'>
+                        &#9733; &#9733; &#9733; &#9733; &#9734;
+                      </small>
                     </div>
                   </Card>
                 </Col>
@@ -134,13 +146,18 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href='#'>Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                      <p class='card-text'>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Amet numquam aspernatur!
+                      </p>
                     </Card.Body>
-                    <div class="card-footer">
-                      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                    <div class='card-footer'>
+                      <small class='text-muted'>
+                        &#9733; &#9733; &#9733; &#9733; &#9734;
+                      </small>
                     </div>
                   </Card>
                 </Col>
@@ -153,13 +170,18 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href='#'>Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                      <p class='card-text'>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Amet numquam aspernatur!
+                      </p>
                     </Card.Body>
-                    <div class="card-footer">
-                      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                    <div class='card-footer'>
+                      <small class='text-muted'>
+                        &#9733; &#9733; &#9733; &#9733; &#9734;
+                      </small>
                     </div>
                   </Card>
                 </Col>
@@ -172,35 +194,28 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href='#'>Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                      <p class='card-text'>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Amet numquam aspernatur!
+                      </p>
                     </Card.Body>
-                    <div class="card-footer">
-                      <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                    <div class='card-footer'>
+                      <small class='text-muted'>
+                        &#9733; &#9733; &#9733; &#9733; &#9734;
+                      </small>
                     </div>
                   </Card>
                 </Col>
-
               </Row>
-    
-
             </Col>
-  
-
           </Row>
-
-
         </Container>
-
-
-
 
         <Footer />
       </>
-      
     )
-    
   }
 }
