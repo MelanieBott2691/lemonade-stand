@@ -1,14 +1,12 @@
-#modal {
-/* position: fixed; */
 
-  /* top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; */
-  /* background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--mainWhite); */
-}
-  
+Button.checkout-btn  {
+    border-radius: 30px;
+    width: 240px;
+    background-color: black;
+  }
+  Button.cancel-btn {
+    background-color: rgb(110, 32, 32);
+    /* border-color: rgb(110, 32, 32); */
+    color: whitesmoke;
+    border-radius: 30px;
+  }
