@@ -6,17 +6,49 @@ import PurchaseInfo from '../components/PurchaseInfo/PurchaseInfo';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Footer from '../components/Footer/Footer';
 
 export default class Profile extends Component {
   state = {
     user: {
       name: 'bobby',
-      email: 'stuff.com'
+      email: 'stuff.com',
     },
-    stores: [],
+    stores: [
+      {
+        _id: 12345,
+        name: 'Fun Store',
+        description: 'stuff',
+      },
+      {
+        _id: 12346,
+        name: 'Kids Store',
+        description: 'stuff2',
+      },
+      {
+        _id: 12347,
+        name: 'Best Store',
+        description: 'stuff2',
+      },
+      {
+        _id: 12345,
+        name: 'Fun Store',
+        description: 'stuff',
+      },
+      {
+        _id: 12346,
+        name: 'Kids Store',
+        description: 'stuff2',
+      },
+      {
+        _id: 12347,
+        name: 'Best Store',
+        description: 'stuff2',
+      },
+    ],
     purchases: [],
     inputSearch: '',
-    loggedIn: false
+    loggedIn: false,
   };
 
   render() {
@@ -25,21 +57,23 @@ export default class Profile extends Component {
         <Nav />
         <Container>
           <Row>
-            <Col>
+            <Col xl={true} lg={true} md={true} sm={true}>
               <UserInfo user={this.state.user} />
             </Col>
-          </Row>
-          <Row>
-            <Col>
-              <StoreInfo />
+            <Col md={1} xl={1}></Col>
+            <br></br>
+            <Col xl={true} lg={true} md={true} sm={true}>
+              <StoreInfo stores={this.state.stores} />
             </Col>
           </Row>
+          <br></br>
           <Row>
-            <Col>
+            <Col xl={12}>
               <PurchaseInfo />
             </Col>
           </Row>
         </Container>
+        <Footer />
       </>
     );
   }
