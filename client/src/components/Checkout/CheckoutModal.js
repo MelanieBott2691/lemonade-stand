@@ -3,8 +3,16 @@ import React from 'react';
 // import { ProductConsumer } from '../context'
 // import { ButtonContainer } from './Button'
 // import { Link } from 'react-router-dom'
-// import { Modal } from 'react-bootstrap'
-import { Modal, Button, ListGroup, Card, Row } from 'react-bootstrap';
+import RadioButton from './RadioButton';
+import {
+  Modal,
+  Button,
+  ListGroup,
+  Card,
+  Row,
+  Col,
+  Container
+} from 'react-bootstrap';
 import './CheckoutModal.css';
 
 // import React, { Component } from 'react'
@@ -29,6 +37,13 @@ class CheckoutModal extends React.Component {
         <Modal show={this.state.showHide}>
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
             <Modal.Title>How You'll Pay</Modal.Title>
+            <Container>
+              <Row>
+                <Col>
+                  <RadioButton />
+                </Col>
+              </Row>
+            </Container>
           </Modal.Header>
           <Modal.Body className="modal-container">
             <Card.Body>
