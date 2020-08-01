@@ -1,4 +1,8 @@
  .d-block {
-    height: 600px;
-    background-color: rgba(10,10,10,0.3);
+    opacity: 0.8;
+}
+
+.carouselSize {
+    height: 255px;
+    /* width: auto; */
 }
