@@ -3,6 +3,11 @@ import API from '../utils/API';
 import Nav from '../components/Nav/Nav.js';
 import Results from '../components/Results/Results.js';
 import Carouselbanner from '../components/Carousel/Carousel.js';
+import {
+  Container,
+  Row,
+  Col
+} from 'react-bootstrap';
 
 import Footer from '../components/Footer/Footer.js'
 
@@ -45,8 +50,15 @@ export default class Home extends Component {
           inputSearch={this.state.inputSearch}
         />
         <br></br>
-        <Carouselbanner />
-        <Results data={this.state.data} />
+        <Container >
+          <Row>
+            <Col xl={12}>
+              <Carouselbanner />
+              <br></br>
+              <Results data={this.state.data} />
+            </Col>
+          </Row>
+        </Container>
         <Footer />
       </div>
     );
