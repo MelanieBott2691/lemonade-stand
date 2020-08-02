@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Card, CardDeck } from 'react-bootstrap';
-import Navbar from '../components/Nav/Nav';
+import { Card } from 'react-bootstrap';
+import Nav from '../components/Nav/Nav';
 import Footer from '../components/Footer/Footer.js';
 import '../assets/css/style.css';
-import '../assets/css/Contact.css';
 
 export default class Contact extends Component {
   state = {
@@ -18,13 +17,14 @@ export default class Contact extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <div className="contact-container">
-          <form>
-            <CardDeck>
-              <Card style={{ width: '24rem' }}>
-                <div className="container">
-                  <Card.Body>
+        <Nav />
+        <Card>
+          <div className="contact-container">
+            <form>
+              <div className="container">
+                {/* <Card.Header>Send us a Message</Card.Header> */}
+                <Card.Body>
+                  <Card.Text>
                     <div className="form-group">
                       <label for="exampleFormControlInput1">First Name:</label>
                       <input
@@ -68,12 +68,13 @@ export default class Contact extends Component {
                         </button>
                       </div>
                     </div>
-                  </Card.Body>
-                </div>
-              </Card>
-            </CardDeck>
-          </form>
-        </div>
+                  </Card.Text>
+                </Card.Body>
+              </div>
+            </form>
+          </div>
+        </Card>
+        <br></br>
         <Footer />
       </div>
     );
