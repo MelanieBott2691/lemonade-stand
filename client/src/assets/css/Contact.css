@@ -1,0 +1,11 @@
+.contact-container {
+    /* background-color: pink  ; */
+    background-image: url('../images/purpleLGstand.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+   
+    
+}
+.contact-container img {
+    opacity: 0.5;
+}
