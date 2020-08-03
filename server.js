@@ -2,10 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const app = express();
+const bodyParser = require('body-parser');
 const routes = require('./routes');
-const session = require('express-session');
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
 
 const PORT = process.env.PORT || 3001;
 
@@ -17,21 +16,22 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 
+// Bodyparser middleware
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+);
+app.use(bodyParser.json());
+
 // Use apiRoutes
 app.use(routes);
 
-// Use Session
-app.use(
-  session({
-    secret: 'secret',
-    saveUninitialized: true,
-    resave: true
-  })
-);
-
 //Use Passport
 app.use(passport.initialize());
-app.use(passport.session());
+
+// Passport config
+require('./config/passport')(passport);
 
 // Send every request to the React app
 // Define any API routes before this runs
