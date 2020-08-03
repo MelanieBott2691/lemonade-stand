@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
+import './ShoppingCart.css';
 
 import CheckoutModal from '../Checkout/CheckoutModal';
 import { Form, Row, Col, Card, Table } from 'react-bootstrap';
@@ -9,11 +10,11 @@ export default class ShoppingCart extends Component {
     return (
       <>
         <Nav />
-        <Card>
+        <Card variant="outlined" className="shoppingCart-container">
           <Card.Header>My Shopping Cart</Card.Header>
-          <Table striped bordered hover>
+          <Table striped bordered hover size="sm" className="center">
             <thead>
-              <tr>
+              <tr className="table-row">
                 <th>Product</th>
                 <th>Price</th>
                 <th>Qauntity</th>
@@ -21,7 +22,7 @@ export default class ShoppingCart extends Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr className="table-row">
                 <td>{}</td>
                 <td>{}</td>
                 <td>
@@ -48,7 +49,7 @@ export default class ShoppingCart extends Component {
                 </td>
                 <td>{}</td>
               </tr>
-              <tr>
+              <tr className="table-row">
                 <td>{}</td>
                 <td>{}</td>
                 <td>
@@ -75,7 +76,7 @@ export default class ShoppingCart extends Component {
                 </td>
                 <td>{}</td>
               </tr>
-              <tr>
+              <tr className="table-row">
                 <td>{}</td>
                 <td>{}</td>
                 <td>
@@ -102,7 +103,7 @@ export default class ShoppingCart extends Component {
                 </td>
                 <td>{}</td>
               </tr>
-              <tr>
+              <tr className="table-row">
                 <td>{}</td>
                 <td>{}</td>
                 <td>
