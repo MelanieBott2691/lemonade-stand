@@ -1,8 +1,4 @@
 import React from 'react';
-// import styled from 'styled-components'
-// import { ProductConsumer } from '../context'
-// import { ButtonContainer } from './Button'
-// import { Link } from 'react-router-dom'
 import RadioButton from './RadioButton';
 import {
   Modal,
@@ -14,8 +10,6 @@ import {
   Container
 } from 'react-bootstrap';
 import './CheckoutModal.css';
-
-// import React, { Component } from 'react'
 
 class CheckoutModal extends React.Component {
   constructor() {
@@ -54,7 +48,7 @@ class CheckoutModal extends React.Component {
               <ListGroup>
                 <Row>Item(s) total: ${} </Row>
                 <Row>Quantity total: {} </Row>
-                <hr></hr>
+                <hr />
                 <Row>
                   Total ({}item(s)) ${}
                 </Row>
