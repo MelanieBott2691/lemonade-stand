@@ -24,3 +24,37 @@
 .contact-form button:focus{
     box-shadow:none;
 } 
+
+/* About Page */
+.contact-container {
+    /* background-color: pink  ; */
+    /* background-image: url('../images/purpleLGstand.png'); */
+    /* background-image: url('../images/purpleLGstand.png'); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: ;
+   
+    
+}
+.contact-container img {
+    opacity: 0.5;
+}
+.text-muted {
+    text-align: right;
+}
+.platform-container{
+    background-color: rgb(67, 67, 116, 0.2);
+    /* opacity: .1;
+    color: black; */
+}
+.bottom-container {
+    background-color: rgb(67, 67, 116, 0.5);
+    color: black;
+    /* opacity: .1; */
+}
+
+/* CART */
+.checkoutModal {
+    align-items: center;
+    background-color: green;
+}

@@ -1,56 +1,18 @@
 import React, { Component } from 'react';
-import Nav from '../components/Nav/Nav';
-import CartResults from '../components/CartResults/CartResults';
-import CheckoutModal from '../components/Checkout/CheckoutModal';
+import Nav from '../Nav/Nav';
+
+import CheckoutModal from '../Checkout/CheckoutModal';
 import { Form, Row, Col, Card } from 'react-bootstrap';
-import '../assets/css/style.css';
 
-export default class Cart extends Component {
-  state = {
-    data: [
-      {
-        id: 1,
-        name: 'test1',
-        price: 47.0
-      },
-      {
-        id: 2,
-        name: 'test2',
-        price: 54.0
-      },
-      {
-        id: 3,
-        name: 'test3',
-        price: 24.0
-      },
-      {
-        id: 4,
-        name: 'test4',
-        price: 14.0
-      },
-      {
-        id: 5,
-        name: 'test5',
-        price: 53.0
-      }
-    ],
-    inputSearch: ''
-  };
-
+export default class ShoppingCart extends Component {
   render() {
     return (
       <>
         <Nav />
         <Card>
-          <Form show={this.state.data}>
+          <Form>
             <Form.Row className="align-items-center">
               <Col xs="auto" className="my-1">
-                {/* <Form.Label
-                  className="mr-sm-2"
-                  htmlFor="inlineFormCustomSelect"
-                  srOnly>
-                  Preference
-                </Form.Label> */}
                 <Form.Control
                   as="select"
                   className="mr-sm-2"
@@ -70,17 +32,6 @@ export default class Cart extends Component {
                   <option value="other">Other (add in notes)</option>
                 </Form.Control>
               </Col>
-              {/* <Col xs="auto" className="my-1">
-                <Form.Check
-                  type="checkbox"
-                  id="customControlAutosizing"
-                  label="Remember my preference"
-                  custom
-                />
-              </Col>
-              <Col xs="auto" className="my-1">
-                <Button type="submit">Submit</Button>
-              </Col> */}
             </Form.Row>
           </Form>
         </Card>
@@ -117,8 +68,6 @@ export default class Cart extends Component {
           </Form>
           <CheckoutModal />
         </Card>
-
-        <CartResults data={this.state.data} />
       </>
     );
   }

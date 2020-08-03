@@ -1,8 +1,4 @@
 import React from 'react';
-// import styled from 'styled-components'
-// import { ProductConsumer } from '../context'
-// import { ButtonContainer } from './Button'
-// import { Link } from 'react-router-dom'
 import RadioButton from './RadioButton';
 import {
   Modal,
@@ -14,8 +10,6 @@ import {
   Container
 } from 'react-bootstrap';
 import './CheckoutModal.css';
-
-// import React, { Component } from 'react'
 
 class CheckoutModal extends React.Component {
   constructor() {
@@ -30,19 +24,29 @@ class CheckoutModal extends React.Component {
   render() {
     return (
       <div>
-        <Button variant="primary" onClick={() => this.handleModalShowHide()}>
+        <Button
+          id="checkoutModal"
+          style={{
+            justifyContent: 'center',
+            display: 'flex',
+            alignItems: 'center'
+          }}
+          onClick={() => this.handleModalShowHide()}>
           Checkout
         </Button>
 
         <Modal show={this.state.showHide}>
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
-            <Modal.Title>How You'll Pay</Modal.Title>
             <Container>
-              <Row>
-                <Col>
-                  <RadioButton />
-                </Col>
-              </Row>
+              <Col>
+                <Row>
+                  <Modal.Title>How You'll Pay</Modal.Title>
+                </Row>
+              </Col>
+
+              <Col>
+                <RadioButton />
+              </Col>
             </Container>
           </Modal.Header>
           <Modal.Body className="modal-container">
@@ -51,7 +55,7 @@ class CheckoutModal extends React.Component {
               <ListGroup>
                 <Row>Item(s) total: ${} </Row>
                 <Row>Quantity total: {} </Row>
-                <hr></hr>
+                <hr />
                 <Row>
                   Total ({}item(s)) ${}
                 </Row>

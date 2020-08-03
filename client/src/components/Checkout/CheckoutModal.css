@@ -10,3 +10,7 @@ Button.checkout-btn  {
     color: whitesmoke;
     border-radius: 30px;
   }
+  #checkoutModal {
+    background-color: purple;
+    justify-content: center;
+  }
