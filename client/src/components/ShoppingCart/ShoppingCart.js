@@ -10,6 +10,7 @@ export default class ShoppingCart extends Component {
     return (
       <>
         <Nav />
+        <br />
         <Card variant="outlined" className="shoppingCart-container">
           <Card.Header>My Shopping Cart</Card.Header>
           <Table striped bordered hover size="sm" className="center">
@@ -133,6 +134,7 @@ export default class ShoppingCart extends Component {
             </tbody>
           </Table>
         </Card>
+        <br />
         {/* <Card> */}
         {/* <Form>
             <Form.Row className="align-items-center">

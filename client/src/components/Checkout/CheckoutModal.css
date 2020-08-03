@@ -11,6 +11,13 @@ Button.checkout-btn  {
     border-radius: 30px;
   }
   #checkoutModal {
-    background-color: purple;
+    background-color: rebeccapurple;
     justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
   }

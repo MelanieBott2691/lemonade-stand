@@ -32,8 +32,9 @@ class CheckoutModal extends React.Component {
             alignItems: 'center'
           }}
           onClick={() => this.handleModalShowHide()}>
-          Checkout
+          Review for Checkout
         </Button>
+        <br />
 
         <Modal show={this.state.showHide}>
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
