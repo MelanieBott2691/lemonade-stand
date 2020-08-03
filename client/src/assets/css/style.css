@@ -52,3 +52,9 @@
     color: black;
     /* opacity: .1; */
 }
+
+/* CART */
+.checkoutModal {
+    align-items: center;
+    background-color: green;
+}

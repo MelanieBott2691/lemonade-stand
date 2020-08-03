@@ -24,7 +24,14 @@ class CheckoutModal extends React.Component {
   render() {
     return (
       <div>
-        <Button variant="primary" onClick={() => this.handleModalShowHide()}>
+        <Button
+          id="checkoutModal"
+          style={{
+            justifyContent: 'center',
+            display: 'flex',
+            alignItems: 'center'
+          }}
+          onClick={() => this.handleModalShowHide()}>
           Checkout
         </Button>
 

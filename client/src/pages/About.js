@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Nav from '../components/Nav/Nav';
 import Footer from '../components/Footer/Footer';
 import '../assets/css/style.css';
-import Button from 'react-bootstrap/Button';
 import { Container, Row, CardDeck, Card } from 'react-bootstrap';
 
 export default class About extends Component {

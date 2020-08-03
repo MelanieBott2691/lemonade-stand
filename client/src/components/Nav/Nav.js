@@ -109,6 +109,9 @@ class Navigation extends React.Component {
               <a className="dropdown-item" href="/cart">
                 Cart
               </a>
+              <a className="dropdown-item" href="/shoppingcart">
+                Shopping Cart
+              </a>
             </NavDropdown>
           </ul>
           {/* Search Bar */}
