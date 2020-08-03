@@ -33,7 +33,7 @@ export default class ShoppingCart extends Component {
                       className="mr-sm-2"
                       id="inlineFormCustomSelect"
                       custom>
-                      <option value="0">Choose Qauntity...</option>
+                      <option value="0">Qty...</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -60,7 +60,7 @@ export default class ShoppingCart extends Component {
                       className="mr-sm-2"
                       id="inlineFormCustomSelect"
                       custom>
-                      <option value="0">Choose Qauntity...</option>
+                      <option value="0">Qty...</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -87,7 +87,7 @@ export default class ShoppingCart extends Component {
                       className="mr-sm-2"
                       id="inlineFormCustomSelect"
                       custom>
-                      <option value="0">Choose Qauntity...</option>
+                      <option value="0">Qty...</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -114,7 +114,7 @@ export default class ShoppingCart extends Component {
                       className="mr-sm-2"
                       id="inlineFormCustomSelect"
                       custom>
-                      <option value="0">Choose Qauntity...</option>
+                      <option value="0">Qty...</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
