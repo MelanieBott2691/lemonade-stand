@@ -22,8 +22,12 @@ Button.checkout-btn  {
     border-radius: 8px;
   }
   .card-image {
-    background-image: url("../../assets/images/purpleLGstand.png");
+    /* background-image: url("../../assets/images/purpleLGstand.png"); */
     background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
   
   }
                   

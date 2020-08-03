@@ -9,6 +9,7 @@ import {
   Col,
   Container
 } from 'react-bootstrap';
+import header from '../../assets/images/purpleLGstand.png';
 import './CheckoutModal.css';
 
 class CheckoutModal extends React.Component {
@@ -36,16 +37,26 @@ class CheckoutModal extends React.Component {
         </Button>
         <br />
 
-        <Modal show={this.state.showHide}>
+        <Modal id="modal" show={this.state.showHide} className="modal-checkout">
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
             <Container>
               <Col>
                 <Row>
-                  <Card.Img
+                  <img
+                    src={header}
+                    alt="header image"
                     variant="top"
+                    height={200}
+                    width={400}
                     className="card-image"
-                    src="../../assets/images/purpleLGstand.png"></Card.Img>
+                  />
                   <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <hr />
                   <Modal.Title>How You'll Pay</Modal.Title>
                 </Row>
               </Col>
