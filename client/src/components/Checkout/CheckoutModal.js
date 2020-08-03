@@ -41,6 +41,11 @@ class CheckoutModal extends React.Component {
             <Container>
               <Col>
                 <Row>
+                  <Card.Img
+                    variant="top"
+                    className="card-image"
+                    src="../../assets/images/purpleLGstand.png"></Card.Img>
+                  <br></br>
                   <Modal.Title>How You'll Pay</Modal.Title>
                 </Row>
               </Col>
