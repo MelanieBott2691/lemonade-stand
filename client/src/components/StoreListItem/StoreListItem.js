@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-export default class Item extends React.Component {
+
+export default class StoreListItem extends React.Component {
   render() {
     return (
       <Card>
@@ -11,11 +12,9 @@ export default class Item extends React.Component {
         />
         <Card.Body>
           <Card.Title>{this.props.name}</Card.Title>
-          <Card.Title>Price:{this.props.price}</Card.Title>
-          <Card.Title>id:{this.props._id}</Card.Title>
-          <Button href="#">
-            Add to Cart
-          </Button> <Button href="#">Store</Button>{' '}
+          <Button href="#" block size="sm">
+            Edit Stand
+          </Button>
         </Card.Body>
       </Card>
     );
