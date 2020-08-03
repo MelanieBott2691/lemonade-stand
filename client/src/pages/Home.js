@@ -3,19 +3,15 @@ import API from '../utils/API';
 import Nav from '../components/Nav/Nav.js';
 import Results from '../components/Results/Results.js';
 import Carouselbanner from '../components/Carousel/Carousel.js';
-import {
-  Container,
-  Row,
-  Col
-} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
-import Footer from '../components/Footer/Footer.js'
+import Footer from '../components/Footer/Footer.js';
 
 export default class Home extends Component {
   state = {
     data: [],
     isLoggedIn: false,
-    inputSearch: ''
+    inputSearch: '',
   };
 
   componentDidMount() {
@@ -28,7 +24,7 @@ export default class Home extends Component {
   handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -50,7 +46,7 @@ export default class Home extends Component {
           inputSearch={this.state.inputSearch}
         />
         <br></br>
-        <Container >
+        <Container>
           <Row>
             <Col xl={12}>
               <Carouselbanner />
