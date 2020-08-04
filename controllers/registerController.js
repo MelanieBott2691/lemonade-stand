@@ -1,6 +1,5 @@
 const db = require('../models');
 const validateRegisterInput = require('../validation/register');
-const validateLoginInput = require('../validation/login');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const keys = require('../config/keys');
