@@ -5,6 +5,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const routes = require('./routes');
 const passport = require('passport');
+const mongoURI = require('./config/keys').mongoURI;
 
 const PORT = process.env.PORT || 3001;
 
@@ -39,13 +40,10 @@ app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
 
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/lemonadestand',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  }
-);
+mongoose.connect(process.env.MONGODB_URI || mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 app.listen(PORT, function () {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
