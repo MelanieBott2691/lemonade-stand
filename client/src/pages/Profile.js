@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Footer from '../components/Footer/Footer';
+import NewStore from '../components/NewStore/NewStore';
 
 export default class Profile extends Component {
   state = {
