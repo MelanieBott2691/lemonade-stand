@@ -1,42 +1,7 @@
 const router = require('express').Router();
-const itemsController = require('../../controllers/itemsController');
+const registerController = require('../../controllers/registerController');
 
 // Matches with "/api/register"
-router.route('/').post(itemsController.create);
-
-router.post('/register', (req, res) => {
-  // Form validation
-
-  const { errors, isValid } = validateRegisterInput(req.body);
-
-  // Check validation
-  if (!isValid) {
-    return res.status(400).json(errors);
-  }
-
-  User.findOne({ email: req.body.email }).then((user) => {
-    if (user) {
-      return res.status(400).json({ email: 'Email already exists' });
-    } else {
-      const newUser = new User({
-        name: req.body.name,
-        email: req.body.email,
-        password: req.body.password
-      });
-
-      // Hash password before saving in database
-      bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newUser.password, salt, (err, hash) => {
-          if (err) throw err;
-          newUser.password = hash;
-          newUser
-            .save()
-            .then((user) => res.json(user))
-            .catch((err) => console.log(err));
-        });
-      });
-    }
-  });
-});
+router.route('/').post(registerController.registerUser);
 
 module.exports = router;
