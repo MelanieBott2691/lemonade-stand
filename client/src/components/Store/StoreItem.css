@@ -7,3 +7,10 @@
     margin-left: 10px;
     align-content: flex-start;
 }
+#x-btn {
+    align-content: flex-start;
+    align-items: right;
+    justify-content: right;
+    margin: 0 auto;
+    margin-left: auto;
+}

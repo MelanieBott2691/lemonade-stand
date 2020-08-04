@@ -4,6 +4,8 @@ import StoreListItem from '../StoreListItem/StoreListItem.js';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import CardColumns from 'react-bootstrap/CardColumns';
+import '../NewStore/NewStore.js';
+import NewStore from '../NewStore/NewStore.js';
 // import logo from '../StoreInfo/logo.png'
 
 export default class StoreInfo extends React.Component {
@@ -17,7 +19,8 @@ export default class StoreInfo extends React.Component {
               <StoreListItem key={store._id} {...store} />
             ))}
           </CardColumns>
-          <Button href="/createstore">Create New Stand</Button>{' '}
+          {/* <Button href="#">Create New Stand</Button>{' '} */}
+          <NewStore />
         </Card.Body>
       </Card>
     );
