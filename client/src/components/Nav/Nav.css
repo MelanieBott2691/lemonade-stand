@@ -6,6 +6,7 @@
   height: 150px;
   position: relative;
   color: white;
+  box-shadow: 2px 2px 5px black;
     /* max-width: 100%;
     height: 120px;
     display: flex; */
@@ -39,6 +40,7 @@ img.nav-image {
     vertical-align: middle;
     display: flex;
     padding-left: 10px;
+    text-shadow: 2px 2px 3px black;
 
 }
 .nav-link {
@@ -49,4 +51,15 @@ img.nav-image {
 button.btn {
   border-color: white;
   color: white;
+  box-shadow: 2px 2px 2px black;
+}
+.navbar-nav a {
+  
+}
+a.nav-link {
+  text-shadow: 2px 2px 3px black;
+}
+
+input.form-control {
+  box-shadow: 2px 2px 3px black;
 }
