@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { registerUser } from '../actions/authActions';
 import Nav from '../components/Nav/Nav';
 import RegisterForm from '../components/RegisterForm/RegisterForm';
 
-export default class Register extends Component {
+class Register extends Component {
   state = {
     firstName: '',
     lastName: '',
@@ -15,34 +19,43 @@ export default class Register extends Component {
     errors: {}
   };
 
-  handleInputChange = (event) => {
+  componentDidMount() {
+    // If logged in and user navigates to Register page, should redirect them to dashboard
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push('/');
+    }
+  }
+
+  getDerivedStateFromProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
+  }
+
+  onChange = (event) => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
+    console.log(this.state);
   };
 
-  handleRegistration = (event) => {
-    event.preventDefault();
+  onSubmit = (e) => {
+    e.preventDefault();
+
     const newUser = {
-      userName: this.state.userName,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
+      userName: this.state.userName,
       imageUrl: this.state.imageUrl,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2
     };
-    API.register(newUser)
-      .then((res) => {
-        this.setState({ data: res.data });
-        this.alert(res);
-      })
-      .catch((err) => console.log(this.state.errors));
-  };
 
-  alert = (response) => {
-    console.log(response);
+    this.props.registerUser(newUser, this.props.history);
   };
 
   render() {
@@ -52,8 +65,8 @@ export default class Register extends Component {
       <>
         <Nav />
         <RegisterForm
-          handleRegistration={this.handleRegistration}
-          handleInputChange={this.handleInputChange}
+          onSubmit={this.onSubmit}
+          onChange={this.onChange}
           data={this.state}
           errors={errors}
         />
@@ -61,3 +74,16 @@ export default class Register extends Component {
     );
   }
 }
+
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  errors: state.errors
+});
+
+export default connect(mapStateToProps, { registerUser })(withRouter(Register));
