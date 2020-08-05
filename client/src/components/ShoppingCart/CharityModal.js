@@ -9,7 +9,7 @@ import {
   Col,
   Container
 } from 'react-bootstrap';
-import header from '../../assets/images/purpleLGstand.png';
+import charity from '../../assets/images/charity.png';
 // import './CheckoutModal.css';
 
 class CharityModal extends React.Component {
@@ -43,7 +43,7 @@ class CharityModal extends React.Component {
               <Col>
                 <Row>
                   <img
-                    src={header}
+                    src={charity}
                     alt="header image"
                     variant="top"
                     height={200}
@@ -57,7 +57,7 @@ class CharityModal extends React.Component {
                   <br></br>
                   <br></br>
                   <hr />
-                  <Modal.Title>Choose a Charity</Modal.Title>
+                  <Modal.Title></Modal.Title>
                 </Row>
               </Col>
             </Container>
@@ -65,7 +65,8 @@ class CharityModal extends React.Component {
 
           <Modal.Body className="modal-container">
             <Card.Body>
-              <Card.Title></Card.Title>
+              <Card.Title>Choose a Charity To Donate To:</Card.Title>
+              <br />
               <Row>
                 <Col>
                   <Form>
@@ -151,17 +152,17 @@ class CharityModal extends React.Component {
             </Card.Body>
           </Modal.Body>
           <Modal.Footer>
-            <Button
+            {/* <Button
               className="cancel-btn"
               variant="secondary"
               onClick={() => this.handleModalShowHide()}>
               Cancel
-            </Button>
+            </Button> */}
             <Button
               className="checkout-btn"
               variant="primary"
               onClick={() => this.handleModalShowHide()}>
-              Proceed to checkout
+              Return to Complete Checkout
             </Button>
           </Modal.Footer>
         </Modal>
