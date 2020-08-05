@@ -39,9 +39,9 @@ class NavDropdown extends React.Component {
       'dropdown-menu' + (this.state.isToggleOn ? ' show' : '');
     return (
       <li className="nav-item dropdown">
-        <a
+        <Link
           className="nav-link dropdown-toggle"
-          href="/"
+          to="/"
           id="navbarDropdown"
           role="button"
           data-toggle="dropdown"
@@ -51,7 +51,7 @@ class NavDropdown extends React.Component {
             this.showDropdown(e);
           }}>
           {this.props.name}
-        </a>
+        </Link>
         <div className={classDropdownMenu} aria-labelledby="navbarDropdown">
           {this.props.children}
         </div>

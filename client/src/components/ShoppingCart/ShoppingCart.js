@@ -4,7 +4,7 @@ import './ShoppingCart.css';
 
 import CheckoutModal from '../Checkout/CheckoutModal';
 import { Form, Row, Col, Card, Table } from 'react-bootstrap';
-import CharitySelector from './CharitySelector';
+import CharityModal from '../ShoppingCart/CharityModal';
 
 export default class ShoppingCart extends Component {
   render() {
@@ -136,29 +136,38 @@ export default class ShoppingCart extends Component {
           </Table>
         </Card>
         <br />
-        <Card>
-          <Form>
-            <Form.Row className="align-items-center">
-              <Col xs="auto" className="my-1">
-                <Form.Control
-                  as="select"
-                  className="mr-sm-2"
-                  id="inlineFormCustomSelect"
-                  custom>
-                  <CharitySelector />
 
-                  <div className="testing-container">
-                    <button type="button" onClick={() => this.handleClick('/')}>
-                      Red Cross
-                    </button>
-                    <div className="test">Test</div>
-                  </div>
-                </Form.Control>
-              </Col>
-            </Form.Row>
-          </Form>
-        </Card>
         <Card>
+          <br></br>
+          <Form>
+            <Row>
+              <Col>
+                <CharityModal />
+                {/* <Form.Group controlId="exampleForm.SelectCustom">
+                  <Form.Label>Select Charity</Form.Label>
+                  <Form.Control as="select" custom>
+                    <option>
+                      Red Cross<a href="redcross.org"></a>
+                    </option>
+                    <option>Best Friends Animal Society</option>
+                    <option>Make A Wish</option>
+                    <option>Habitat for Humanity</option>
+                    <option>Local Charity</option>
+
+                    <div className="testing-container">
+                      <button
+                        type="button"
+                        onClick={() => this.handleClick('/')}>
+                        Red Cross
+                      </button>
+                      <div className="test">Test</div>
+                    </div>
+                  </Form.Control>
+                </Form.Group> */}
+              </Col>
+            </Row>
+          </Form>
+
           <Form>
             <Row>
               <Col>
