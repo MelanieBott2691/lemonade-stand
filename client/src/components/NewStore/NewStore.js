@@ -32,7 +32,9 @@ class NewStore extends React.Component {
           show={this.state.showHide}
           style={{ display: 'flex', justifyContent: 'center' }}>
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
-            <Modal.Title>Create Your Stand!</Modal.Title>
+            <Modal.Title className="modal-title">
+              Create Your Stand!
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body className="modal-container">
             <Container>
@@ -56,7 +58,7 @@ class NewStore extends React.Component {
                         label="Upload an Image for your Stand"
                       />
                     </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlSelect1">
+                    {/* <Form.Group controlId="exampleForm.ControlSelect1">
                       <Form.Label>Example select</Form.Label>
                       <Form.Control as="select">
                         <option>1</option>
@@ -75,7 +77,7 @@ class NewStore extends React.Component {
                         <option>4</option>
                         <option>5</option>
                       </Form.Control>
-                    </Form.Group>
+                    </Form.Group> */}
                     <Form.Group controlId="exampleForm.ControlTextarea1">
                       <Form.Label>Stand Description</Form.Label>
                       <Form.Control
