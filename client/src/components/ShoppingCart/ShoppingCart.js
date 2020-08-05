@@ -5,6 +5,7 @@ import './ShoppingCart.css';
 import CheckoutModal from '../Checkout/CheckoutModal';
 import { Form, Row, Col, Card, Table } from 'react-bootstrap';
 import CharityModal from '../ShoppingCart/CharityModal';
+// import CurrencyInput from 'react-currency-input-field';
 
 export default class ShoppingCart extends Component {
   render() {
@@ -25,8 +26,20 @@ export default class ShoppingCart extends Component {
             </thead>
             <tbody>
               <tr className="table-row">
-                <td>{}</td>
-                <td>{}</td>
+                <td>Charity (Select Below)</td>
+
+                <td>
+                  <input
+                    id="input-example"
+                    name="input-name"
+                    placeholder="$ 00.00"
+                    // defaultValue={1.0}
+                    allowDecimals={true}
+                    decimalsLimit={2}
+                    onChange={(value, name) => console.log(value, name)}
+                  />
+                </td>
+
                 <td>
                   {
                     <Form.Control
@@ -49,7 +62,7 @@ export default class ShoppingCart extends Component {
                     </Form.Control>
                   }
                 </td>
-                <td>{}</td>
+                <td>${}</td>
               </tr>
               <tr className="table-row">
                 <td>{}</td>

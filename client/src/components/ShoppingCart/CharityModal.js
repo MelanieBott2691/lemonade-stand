@@ -10,7 +10,7 @@ import {
   Container
 } from 'react-bootstrap';
 import charity from '../../assets/images/charity.png';
-// import './CheckoutModal.css';
+import './CharityModal.css';
 
 class CharityModal extends React.Component {
   constructor() {
@@ -26,14 +26,14 @@ class CharityModal extends React.Component {
     return (
       <div>
         <Button
-          id="checkoutModal"
+          id="charityModal"
           style={{
             justifyContent: 'center',
             display: 'flex',
             alignItems: 'center'
           }}
           onClick={() => this.handleModalShowHide()}>
-          Review for Checkout
+          Select a Charity
         </Button>
         <br />
 
