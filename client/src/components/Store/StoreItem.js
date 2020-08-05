@@ -13,7 +13,11 @@ export default function StoreItem() {
       <Nav />
       <div>
         <Container>
-          <Button className="cancel-btn" variant="secondary" onClick="/home">
+          <Button
+            id="x-btn"
+            className="cancel-btn"
+            variant="secondary"
+            onClick="/home">
             X
           </Button>
           <Row>
@@ -42,12 +46,13 @@ export default function StoreItem() {
                 <span className="text-warning">
                   &#9733; &#9733; &#9733; &#9733; &#9734;
                 </span>
-                4.0 stars
+                4.0 reached goal
               </Card.Body>
             </Card>
           </CardDeck>
+          <br></br>
           <Card className="reviews-card">
-            <Card.Header>Product Reviews</Card.Header>
+            <Card.Header>Charitable Contributions</Card.Header>
             <Card.Body>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
