@@ -1,6 +1,7 @@
 import './Nav.css';
 import logo from '../Nav/logo.png';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavItem = (props) => {
   const pageURI = window.location.pathname + window.location.search;
@@ -90,28 +91,28 @@ class Navigation extends React.Component {
             <NavItem id="navitem" path="/" name="Home" />
             <NavItem id="navitem" path="/about" name="About" />
             <NavDropdown id="navitem" name="Menu">
-              <a className="dropdown-item" href="/login">
+              <Link to="/login" className="dropdown-item">
                 Sign In
-              </a>
-              <a className="dropdown-item" href="/register">
+              </Link>
+              <Link className="dropdown-item" to="/register">
                 Register
-              </a>
-              <a className="dropdown-item" href="/profile">
+              </Link>
+              <Link className="dropdown-item" to="/profile">
                 Profile
-              </a>
-              <a className="dropdown-item" href="/contact">
+              </Link>
+              <Link className="dropdown-item" to="/contact">
                 Contact
-              </a>
-              <a className="dropdown-item" href="/storeitem">
+              </Link>
+              <Link className="dropdown-item" to="/storeitem">
                 TestItem
-              </a>
+              </Link>
               <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="/cart">
+              <Link className="dropdown-item" to="/cart">
                 Cart
-              </a>
-              <a className="dropdown-item" href="/shoppingcart">
+              </Link>
+              <Link className="dropdown-item" to="/shoppingcart">
                 Shopping Cart
-              </a>
+              </Link>
             </NavDropdown>
           </ul>
           {/* Search Bar */}

@@ -4,6 +4,7 @@ import './ShoppingCart.css';
 
 import CheckoutModal from '../Checkout/CheckoutModal';
 import { Form, Row, Col, Card, Table } from 'react-bootstrap';
+import CharitySelector from './CharitySelector';
 
 export default class ShoppingCart extends Component {
   render() {
@@ -135,8 +136,8 @@ export default class ShoppingCart extends Component {
           </Table>
         </Card>
         <br />
-        {/* <Card> */}
-        {/* <Form>
+        <Card>
+          <Form>
             <Form.Row className="align-items-center">
               <Col xs="auto" className="my-1">
                 <Form.Control
@@ -144,23 +145,19 @@ export default class ShoppingCart extends Component {
                   className="mr-sm-2"
                   id="inlineFormCustomSelect"
                   custom>
-                  <option value="0">Choose Qauntity...</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="other">Other (add in notes)</option>
+                  <CharitySelector />
+
+                  <div className="testing-container">
+                    <button type="button" onClick={() => this.handleClick('/')}>
+                      Red Cross
+                    </button>
+                    <div className="test">Test</div>
+                  </div>
                 </Form.Control>
               </Col>
             </Form.Row>
           </Form>
-        </Card> */}
+        </Card>
         <Card>
           <Form>
             <Row>

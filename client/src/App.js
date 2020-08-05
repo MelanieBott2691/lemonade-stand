@@ -29,6 +29,7 @@ function App() {
           <Route exact path="/createstore" component={CreateStore} />
           <Route exact path="/storeitem" component={StoreItem} />
           <Route exact path="/storetest" component={Store} />
+
           <Footer />
           {/* <Route exact path="/books/:id" component={Detail} /> */}
           {/* <Route component={NoMatch} /> */}
