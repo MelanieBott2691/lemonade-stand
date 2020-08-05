@@ -92,16 +92,4 @@ class EditStandModal extends React.Component {
 
 export default EditStandModal;
 
-// <div class="form-row">
-//           <div class="form-group col-md-6">
-//             <label for="item-name"></label>
-//             <input type="text" class="block" id="item-name" class="form-control" aria-describedby="item-name"
-//             placeholder="Add item">
-//           </div>
-//           <div class="form-group col-md-6">
-//             <label for="item-price"></label>
-//             <input type="text" class="block" id="item-price" class="form-control" aria-describedby="item-price"
-//             placeholder="Add price per">
-//           </div>
-//         </div>
-//         <button id="submit" class="btn btn-secondary float-center">Add</button>
+
