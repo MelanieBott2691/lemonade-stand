@@ -1,0 +1,26 @@
+.shoppingCart-container {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    width: 500;
+    align-content: center;
+    /* justify-content: center; */
+    /* margin-left: 10%; */
+    /* margin-right: 50%; */
+    float: center;
+    /* display: inline-block; */
+}
+#inlineFormCustomSelect {
+    width: 80px;
+}
+.table-row {
+    width: 20px;
+}
+.center {
+    
+}
