@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Image from 'react-bootstrap/Image';
+import EditUserModal from './EditUserModal';
 
 export default function UserInfo(props) {
   return (
@@ -22,10 +23,9 @@ export default function UserInfo(props) {
       <ListGroup className="list-group-flush">
         <ListGroupItem>username: {props.user.name}</ListGroupItem>
         <ListGroupItem>email: {props.user.email}</ListGroupItem>
-        <ListGroupItem>something else here</ListGroupItem>
       </ListGroup>
       <Card.Body>
-        <Button href="#">Edit User Info</Button>
+        <EditUserModal />
       </Card.Body>
     </Card>
   );

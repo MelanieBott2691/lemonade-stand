@@ -1,15 +1,7 @@
 import React from 'react';
 import './NewStore.css';
 
-import {
-  Modal,
-  Button,
-  Card,
-  Row,
-  Col,
-  Form,
-  Container,
-} from 'react-bootstrap';
+import { Modal, Button, Col, Form, Container } from 'react-bootstrap';
 
 class NewStore extends React.Component {
   constructor() {
@@ -32,7 +24,9 @@ class NewStore extends React.Component {
           show={this.state.showHide}
           style={{ display: 'flex', justifyContent: 'center' }}>
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
-            <Modal.Title>Create Your Stand!</Modal.Title>
+            <Modal.Title className="modal-title">
+              Create Your Stand!
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body className="modal-container">
             <Container>
@@ -55,26 +49,6 @@ class NewStore extends React.Component {
                         id="exampleFormControlFile1"
                         label="Upload an Image for your Stand"
                       />
-                    </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlSelect1">
-                      <Form.Label>Example select</Form.Label>
-                      <Form.Control as="select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </Form.Control>
-                    </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlSelect2">
-                      <Form.Label>Example multiple select</Form.Label>
-                      <Form.Control as="select" multiple>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlTextarea1">
                       <Form.Label>Stand Description</Form.Label>

@@ -1,1 +1,8 @@
+.form-group {
+  width: 500px;
+  padding-left: 30px;
+}
 
+.modal-title {
+  padding-left: 45px;
+}

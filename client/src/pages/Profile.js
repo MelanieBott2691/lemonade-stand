@@ -58,12 +58,12 @@ export default class Profile extends Component {
         <Nav />
         <Container>
           <Row>
-            <Col xl={true} lg={true} md={true} sm={true}>
+            <Col xl={true} lg={true} md={12} sm={true}>
               <UserInfo user={this.state.user} />
             </Col>
             <Col md={1} xl={1}></Col>
             <br></br>
-            <Col xl={true} lg={true} md={true} sm={true}>
+            <Col xl={true} lg={true} md={12} sm={true}>
               <StoreInfo stores={this.state.stores} />
             </Col>
           </Row>
