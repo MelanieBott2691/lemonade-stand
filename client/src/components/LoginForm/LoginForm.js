@@ -1,7 +1,7 @@
 import React from 'react';
 import './LoginForm.css';
 
-export default function LoginForm() {
+export default function LoginForm(props) {
   return (
     <div className="wrapper">
       <form className="form-signin">
@@ -9,18 +9,29 @@ export default function LoginForm() {
         <input
           type="text"
           className="form-control"
-          name="username"
+          name="email"
           placeholder="Email Address"
           required=""
-          autofocus=""></input>
+          error={props.errors.email}
+          value={props.email}
+          onChange={props.handleInputChange}
+          autofocus=""
+        />
         <input
           type="password"
           className="form-control"
           name="password"
           placeholder="Password"
-          required=""></input>
+          error={props.errors.password}
+          value={props.password}
+          onChange={props.handleInputChange}
+          required=""
+        />
 
-        <button className="btn btn-lg btn-primary btn-block" type="submit">
+        <button
+          onClick={props.handleLogin}
+          className="btn btn-lg btn-primary btn-block"
+          type="submit">
           Login
         </button>
       </form>

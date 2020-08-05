@@ -13,6 +13,7 @@ export default function RegisterForm(props) {
           required=""
           autofocus=""
           name="firstName"
+          error={props.errors.firstName}
           value={props.firstName}
           onChange={props.handleInputChange}
         />
@@ -23,6 +24,7 @@ export default function RegisterForm(props) {
           required=""
           autofocus=""
           name="lastName"
+          error={props.errors.lastName}
           value={props.lastName}
           onChange={props.handleInputChange}
         />
@@ -33,6 +35,7 @@ export default function RegisterForm(props) {
           required=""
           autofocus=""
           name="userName"
+          error={props.errors.userName}
           value={props.userName}
           onChange={props.handleInputChange}
         />
@@ -53,6 +56,7 @@ export default function RegisterForm(props) {
           required=""
           autofocus=""
           name="email"
+          error={props.errors.email}
           value={props.email}
           onChange={props.handleInputChange}
         />
@@ -62,7 +66,18 @@ export default function RegisterForm(props) {
           placeholder="Password"
           required=""
           name="password"
+          error={props.errors.password}
           value={props.password}
+          onChange={props.handleInputChange}
+        />
+        <input
+          type="password"
+          className="form-control"
+          placeholder="Password"
+          required=""
+          name="password2"
+          error={props.errors.password2}
+          value={props.password2}
           onChange={props.handleInputChange}
         />
 
