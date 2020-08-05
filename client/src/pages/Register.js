@@ -10,7 +10,9 @@ export default class Register extends Component {
     userName: '',
     imageUrl: '',
     email: '',
-    password: ''
+    password: '',
+    password2: '',
+    errors: {}
   };
 
   handleInputChange = (event) => {
@@ -22,13 +24,30 @@ export default class Register extends Component {
 
   handleRegistration = (event) => {
     event.preventDefault();
-    API.createUser(this.state)
-      .then((res) => this.setState({ data: res.data }))
-      .catch((err) => console.log(err));
-    console.log(this.state.data);
+    const newUser = {
+      userName: this.state.userName,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      imageUrl: this.state.imageUrl,
+      email: this.state.email,
+      password: this.state.password,
+      password2: this.state.password2
+    };
+    API.register(newUser)
+      .then((res) => {
+        this.setState({ data: res.data });
+        this.alert(res);
+      })
+      .catch((err) => console.log(this.state.errors));
+  };
+
+  alert = (response) => {
+    console.log(response);
   };
 
   render() {
+    const { errors } = this.state;
+
     return (
       <>
         <Nav />
@@ -36,6 +55,7 @@ export default class Register extends Component {
           handleRegistration={this.handleRegistration}
           handleInputChange={this.handleInputChange}
           data={this.state}
+          errors={errors}
         />
       </>
     );
