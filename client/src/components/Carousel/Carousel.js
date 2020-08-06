@@ -52,7 +52,7 @@ export default function Carouselbanner() {
       <Carousel.Item className="carouselSize">
         <img
           className="d-block w-100"
-          src="https://images.pexels.com/photos/2457278/pexels-photo-2457278.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+          src="https://images.pexels.com/photos/1150626/pexels-photo-1150626.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
           alt="Third slide"
           fluid
           rounded
