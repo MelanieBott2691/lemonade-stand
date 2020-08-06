@@ -1,7 +1,7 @@
 import React from 'react';
 import './EditUserModal.css';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
+// import InputGroup from 'react-bootstrap/InputGroup';
+// import FormControl from 'react-bootstrap/FormControl';
 
 import { Modal, Button, Col, Form, Container } from 'react-bootstrap';
 
@@ -9,7 +9,7 @@ class EditUserModal extends React.Component {
   constructor() {
     super();
     this.state = {
-      showHide: false,
+      showHide: false
     };
   }
   handleModalShowHide() {

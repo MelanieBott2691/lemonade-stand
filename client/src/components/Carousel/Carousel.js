@@ -5,13 +5,13 @@ import Carousel from 'react-bootstrap/Carousel';
 export default function Carouselbanner() {
   return (
     <Carousel>
-      <Carousel.Item className="carouselSize" fluid rounded>
+      <Carousel.Item className="carouselSize">
         <img
           className="d-block w-100"
           src="https://images.pexels.com/photos/2842734/pexels-photo-2842734.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
           alt="First slide"
-          fluid
-          rounded
+          // fluid
+          // rounded
         />
         <Carousel.Caption>
           <h2>CREATIVITY</h2>
@@ -32,8 +32,8 @@ export default function Carouselbanner() {
           className="d-block w-100"
           src="https://images.pexels.com/photos/1279813/pexels-photo-1279813.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
           alt="Third slide"
-          fluid
-          rounded
+          // fluid
+          // rounded
         />
         <Carousel.Caption>
           <h2>CHARITY</h2>
@@ -54,8 +54,8 @@ export default function Carouselbanner() {
           className="d-block w-100"
           src="https://images.pexels.com/photos/1150626/pexels-photo-1150626.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
           alt="Third slide"
-          fluid
-          rounded
+          // fluid
+          // rounded
         />
         <Carousel.Caption>
           <h2>COMMUNITY</h2>

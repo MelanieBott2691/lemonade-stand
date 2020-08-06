@@ -1,6 +1,9 @@
 import './Nav.css';
 import logo from '../Nav/logo.png';
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { logoutUser } from '../../actions/authActions';
 
 const NavItem = (props) => {
   const pageURI = window.location.pathname + window.location.search;
@@ -60,6 +63,11 @@ class NavDropdown extends React.Component {
 }
 
 class Navigation extends React.Component {
+  onLogoutClick = (e) => {
+    e.preventDefault();
+    this.props.logoutUser();
+  };
+
   render() {
     return (
       <nav className="navbar navbar-expand-lg">
@@ -70,7 +78,6 @@ class Navigation extends React.Component {
             className="nav-image"
             width="100"
             height="120"
-            alignItems="left"
           />
         </a>
 
@@ -92,6 +99,12 @@ class Navigation extends React.Component {
             <NavDropdown id="navitem" name="Menu">
               <a className="dropdown-item" href="/login">
                 Sign In
+              </a>
+              <a
+                className="dropdown-item"
+                href="/"
+                onClick={this.onLogoutClick}>
+                Logout
               </a>
               <a className="dropdown-item" href="/register">
                 Register
@@ -138,4 +151,13 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+Navigation.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps, { logoutUser })(Navigation);
