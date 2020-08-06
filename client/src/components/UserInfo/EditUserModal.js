@@ -9,7 +9,7 @@ class EditUserModal extends React.Component {
   constructor() {
     super();
     this.state = {
-      showHide: false
+      showHide: false,
     };
   }
   handleModalShowHide() {
@@ -56,10 +56,14 @@ class EditUserModal extends React.Component {
                       />
                     </Form.Group>
 
-                    <Form.Group>
-                      <Form.File
-                        id="exampleFormControlFile1"
-                        label="Upload an Image for your self!"
+                    <Form.Group className="form-group" controlId="imageUrl">
+                      <Form.Label>Image URL</Form.Label>
+
+                      <Form.Control
+                        type="text"
+                        placeholder=""
+                        onChange={this.props.onChange}
+                        value={this.props.user.imageUrl}
                       />
                     </Form.Group>
                   </Col>

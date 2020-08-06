@@ -21,8 +21,11 @@ export default function UserInfo(props) {
         <Card.Text>Bobby is a solid dude.</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <input value={props.user.userName} />
-        <input value={props.user.email} />
+        <label for="un">Username</label>
+        <input id="un" value={props.user.userName} />
+        <br></br>
+        <label for="em">Email</label>
+        <input id="em" value={props.user.email} />
       </ListGroup>
       <Card.Body>
         <EditUserModal user={props.user} onChange={props.onChange} />
