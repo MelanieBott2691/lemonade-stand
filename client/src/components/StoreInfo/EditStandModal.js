@@ -44,12 +44,16 @@ class EditStandModal extends React.Component {
                       />
                     </Form.Group>
 
-                    <Form.Group>
-                      <Form.File
-                        id="exampleFormControlFile1"
-                        label="Upload an Image for your Stand"
+                    {/* <Form.Group className="form-group" controlId="imageUrl">
+                      <Form.Label>Image URL</Form.Label>
+
+                      <Form.Control
+                        type="text"
+                        placeholder=""
+                        onChange={this.props.onChange}
+                        value={this.props.store.imageUrl}
                       />
-                    </Form.Group>
+                    </Form.Group> */}
                     <Form.Group controlId="exampleForm.ControlTextarea1">
                       <Form.Label>Change Stand Description</Form.Label>
                       <Form.Control
@@ -91,5 +95,3 @@ class EditStandModal extends React.Component {
 }
 
 export default EditStandModal;
-
-
