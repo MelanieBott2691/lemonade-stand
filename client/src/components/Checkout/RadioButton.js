@@ -1,6 +1,6 @@
 import React from 'react';
-import { Row, Form, Col, Button } from 'react-bootstrap';
-import PaymentForm from './PaymentForm';
+import { Row, Form, Col } from 'react-bootstrap';
+// import PaymentForm from './PaymentForm';
 import './RadioButton.css';
 
 const RadioButton = (props) => {

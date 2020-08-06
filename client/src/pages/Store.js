@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import Nav from '../components/Nav/Nav';
-import StoreItem from '../components/Store/StoreItem';
+// import StoreItem from '../components/Store/StoreItem';
 import {
   Container,
   Row,
   Col,
   ListGroup,
   ListGroupItem,
-  Card,
+  Card
 } from 'react-bootstrap';
 import Footer from '../components/Footer/Footer';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 
 export default class Store extends Component {
   render() {
@@ -47,7 +47,7 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href="/">Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
                       <p class="card-text">
@@ -71,7 +71,7 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href="/">Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
                       <p class="card-text">
@@ -95,7 +95,7 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href="/">Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
                       <p class="card-text">
@@ -119,7 +119,7 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href="/">Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
                       <p class="card-text">
@@ -143,7 +143,7 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href="/">Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
                       <p class="card-text">
@@ -167,7 +167,7 @@ export default class Store extends Component {
                     />
                     <Card.Body>
                       <Card.Title>
-                        <a href="#">Item One</a>
+                        <a href="/">Item One</a>
                       </Card.Title>
                       <h5>$24.99</h5>
                       <p class="card-text">
