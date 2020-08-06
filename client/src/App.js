@@ -54,7 +54,6 @@ function App() {
             <Route exact path="/register" component={Register} />
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/shoppingcart" component={ShoppingCart} />
-            {/* <Route exact path="/profile" component={Profile} /> */}
             <Route exact path="/createstore" component={CreateStore} />
             <Route exact path="/storeitem" component={StoreItem} />
             <Route exact path="/storetest" component={Store} />
