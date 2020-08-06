@@ -14,7 +14,7 @@ export default function UserInfo(props) {
         style={{ width: '10rem' }}
         variant="top"
         src={props.user.imageUrl}
-        roundedCircle
+        // roundedCircle
       />
       <Card.Body>
         <Card.Title>{props.user.userName}</Card.Title>

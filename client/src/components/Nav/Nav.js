@@ -70,7 +70,7 @@ class Navigation extends React.Component {
             className="nav-image"
             width="100"
             height="120"
-            alignItems="left"
+            // alignItems="left"
           />
         </a>
 
