@@ -1,5 +1,5 @@
 import React from 'react';
-import RadioButton from './RadioButton';
+import PaypalButton from './PayPalButton';
 import {
   Modal,
   Button,
@@ -62,7 +62,7 @@ class CheckoutModal extends React.Component {
               </Col>
 
               <Col>
-                <RadioButton />
+                <PaypalButton />
               </Col>
             </Container>
           </Modal.Header>
