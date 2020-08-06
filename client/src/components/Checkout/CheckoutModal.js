@@ -44,7 +44,7 @@ class CheckoutModal extends React.Component {
                 <Row>
                   <img
                     src={header}
-                    alt="header image"
+                    alt="header"
                     variant="top"
                     height={200}
                     width={400}

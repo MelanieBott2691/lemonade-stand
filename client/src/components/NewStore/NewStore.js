@@ -7,7 +7,7 @@ class NewStore extends React.Component {
   constructor() {
     super();
     this.state = {
-      showHide: false,
+      showHide: false
     };
   }
   handleModalShowHide() {
@@ -16,7 +16,10 @@ class NewStore extends React.Component {
   render() {
     return (
       <div>
-        <Button variant="primary" onClick={() => this.handleModalShowHide()}>
+        <Button
+          className="float-right"
+          variant="primary"
+          onClick={() => this.handleModalShowHide()}>
           Create New Stand
         </Button>
 

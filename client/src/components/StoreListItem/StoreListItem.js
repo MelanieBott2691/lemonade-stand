@@ -14,6 +14,19 @@ export default class StoreListItem extends React.Component {
         <Card.Body>
           <Card.Title>{this.props.name}</Card.Title>
           <EditStandModal />
+          {/* <Button
+            className="btn-sm btn-block"
+            variant="primary"
+            onClick={() => this.handleModalShowHide()}>
+            Go To
+          </Button> */}
+          <Button
+            className="btn btn-primary btn-sm btn-block"
+            variant="primary"
+            href="#"
+            role="button">
+            Go To
+          </Button>
         </Card.Body>
       </Card>
     );

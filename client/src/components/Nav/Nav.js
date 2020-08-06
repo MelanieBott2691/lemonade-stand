@@ -1,7 +1,13 @@
 import './Nav.css';
 import logo from '../Nav/logo.png';
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { logoutUser } from '../../actions/authActions';
+>>>>>>> d963c3ac40473a7e99a870aa2a144575efd4b704
 
 const NavItem = (props) => {
   const pageURI = window.location.pathname + window.location.search;
@@ -61,6 +67,11 @@ class NavDropdown extends React.Component {
 }
 
 class Navigation extends React.Component {
+  onLogoutClick = (e) => {
+    e.preventDefault();
+    this.props.logoutUser();
+  };
+
   render() {
     return (
       <nav className="navbar navbar-expand-lg">
@@ -71,7 +82,6 @@ class Navigation extends React.Component {
             className="nav-image"
             width="100"
             height="120"
-            alignItems="left"
           />
         </a>
 
@@ -93,8 +103,19 @@ class Navigation extends React.Component {
             <NavDropdown id="navitem" name="Menu">
               <Link to="/login" className="dropdown-item">
                 Sign In
+<<<<<<< HEAD
               </Link>
               <Link className="dropdown-item" to="/register">
+=======
+              </a>
+              <a
+                className="dropdown-item"
+                href="/"
+                onClick={this.onLogoutClick}>
+                Logout
+              </a>
+              <a className="dropdown-item" href="/register">
+>>>>>>> d963c3ac40473a7e99a870aa2a144575efd4b704
                 Register
               </Link>
               <Link className="dropdown-item" to="/profile">
@@ -139,4 +160,13 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+Navigation.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps, { logoutUser })(Navigation);

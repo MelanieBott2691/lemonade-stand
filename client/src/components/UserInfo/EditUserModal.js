@@ -1,7 +1,7 @@
 import React from 'react';
 import './EditUserModal.css';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
+// import InputGroup from 'react-bootstrap/InputGroup';
+// import FormControl from 'react-bootstrap/FormControl';
 
 import { Modal, Button, Col, Form, Container } from 'react-bootstrap';
 
@@ -56,10 +56,14 @@ class EditUserModal extends React.Component {
                       />
                     </Form.Group>
 
-                    <Form.Group>
-                      <Form.File
-                        id="exampleFormControlFile1"
-                        label="Upload an Image for your self!"
+                    <Form.Group className="form-group" controlId="imageUrl">
+                      <Form.Label>Image URL</Form.Label>
+
+                      <Form.Control
+                        type="text"
+                        placeholder=""
+                        onChange={this.props.onChange}
+                        value={this.props.user.imageUrl}
                       />
                     </Form.Group>
                   </Col>

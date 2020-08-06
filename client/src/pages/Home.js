@@ -11,30 +11,27 @@ export default class Home extends Component {
   state = {
     data: [],
     isLoggedIn: false,
-    inputSearch: '',
+    inputSearch: ''
   };
 
   componentDidMount() {
     API.getItems()
       .then((res) => this.setState({ data: res.data }))
       .catch((err) => console.log(err));
-    console.log(this.state.data);
   }
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value,
+      [name]: value
     });
   };
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.inputSearch);
     API.getSearch(this.state.inputSearch)
       .then((res) => this.setState({ data: res.data }))
       .catch((err) => console.log(err));
-    console.log(this.state.data);
   };
 
   render() {
