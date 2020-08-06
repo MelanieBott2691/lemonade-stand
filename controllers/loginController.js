@@ -31,7 +31,11 @@ module.exports = {
           // Create JWT Payload
           const payload = {
             id: user.id,
-            name: user.name
+            firstName: user.firstName,
+            lastName: user.lastName,
+            userName: user.userName,
+            email: user.email,
+            imageUrl: user.imageUrl
           };
 
           // Sign token
