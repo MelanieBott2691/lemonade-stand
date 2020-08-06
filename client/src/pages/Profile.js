@@ -13,49 +13,41 @@ import Footer from '../components/Footer/Footer';
 // import NewStore from '../components/NewStore/NewStore';
 
 class Profile extends Component {
-  // state = {
-  //   user: {
-  //     userName: 'bobby',
-  //     email: 'stuff.com',
-  //     imageUrl:
-  //       'https://www.happinessishomemade.net/wp-content/uploads/2018/04/Tissue-Paper-Snail-9.jpg'
-  //   },
-  //   stores: [
-  //     {
-  //       _id: 12345,
-  //       name: 'Fun Store',
-  //       description: 'stuff'
-  //     },
-  //     {
-  //       _id: 12346,
-  //       name: 'Kids Store',
-  //       description: 'stuff2'
-  //     },
-  //     {
-  //       _id: 12347,
-  //       name: 'Best Store',
-  //       description: 'stuff2'
-  //     },
-  //     {
-  //       _id: 12348,
-  //       name: 'Fun Store',
-  //       description: 'stuff'
-  //     },
-  //     {
-  //       _id: 12349,
-  //       name: 'Kids Store',
-  //       description: 'stuff2'
-  //     },
-  //     {
-  //       _id: 12341,
-  //       name: 'Best Store',
-  //       description: 'stuff2'
-  //     }
-  //   ],
-  //   purchases: [],
-  //   inputSearch: '',
-  //   loggedIn: false
-  // };
+  state = {
+    stores: [
+      {
+        _id: 12345,
+        name: 'Fun Store',
+        description: 'stuff'
+      },
+      {
+        _id: 12346,
+        name: 'Kids Store',
+        description: 'stuff2'
+      },
+      {
+        _id: 12347,
+        name: 'Best Store',
+        description: 'stuff2'
+      },
+      {
+        _id: 12348,
+        name: 'Fun Store',
+        description: 'stuff'
+      },
+      {
+        _id: 12349,
+        name: 'Kids Store',
+        description: 'stuff2'
+      },
+      {
+        _id: 12341,
+        name: 'Best Store',
+        description: 'stuff2'
+      }
+    ],
+    purchases: []
+  };
 
   onChange = (e) => {
     this.setState({ user: { [e.target.id]: e.target.value } });
@@ -74,7 +66,7 @@ class Profile extends Component {
             <Col md={1} xl={1}></Col>
             <br></br>
             <Col xl={true} lg={true} md={12} sm={true}>
-              {/* <StoreInfo stores={stores} onChange={this.onChange} /> */}
+              <StoreInfo stores={this.state.stores} onChange={this.onChange} />
             </Col>
           </Row>
           <br></br>
