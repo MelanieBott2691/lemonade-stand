@@ -9,7 +9,7 @@ class EditUserModal extends React.Component {
   constructor() {
     super();
     this.state = {
-      showHide: false,
+      showHide: false
     };
   }
   handleModalShowHide() {
@@ -35,22 +35,25 @@ class EditUserModal extends React.Component {
               <Form>
                 <Form.Row className="align-items-center">
                   <Col xs="auto">
-                    <Form.Group
-                      className="form-group"
-                      controlId="exampleForm.ControlInput1">
+                    <Form.Group className="form-group" controlId="userName">
                       <Form.Label>Username</Form.Label>
 
                       <Form.Control
                         type="name"
-                        placeholder="Change username."
+                        placeholder=""
+                        onChange={this.props.onChange}
+                        value={this.props.user.userName}
                       />
                     </Form.Group>
-                    <Form.Group
-                      className="form-group"
-                      controlId="exampleForm.ControlInput1">
+                    <Form.Group className="form-group" controlId="email">
                       <Form.Label>E-mail</Form.Label>
 
-                      <Form.Control type="email" placeholder="Change Email." />
+                      <Form.Control
+                        type="email"
+                        placeholder=""
+                        onChange={this.props.onChange}
+                        value={this.props.user.email}
+                      />
                     </Form.Group>
 
                     <Form.Group>

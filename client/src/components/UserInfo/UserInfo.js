@@ -13,19 +13,19 @@ export default function UserInfo(props) {
       <Card.Img
         style={{ width: '10rem' }}
         variant="top"
-        src="https://www.happinessishomemade.net/wp-content/uploads/2018/04/Tissue-Paper-Snail-9.jpg"
+        src={props.user.imageUrl}
         roundedCircle
       />
       <Card.Body>
-        <Card.Title>{props.user.name}</Card.Title>
+        <Card.Title>{props.user.userName}</Card.Title>
         <Card.Text>Bobby is a solid dude.</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroupItem>username: {props.user.name}</ListGroupItem>
-        <ListGroupItem>email: {props.user.email}</ListGroupItem>
+        <input value={props.user.userName} />
+        <input value={props.user.email} />
       </ListGroup>
       <Card.Body>
-        <EditUserModal />
+        <EditUserModal user={props.user} onChange={props.onChange} />
       </Card.Body>
     </Card>
   );
