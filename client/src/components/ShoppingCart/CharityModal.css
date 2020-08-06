@@ -27,3 +27,6 @@
     align-items: right;
     justify-content: right;
 }
+.column-charity {
+    justify-content: center;
+}
