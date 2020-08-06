@@ -1,13 +1,9 @@
 import './Nav.css';
 import logo from '../Nav/logo.png';
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
->>>>>>> d963c3ac40473a7e99a870aa2a144575efd4b704
 
 const NavItem = (props) => {
   const pageURI = window.location.pathname + window.location.search;
@@ -45,7 +41,7 @@ class NavDropdown extends React.Component {
       'dropdown-menu' + (this.state.isToggleOn ? ' show' : '');
     return (
       <li className="nav-item dropdown">
-        <Link
+        <a
           className="nav-link dropdown-toggle"
           to="/"
           id="navbarDropdown"
@@ -57,7 +53,7 @@ class NavDropdown extends React.Component {
             this.showDropdown(e);
           }}>
           {this.props.name}
-        </Link>
+        </a>
         <div className={classDropdownMenu} aria-labelledby="navbarDropdown">
           {this.props.children}
         </div>
@@ -101,12 +97,8 @@ class Navigation extends React.Component {
             <NavItem id="navitem" path="/" name="Home" />
             <NavItem id="navitem" path="/about" name="About" />
             <NavDropdown id="navitem" name="Menu">
-              <Link to="/login" className="dropdown-item">
+              <a className="dropdown-item" href="/login">
                 Sign In
-<<<<<<< HEAD
-              </Link>
-              <Link className="dropdown-item" to="/register">
-=======
               </a>
               <a
                 className="dropdown-item"
@@ -115,25 +107,24 @@ class Navigation extends React.Component {
                 Logout
               </a>
               <a className="dropdown-item" href="/register">
->>>>>>> d963c3ac40473a7e99a870aa2a144575efd4b704
                 Register
-              </Link>
-              <Link className="dropdown-item" to="/profile">
+              </a>
+              <a className="dropdown-item" href="/profile">
                 Profile
-              </Link>
-              <Link className="dropdown-item" to="/contact">
+              </a>
+              <a className="dropdown-item" href="/contact">
                 Contact
-              </Link>
-              <Link className="dropdown-item" to="/storeitem">
+              </a>
+              <a className="dropdown-item" href="/storeitem">
                 TestItem
-              </Link>
+              </a>
               <div className="dropdown-divider"></div>
-              <Link className="dropdown-item" to="/cart">
+              <a className="dropdown-item" href="/cart">
                 Cart
-              </Link>
-              <Link className="dropdown-item" to="/shoppingcart">
+              </a>
+              <a className="dropdown-item" href="/shoppingcart">
                 Shopping Cart
-              </Link>
+              </a>
             </NavDropdown>
           </ul>
           {/* Search Bar */}
