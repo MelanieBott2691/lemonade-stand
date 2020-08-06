@@ -90,7 +90,7 @@ class CheckoutModal extends React.Component {
               className="checkout-btn"
               variant="primary"
               onClick={() => this.handleModalShowHide()}>
-              Proceed to checkout
+              Place Order
             </Button>
           </Modal.Footer>
         </Modal>

@@ -14,7 +14,9 @@ export default class ShoppingCart extends Component {
         <Nav />
         <br />
         <Card variant="outlined" className="shoppingCart-container">
-          <Card.Header>My Shopping Cart</Card.Header>
+          <Card.Header>Review Order</Card.Header>
+          <br />
+          <Card.Title>My Shopping Cart</Card.Title>
           <Table striped bordered hover size="sm" className="center">
             <thead>
               <tr className="table-row">
@@ -30,7 +32,7 @@ export default class ShoppingCart extends Component {
 
                 <td>
                   <input
-                    id="input-example"
+                    id="input-price"
                     name="input-name"
                     placeholder="$ 00.00"
                     // defaultValue={1.0}
@@ -186,7 +188,9 @@ export default class ShoppingCart extends Component {
               <Col>
                 {/* Shipping Options */}
                 <Form.Group controlId="exampleForm.SelectCustom">
-                  <Form.Label>Shipping</Form.Label>
+                  <Form.Label style={{ fontWeight: 'bold' }}>
+                    Shipping
+                  </Form.Label>
                   <Form.Control as="select" custom>
                     <option>Standard Shipping $4.99</option>
                     <option>FedEx Ground $12.98</option>

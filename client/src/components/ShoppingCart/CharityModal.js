@@ -9,6 +9,7 @@ import {
   Col,
   Container
 } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import charity from '../../assets/images/charity.png';
 import './CharityModal.css';
 
@@ -68,11 +69,18 @@ class CharityModal extends React.Component {
               <Card.Title>Choose a Charity To Donate To:</Card.Title>
               <br />
               <Row>
+                {/* test */}
+                <Col>
+                  <a href="https//www.google.com">Charity</a>
+                </Col>
+
+                {/* test end */}
                 <Col>
                   <Form>
                     {['radio'].map((type) => (
                       <div key={`default-${type}`} className="mb-3">
                         <Form.Check
+                          className="charity-label"
                           type={type}
                           id={`default-${type}`}
                           label={`Red Cross`}
@@ -86,6 +94,7 @@ class CharityModal extends React.Component {
                     {['radio'].map((type) => (
                       <div key={`default-${type}`} className="mb-3">
                         <Form.Check
+                          className="charity-label"
                           type={type}
                           id={`default-${type}`}
                           label={`Local Charity`}
@@ -99,6 +108,7 @@ class CharityModal extends React.Component {
                     {['radio'].map((type) => (
                       <div key={`default-${type}`} className="mb-3">
                         <Form.Check
+                          className="charity-label"
                           type={type}
                           id={`default-${type}`}
                           label={`Make A Wish`}
@@ -114,6 +124,7 @@ class CharityModal extends React.Component {
                     {['radio'].map((type) => (
                       <div key={`default-${type}`} className="mb-3">
                         <Form.Check
+                          className="charity-label"
                           type={type}
                           id={`default-${type}`}
                           label={`Habitat for Humanity`}
