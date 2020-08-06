@@ -26,7 +26,7 @@ export default function PurchaseInfo(props) {
                   <img
                     className="img-size"
                     variant="top"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI5bVzb97IoZ53rt_CqeXv_ifuyizhMSolWQ&usqp=CAU"
+                    src="https://cdn3.volusion.com/65wgp.sm6ue/v/vspfiles/photos/GT66AA-2.jpg?v-cache=1569508703"
                     thumbnail
                   />
                 </td>

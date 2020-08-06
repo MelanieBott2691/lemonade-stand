@@ -18,8 +18,11 @@ class EditStandModal extends React.Component {
   render() {
     return (
       <div>
-        <Button variant="primary" onClick={() => this.handleModalShowHide()}>
-          Edit Stand
+        <Button
+          className="btn-sm btn-block"
+          variant="primary"
+          onClick={() => this.handleModalShowHide()}>
+          Edit
         </Button>
 
         <Modal
