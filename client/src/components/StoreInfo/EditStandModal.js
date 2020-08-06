@@ -1,9 +1,11 @@
 import React from 'react';
-import './NewStore.css';
+import './EditStandModal.css';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
 
 import { Modal, Button, Col, Form, Container } from 'react-bootstrap';
 
-class NewStore extends React.Component {
+class EditStandModal extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -17,16 +19,14 @@ class NewStore extends React.Component {
     return (
       <div>
         <Button variant="primary" onClick={() => this.handleModalShowHide()}>
-          Create New Stand
+          Edit Stand
         </Button>
 
         <Modal
           show={this.state.showHide}
           style={{ display: 'flex', justifyContent: 'center' }}>
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
-            <Modal.Title className="modal-title">
-              Create Your Stand!
-            </Modal.Title>
+            <Modal.Title className="modal-title">Edit Your Stand!</Modal.Title>
           </Modal.Header>
           <Modal.Body className="modal-container">
             <Container>
@@ -40,7 +40,7 @@ class NewStore extends React.Component {
 
                       <Form.Control
                         type="name"
-                        placeholder="Name of your Stand."
+                        placeholder="Change Stand name."
                       />
                     </Form.Group>
 
@@ -51,12 +51,25 @@ class NewStore extends React.Component {
                       />
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlTextarea1">
-                      <Form.Label>Stand Description</Form.Label>
+                      <Form.Label>Change Stand Description</Form.Label>
                       <Form.Control
                         as="textarea"
-                        rows="4"
+                        rows="5"
                         placeholder="What do you STAND for? What is it you're trying to achieve with your stand? Whether it's trying to make the world a better place through charity, raising funds for a cause, or loved one, your customers want to know!"
                       />
+                    </Form.Group>
+                    <Form.Group controlId="exampleForm.ControlTextarea1">
+                      <Form.Label>Add New Stand Item</Form.Label>
+                      <div>
+                        <InputGroup className="mb-3">
+                          <FormControl placeholder="Item Name" />
+                          <FormControl placeholder="Item Price: $0.00" />
+                          <FormControl placeholder="Img URL" />
+                          <InputGroup.Append></InputGroup.Append>
+                          <Button variant="outline-secondary">+</Button>
+                          {/* <Button variant="outline-secondary">-</Button> */}
+                        </InputGroup>
+                      </div>
                     </Form.Group>
                   </Col>
                 </Form.Row>
@@ -77,4 +90,6 @@ class NewStore extends React.Component {
   }
 }
 
-export default NewStore;
+export default EditStandModal;
+
+

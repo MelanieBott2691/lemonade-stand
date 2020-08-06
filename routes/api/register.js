@@ -1,14 +1,7 @@
 const router = require('express').Router();
-const itemsController = require('../../controllers/itemsController');
+const registerController = require('../../controllers/registerController');
 
-// Matches with "/api/users"
-router.route('/').get(itemsController.findAll).post(itemsController.create);
-
-// Matches with "/api/users/:id"
-router
-  .route('/:id')
-  .get(itemsController.findById)
-  .put(itemsController.update)
-  .delete(itemsController.remove);
+// Matches with "/api/register"
+router.route('/').post(registerController.registerUser);
 
 module.exports = router;

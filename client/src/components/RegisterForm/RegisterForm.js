@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+// import classnames from 'classnames';
 import './RegisterForm.css';
 
 export default function RegisterForm(props) {
@@ -13,8 +15,9 @@ export default function RegisterForm(props) {
           required=""
           autofocus=""
           name="firstName"
+          error={props.errors.firstName}
           value={props.firstName}
-          onChange={props.handleInputChange}
+          onChange={props.onChange}
         />
         <input
           type="text"
@@ -23,8 +26,9 @@ export default function RegisterForm(props) {
           required=""
           autofocus=""
           name="lastName"
+          error={props.errors.lastName}
           value={props.lastName}
-          onChange={props.handleInputChange}
+          onChange={props.onChange}
         />
         <input
           type="text"
@@ -33,8 +37,9 @@ export default function RegisterForm(props) {
           required=""
           autofocus=""
           name="userName"
+          error={props.errors.userName}
           value={props.userName}
-          onChange={props.handleInputChange}
+          onChange={props.onChange}
         />
         <input
           type="text"
@@ -44,7 +49,7 @@ export default function RegisterForm(props) {
           autofocus=""
           name="imageUrl"
           value={props.imageUrl}
-          onChange={props.handleInputChange}
+          onChange={props.onChange}
         />
         <input
           type="text"
@@ -53,8 +58,9 @@ export default function RegisterForm(props) {
           required=""
           autofocus=""
           name="email"
+          error={props.errors.email}
           value={props.email}
-          onChange={props.handleInputChange}
+          onChange={props.onChange}
         />
         <input
           type="password"
@@ -62,12 +68,23 @@ export default function RegisterForm(props) {
           placeholder="Password"
           required=""
           name="password"
+          error={props.errors.password}
           value={props.password}
-          onChange={props.handleInputChange}
+          onChange={props.onChange}
+        />
+        <input
+          type="password"
+          className="form-control"
+          placeholder="Password"
+          required=""
+          name="password2"
+          error={props.errors.password2}
+          value={props.password2}
+          onChange={props.onChange}
         />
 
         <button
-          onClick={props.handleRegistration}
+          // onClick={props.handleRegistration}
           className="btn btn-lg btn-primary btn-block"
           type="submit">
           Register

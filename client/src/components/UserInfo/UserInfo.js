@@ -4,27 +4,28 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Image from 'react-bootstrap/Image'
+import Image from 'react-bootstrap/Image';
+import EditUserModal from './EditUserModal';
 
 export default function UserInfo(props) {
   return (
     <Card>
-      <Card.Img style={{ width: '10rem' }}  
+      <Card.Img
+        style={{ width: '10rem' }}
         variant="top"
-        src="https://www.happinessishomemade.net/wp-content/uploads/2018/04/Tissue-Paper-Snail-9.jpg"
+        src={props.user.imageUrl}
         roundedCircle
       />
       <Card.Body>
-        <Card.Title>{props.user.name}</Card.Title>
+        <Card.Title>{props.user.userName}</Card.Title>
         <Card.Text>Bobby is a solid dude.</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroupItem>username: {props.user.name}</ListGroupItem>
-        <ListGroupItem>email: {props.user.email}</ListGroupItem>
-        <ListGroupItem>something else here</ListGroupItem>
+        <input value={props.user.userName} />
+        <input value={props.user.email} />
       </ListGroup>
       <Card.Body>
-        <Button href="#">Edit User Info</Button>
+        <EditUserModal user={props.user} onChange={props.onChange} />
       </Card.Body>
     </Card>
   );

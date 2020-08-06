@@ -1,13 +1,15 @@
 import React from 'react';
-import './NewStore.css';
+import './EditUserModal.css';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
 
 import { Modal, Button, Col, Form, Container } from 'react-bootstrap';
 
-class NewStore extends React.Component {
+class EditUserModal extends React.Component {
   constructor() {
     super();
     this.state = {
-      showHide: false,
+      showHide: false
     };
   }
   handleModalShowHide() {
@@ -17,7 +19,7 @@ class NewStore extends React.Component {
     return (
       <div>
         <Button variant="primary" onClick={() => this.handleModalShowHide()}>
-          Create New Stand
+          Edit Profile
         </Button>
 
         <Modal
@@ -25,7 +27,7 @@ class NewStore extends React.Component {
           style={{ display: 'flex', justifyContent: 'center' }}>
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
             <Modal.Title className="modal-title">
-              Create Your Stand!
+              Edit Your Profile!
             </Modal.Title>
           </Modal.Header>
           <Modal.Body className="modal-container">
@@ -33,29 +35,31 @@ class NewStore extends React.Component {
               <Form>
                 <Form.Row className="align-items-center">
                   <Col xs="auto">
-                    <Form.Group
-                      className="form-group"
-                      controlId="exampleForm.ControlInput1">
-                      <Form.Label>Stand Name</Form.Label>
+                    <Form.Group className="form-group" controlId="userName">
+                      <Form.Label>Username</Form.Label>
 
                       <Form.Control
                         type="name"
-                        placeholder="Name of your Stand."
+                        placeholder=""
+                        onChange={this.props.onChange}
+                        value={this.props.user.userName}
+                      />
+                    </Form.Group>
+                    <Form.Group className="form-group" controlId="email">
+                      <Form.Label>E-mail</Form.Label>
+
+                      <Form.Control
+                        type="email"
+                        placeholder=""
+                        onChange={this.props.onChange}
+                        value={this.props.user.email}
                       />
                     </Form.Group>
 
                     <Form.Group>
                       <Form.File
                         id="exampleFormControlFile1"
-                        label="Upload an Image for your Stand"
-                      />
-                    </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlTextarea1">
-                      <Form.Label>Stand Description</Form.Label>
-                      <Form.Control
-                        as="textarea"
-                        rows="4"
-                        placeholder="What do you STAND for? What is it you're trying to achieve with your stand? Whether it's trying to make the world a better place through charity, raising funds for a cause, or loved one, your customers want to know!"
+                        label="Upload an Image for your self!"
                       />
                     </Form.Group>
                   </Col>
@@ -65,10 +69,9 @@ class NewStore extends React.Component {
           </Modal.Body>
           <Modal.Footer>
             <Button
-              className="checkout-btn"
               variant="primary"
               onClick={() => this.handleModalShowHide()}>
-              Save Stand
+              Save Profile
             </Button>
           </Modal.Footer>
         </Modal>
@@ -77,4 +80,4 @@ class NewStore extends React.Component {
   }
 }
 
-export default NewStore;
+export default EditUserModal;

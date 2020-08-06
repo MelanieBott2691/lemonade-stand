@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import EditStandModal from '../StoreInfo/EditStandModal';
 
 export default class StoreListItem extends React.Component {
   render() {
@@ -12,9 +13,7 @@ export default class StoreListItem extends React.Component {
         />
         <Card.Body>
           <Card.Title>{this.props.name}</Card.Title>
-          <Button href="#" block size="sm">
-            Edit Stand
-          </Button>
+          <EditStandModal />
         </Card.Body>
       </Card>
     );
