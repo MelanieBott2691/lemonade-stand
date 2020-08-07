@@ -10,7 +10,7 @@ export default {
     return axios.post('/api/login', user);
   },
   getSearch: function (query) {
-    return axios.get('/api/items', { query: { name: query.name } });
+    return axios.get('/api/items', query);
   },
   getItems: function () {
     return axios.get('/api/items');

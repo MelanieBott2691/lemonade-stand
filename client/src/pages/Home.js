@@ -21,16 +21,21 @@ export default class Home extends Component {
   }
 
   handleInputChange = (event) => {
-    const { name, value } = event.target;
+    const { value } = event.target;
     this.setState({
-      [name]: value
+      inputSearch: value
     });
+    console.log(this.state.inputSearch);
   };
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    API.getSearch(this.state.inputSearch)
-      .then((res) => this.setState({ data: res.data }))
+    console.log(this.state.inputSearch);
+    API.getSearch({ name: this.state.inputSearch })
+      .then((res) => {
+        console.log(res);
+        this.setState({ data: res.data });
+      })
       .catch((err) => console.log(err));
   };
 
