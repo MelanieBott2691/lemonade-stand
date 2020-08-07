@@ -14,7 +14,7 @@ class Login extends Component {
     this.state = {
       email: '',
       password: '',
-      errors: {},
+      errors: {}
     };
   }
 
@@ -32,7 +32,7 @@ class Login extends Component {
 
     if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors,
+        errors: nextProps.errors
       });
     }
   }
@@ -46,7 +46,7 @@ class Login extends Component {
 
     const userData = {
       email: this.state.email,
-      password: this.state.password,
+      password: this.state.password
     };
 
     this.props.loginUser(userData);
@@ -114,7 +114,7 @@ class Login extends Component {
                               width: '150px',
                               borderRadius: '3px',
                               letterSpacing: '1.5px',
-                              marginTop: '1rem',
+                              marginTop: '1rem'
                             }}
                             type="submit"
                             className="btn btn-large btn-primary waves-effect waves-light hoverable blue accent-3">
@@ -139,12 +139,12 @@ class Login extends Component {
 Login.propTypes = {
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors,
+  errors: state.errors
 });
 
 export default connect(mapStateToProps, { loginUser })(Login);

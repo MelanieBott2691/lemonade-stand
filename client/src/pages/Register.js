@@ -18,7 +18,7 @@ class Register extends Component {
       email: '',
       password: '',
       password2: '',
-      errors: {},
+      errors: {}
     };
   }
 
@@ -32,7 +32,7 @@ class Register extends Component {
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors,
+        errors: nextProps.errors
       });
     }
   }
@@ -50,7 +50,7 @@ class Register extends Component {
       lastName: this.state.lastName,
       email: this.state.email,
       password: this.state.password,
-      password2: this.state.password2,
+      password2: this.state.password2
     };
 
     this.props.registerUser(newUser, this.props.history);
@@ -163,7 +163,7 @@ class Register extends Component {
                               width: '150px',
                               borderRadius: '3px',
                               letterSpacing: '1.5px',
-                              marginTop: '1rem',
+                              marginTop: '1rem'
                             }}
                             type="submit"
                             className="btn btn-large btn-primary waves-effect waves-light">
@@ -188,12 +188,12 @@ class Register extends Component {
 Register.propTypes = {
   registerUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors,
+  errors: state.errors
 });
 
 export default connect(mapStateToProps, { registerUser })(withRouter(Register));

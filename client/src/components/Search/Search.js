@@ -21,8 +21,7 @@ export default class Search extends Component {
             <div className="col-xs-3 col-sm-2">
               <button
                 className="btn btn-md input-md"
-                onClick={this.props.handleFormSubmit}
-                type="success">
+                onClick={this.props.handleFormSubmit}>
                 Search
               </button>
             </div>
