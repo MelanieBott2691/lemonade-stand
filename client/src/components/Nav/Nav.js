@@ -70,7 +70,7 @@ class Navigation extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-sm">
         <a className="navbar-brand" href="/">
           <img
             src={logo}
