@@ -13,7 +13,7 @@ export default class About extends Component {
 
         <Container>
           <Row>
-            <h1 className="our-story-container">Our Story</h1>
+            <h3 className="our-story-container">What We "Stand" For!</h3>
           </Row>
           {/* image card */}
           <CardDeck>
@@ -22,16 +22,11 @@ export default class About extends Component {
             </Card>
             <Card>
               <Card.Body>
-                <Card.Title>MERN Students.....</Card.Title>
-                <Card.Text>All about us!!</Card.Text>
-                <hr></hr>
+                <Card.Title>Inspire Others, Lead!</Card.Title>
                 <Card.Text>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Sapiente dicta fugit fugiat hic aliquam itaque facere,
-                    soluta. Totam id dolores, sint aperiam sequi pariatur
-                    praesentium animi perspiciatis molestias iure, ducimus!
-                  </p>
+                  “If your actions inspire others to dream more, learn more, do
+                  more and become more, you are a leader.”
+                  <div className="text-muted">– John Quincy Adams</div>
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -41,22 +36,25 @@ export default class About extends Component {
             {/* <Card.Header>Our Platform</Card.Header> */}
 
             <Card.Body className="platform-container">
-              <h1>Our Platform</h1>
+              {/* <div>What We "Stand" For</div> */}
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
-                et enim aperiam inventore, similique necessitatibus neque non!
-                Doloribus, modi sapiente laboriosam aperiam fugiat laborum.
-                Sequi mollitia, necessitatibus quae sint natus.
+                Online shoppings brings to its users the accessibility and
+                convenience of online shopping with the ability to search
+                massive online retail catalogs at the tap of the key. While the
+                online shopping experience is convenient it continues to pad the
+                pockets of large corporations and their CEO's without the
+                emotional or personal experience that users expect or deserve.
               </p>
               <div className="text-muted">
                 "Success is making those who believed in you look brilliant."
               </div>
               <hr></hr>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
-                et enim aperiam inventore, similique necessitatibus neque non!
-                Doloribus, modi sapiente laboriosam aperiam fugiat laborum.
-                Sequi mollitia, necessitatibus quae sint natus.
+                The Lemonade Stand is not your typical e-commerce site. It is
+                the next evolution of the American Dream. We cater toward
+                society's most precious commodity, kids! Lemonade Stand is a
+                platform for America's future entrepreneurs, where we hope to
+                inspire, nurture, and plant the seeds of ethics.
               </p>
               <div className="text-muted">
                 "Happiness doesn't result from what we get, but from what we
@@ -64,10 +62,10 @@ export default class About extends Component {
               </div>
               <hr></hr>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
-                et enim aperiam inventore, similique necessitatibus neque non!
-                Doloribus, modi sapiente laboriosam aperiam fugiat laborum.
-                Sequi mollitia, necessitatibus quae sint natus.
+                With the Lemonade Stand we saw an opportunity to create an
+                online space for kids where they can not only take their
+                creations to market but also learn about business ethic, and
+                raise money for a cause, charity or loved ones in the process.
               </p>
               <div className="text-muted">
                 "Action is the fundamental key to success"
@@ -78,15 +76,16 @@ export default class About extends Component {
           <br></br>
           <Card className="bottom-container">
             <Card.Body>
-              <Card.Title>More stuff....</Card.Title>
-              <Card.Text>What to say here....</Card.Text>
-              <hr></hr>
+              <Card.Title></Card.Title>
+              <Card.Text></Card.Text>
+
               <Card.Text>
                 <p className="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta.
-                  Totam id dolores, sint aperiam sequi pariatur praesentium
-                  animi perspiciatis molestias iure, ducimus!
+                  "Rather than standing or speaking for children, we need to
+                  stand with children speaking for themselves. We don't need a
+                  political movement for children...[we need to] build
+                  environments and policies for our collective future."
+                  <div className="text-muted">-Sandra Meucci</div>
                 </p>
               </Card.Text>
             </Card.Body>
