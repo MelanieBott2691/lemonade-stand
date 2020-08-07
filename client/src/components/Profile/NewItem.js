@@ -50,10 +50,10 @@ export default class NewItem extends React.Component {
     return (
       <div>
         <Button
-          className="float-right"
+          className="createItem"
           variant="primary"
           onClick={() => this.handleModalShowHide()}>
-          Create New Stand
+          Create New Item
         </Button>
 
         <Modal
