@@ -21,6 +21,13 @@
 .table-row {
     width: 20px;
 }
-.center {
+#charity {
+    color: black;
     
+}
+input {
+    border-color: white;
+    background-color: whitesmoke;
+    text-align: center;
+    width: 90px;
 }

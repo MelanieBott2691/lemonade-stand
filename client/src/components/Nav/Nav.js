@@ -43,7 +43,7 @@ class NavDropdown extends React.Component {
       <li className="nav-item dropdown">
         <a
           className="nav-link dropdown-toggle"
-          href="/"
+          to="/"
           id="navbarDropdown"
           role="button"
           data-toggle="dropdown"

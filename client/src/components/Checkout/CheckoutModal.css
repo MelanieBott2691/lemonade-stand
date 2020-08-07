@@ -3,15 +3,18 @@ Button.checkout-btn  {
     border-radius: 30px;
     width: 240px;
     background-color: black;
+    color: whitesmoke;
+    border-color: black;
   }
   Button.cancel-btn {
     background-color: rgb(110, 32, 32);
-    /* border-color: rgb(110, 32, 32); */
+    border-color: rgb(110, 32, 32);
     color: whitesmoke;
     border-radius: 30px;
   }
   #checkoutModal {
-    background-color: rebeccapurple;
+    background-color: teal;
+    border-color: teal;
     justify-content: center;
     text-align: center;
     display: flex;
@@ -30,4 +33,8 @@ Button.checkout-btn  {
     margin-bottom: 20px;
   
   }
-                  
+          
+  i.fab {
+size: 7px;
+justify-content: flex-end;
+  }
