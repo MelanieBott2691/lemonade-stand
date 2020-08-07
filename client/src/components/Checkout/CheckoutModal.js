@@ -1,5 +1,5 @@
 import React from 'react';
-import RadioButton from './RadioButton';
+import PayPalButton from './PayPalButton';
 import {
   Modal,
   Button,
@@ -62,7 +62,9 @@ class CheckoutModal extends React.Component {
               </Col>
 
               <Col>
-                <RadioButton />
+                <div id="paypal-button-container">
+                  <PayPalButton />
+                </div>
               </Col>
             </Container>
           </Modal.Header>
@@ -90,7 +92,7 @@ class CheckoutModal extends React.Component {
               className="checkout-btn"
               variant="primary"
               onClick={() => this.handleModalShowHide()}>
-              Proceed to checkout
+              Place Order
             </Button>
           </Modal.Footer>
         </Modal>

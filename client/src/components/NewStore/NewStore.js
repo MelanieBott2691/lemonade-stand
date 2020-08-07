@@ -7,7 +7,7 @@ class NewStore extends React.Component {
   constructor() {
     super();
     this.state = {
-      showHide: false,
+      showHide: false
     };
   }
   handleModalShowHide() {

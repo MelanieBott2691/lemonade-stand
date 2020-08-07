@@ -1,0 +1,32 @@
+#charityModal {
+    background-color: rebeccapurple;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    border-color: rebeccapurple;
+}
+.modal-container {
+    align-items: flex-end;
+}
+
+.mb-3 {
+    /* align-items: left; */
+    margin-left: 0;
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
+    margin-block-start: auto;
+}
+.charity-label {
+    margin-right: 0;
+    align-items: right;
+    justify-content: right;
+}
+.column-charity {
+    justify-content: center;
+}

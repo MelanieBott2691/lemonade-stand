@@ -50,8 +50,9 @@ img.nav-image {
 
 button.btn {
   border-color: white;
-  color: white;
-  box-shadow: 2px 2px 2px black;
+  background-color: whitesmoke;
+  color: black;
+  box-shadow: 2px 2px 2px rgb(37, 37, 37);
 }
 .navbar-nav a {
   
