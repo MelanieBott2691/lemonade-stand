@@ -18,6 +18,15 @@
     /* border-bottom: var(--border); */
 
 }
+
+div.icon {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 6px 0;
+  box-shadow: 2px 2px 3px black;
+}
+
 div.container {
   margin-top: 0;
 }

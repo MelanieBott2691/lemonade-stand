@@ -1,0 +1,44 @@
+.container {
+  align-content: center;
+}
+div.card.text {
+    padding: 0;
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    div.container {
+      width: 350px;
+    }
+  }
+
+@media screen and (max-width: 576px) {
+  input#userName.form-control,
+  input#firstName.form-control,
+  input#lastName.form-control,
+  input#email.form-control,
+  input#password.form-control,
+  input#password2.form-control,
+  label {
+    width: 50%;
+    margin-left: 35px;
+  }
+}
+@media screen and (min-width: 576px) {
+    input#userName.form-control,
+    input#firstName.form-control,
+    input#lastName.form-control,
+    input#email.form-control,
+    input#password.form-control,
+    input#password2.form-control,
+    label {
+      
+      margin-left: 35px;
+    }
+  }

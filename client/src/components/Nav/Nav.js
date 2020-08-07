@@ -90,7 +90,9 @@ class Navigation extends React.Component {
             aria-expanded="false"
             aria-label="Toggle navigation">
             {/* <span className="navbar-toggler-icon"></span> */}
-            Menu
+            <div className="icon"></div>
+            <div className="icon"></div>
+            <div className="icon"></div>
           </button>
           {/* Dropdown */}
 
