@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../components/Nav/Nav';
 import Footer from '../components/Footer/Footer';
 import '../assets/css/style.css';
+import { about } from '../assets/images/img7.jpg';
 import { Container, Row, CardDeck, Card } from 'react-bootstrap';
 
 export default class About extends Component {
@@ -17,7 +18,7 @@ export default class About extends Component {
           {/* image card */}
           <CardDeck>
             <Card style={{ width: '24rem' }}>
-              <Card.Img src="holder.js/171x180" fluid />
+              <Card.Img className="about-image" src={about} fluid />
             </Card>
             <Card>
               <Card.Body>

@@ -14,3 +14,10 @@
     margin: 0 auto;
     margin-left: auto;
 }
+#exit-btn {
+    border-radius: 4px;
+    background-color: rebeccapurple;
+    color: white;
+    justify-content: right;
+    padding: 5px;
+}
