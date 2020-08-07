@@ -1,18 +1,40 @@
 import React from 'react';
+import API from '../../utils/API';
 import './NewStore.css';
 
 import { Modal, Button, Col, Form, Container } from 'react-bootstrap';
+import { object } from 'prop-types';
 
 class NewStore extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      showHide: false
-    };
-  }
+  state = {
+    showHide: false,
+    userId: this.props.user.id,
+    name: '',
+    description: '',
+    imageUrl: ''
+  };
   handleModalShowHide() {
     this.setState({ showHide: !this.state.showHide });
   }
+
+  onChange = (e) => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
+
+  onSubmit = () => {
+    const newStore = {
+      userId: this.props.user.id,
+      name: this.state.name,
+      description: this.state.description,
+      imageUrl: this.state.imageUrl
+    };
+    API.createStore(newStore).then((req, res) => {
+      this.props.grabStores();
+    });
+
+    this.handleModalShowHide();
+  };
+
   render() {
     return (
       <div>
@@ -33,44 +55,50 @@ class NewStore extends React.Component {
           </Modal.Header>
           <Modal.Body className="modal-container">
             <Container>
-              <Form>
-                <Form.Row className="align-items-center">
-                  <Col xs="auto">
-                    <Form.Group
-                      className="form-group"
-                      controlId="exampleForm.ControlInput1">
-                      <Form.Label>Stand Name</Form.Label>
-
-                      <Form.Control
-                        type="name"
-                        placeholder="Name of your Stand."
-                      />
-                    </Form.Group>
-
-                    <Form.Group>
-                      <Form.File
-                        id="exampleFormControlFile1"
-                        label="Upload an Image for your Stand"
-                      />
-                    </Form.Group>
-                    <Form.Group controlId="exampleForm.ControlTextarea1">
-                      <Form.Label>Stand Description</Form.Label>
-                      <Form.Control
-                        as="textarea"
-                        rows="4"
-                        placeholder="What do you STAND for? What is it you're trying to achieve with your stand? Whether it's trying to make the world a better place through charity, raising funds for a cause, or loved one, your customers want to know!"
-                      />
-                    </Form.Group>
-                  </Col>
-                </Form.Row>
-              </Form>
+              <form>
+                <div className="form-group">
+                  <label htmlFor="exampleFormControlInput1">Stand Name</label>
+                  <input
+                    onChange={this.onChange}
+                    value={this.state.name}
+                    type="text"
+                    className="form-control"
+                    id="name"
+                    placeholder="Name of your stand"
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="exampleFormControlInput2">
+                    Link to Image
+                  </label>
+                  <input
+                    onChange={this.onChange}
+                    value={this.state.imageUrl}
+                    type="text"
+                    className="form-control"
+                    id="imageUrl"
+                    placeholder="Link to image of your stand"
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="exampleFormControlTextarea1">
+                    Tell us about your stand!
+                  </label>
+                  <textarea
+                    onChange={this.onChange}
+                    value={this.state.description}
+                    className="form-control"
+                    id="description"
+                    rows="4"></textarea>
+                </div>
+              </form>
             </Container>
           </Modal.Body>
           <Modal.Footer>
             <Button
               className="checkout-btn"
               variant="primary"
-              onClick={() => this.handleModalShowHide()}>
+              onClick={this.onSubmit}>
               Save Stand
             </Button>
           </Modal.Footer>

@@ -21,7 +21,7 @@ export default class StoreInfo extends React.Component {
             ))}
           </CardColumns>
           {/* <Button href="#">Create New Stand</Button>{' '} */}
-          <NewStore />
+          <NewStore user={this.props.user} grabStores={this.props.grabStores} />
         </Card.Body>
       </Card>
     );

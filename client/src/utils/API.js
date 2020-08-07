@@ -14,5 +14,12 @@ export default {
   },
   getItems: function () {
     return axios.get('/api/items');
+  },
+  createStore: function (store) {
+    return axios.post('/api/stores', store);
+  },
+  getUserStores: function (userId) {
+    console.log(userId);
+    return axios.get('/api/stores', userId);
   }
 };
