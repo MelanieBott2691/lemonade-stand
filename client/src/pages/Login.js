@@ -59,6 +59,7 @@ class Login extends Component {
     return (
       <div>
         <Nav />
+        <br></br>
         <div className="container justify-content-center">
           <div className="justify-content-center card">
             <div className="contact-container">
@@ -118,7 +119,7 @@ class Login extends Component {
                               marginTop: '1rem',
                             }}
                             type="submit"
-                            className="btn btn-large btn-primary waves-effect waves-light hoverable blue accent-3">
+                            className="btn btn-large btn-primary">
                             Login
                           </button>
                         </div>
