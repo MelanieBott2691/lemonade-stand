@@ -7,6 +7,7 @@ import classnames from 'classnames';
 import Nav from '../components/Nav/Nav.js';
 import Footer from '../components/Footer/Footer';
 import { Card, Container } from 'react-bootstrap';
+import './Login.css';
 
 class Login extends Component {
   constructor() {
@@ -58,19 +59,19 @@ class Login extends Component {
     return (
       <div>
         <Nav />
-        <Container className="justify-content-center align-self-center">
-          <Card>
+        <div className="container justify-content-center">
+          <div className="justify-content-center card">
             <div className="contact-container">
               <form>
-                <div className="container">
-                  {/* <Card.Header>Send us a Message</Card.Header> */}
-                  <Card.Body>
-                    <div className="form-group">
+                <div className="container-center">
+                  <br></br>
+                  <div className="card.body">
+                    <div className="center">
                       <h4>
                         <b>Login</b> below
                       </h4>
                     </div>
-                    <Card.Text>
+                    <div className="card.text">
                       <form noValidate onSubmit={this.onSubmit}>
                         <div className="form-group">
                           <label htmlFor="email">Email</label>
@@ -82,7 +83,7 @@ class Login extends Component {
                             type="email"
                             className="form-control"
                           />
-                          <span className="red-text">
+                          <span className="red-text form-group">
                             {errors.email}
                             {errors.emailnotfound}
                           </span>
@@ -97,18 +98,18 @@ class Login extends Component {
                             type="password"
                             className="form-control"
                           />
-                          <span className="red-text">
+                          <span className="red-text form-group">
                             {errors.password}
                             {errors.passwordincorrect}
                           </span>
                         </div>
                         <div>
-                          <p className="grey-text text-darken-1 form-group">
+                          <p className="grey-text text-darken-1 center">
                             Don't have an account?{' '}
                             <Link to="/register">Register</Link>
                           </p>
                         </div>
-                        <div className="form-group">
+                        <div className="center">
                           <button
                             style={{
                               width: '150px',
@@ -122,13 +123,14 @@ class Login extends Component {
                           </button>
                         </div>
                       </form>
-                    </Card.Text>
-                  </Card.Body>
+                      <br></br>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
-          </Card>
-        </Container>
+          </div>
+        </div>
         <br></br>
         <Footer />
       </div>
