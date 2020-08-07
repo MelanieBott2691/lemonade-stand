@@ -35,7 +35,8 @@ module.exports = {
             lastName: user.lastName,
             userName: user.userName,
             email: user.email,
-            imageUrl: user.imageUrl
+            imageUrl: user.imageUrl,
+            items: user.items
           };
 
           // Sign token

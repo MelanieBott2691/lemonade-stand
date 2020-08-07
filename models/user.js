@@ -7,7 +7,11 @@ const userSchema = new Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
-  imageUrl: String
+  imageUrl: String,
+  items: {
+    type: Schema.Types.Array,
+    ref: 'Item'
+  }
 });
 
 const User = mongoose.model('User', userSchema);

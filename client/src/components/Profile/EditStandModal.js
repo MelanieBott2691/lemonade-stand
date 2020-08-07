@@ -6,18 +6,24 @@ import FormControl from 'react-bootstrap/FormControl';
 import { Modal, Button, Col, Form, Container } from 'react-bootstrap';
 
 class EditStandModal extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      showHide: false
-    };
-  }
+  state = {
+    showHide: false,
+    storeId: this.props.store._id,
+    itemName: '',
+    itemPrice: '',
+    itemImg: '',
+    storeItems: []
+  };
   handleModalShowHide() {
     this.setState({ showHide: !this.state.showHide });
   }
+
+  addItem() {
+    console.log(this.state.showHide);
+  }
   render() {
     return (
-      <div>
+      <>
         <Button
           className="btn-sm btn-block"
           variant="primary"
@@ -41,22 +47,8 @@ class EditStandModal extends React.Component {
                       controlId="exampleForm.ControlInput1">
                       <Form.Label>Stand Name</Form.Label>
 
-                      <Form.Control
-                        type="name"
-                        placeholder="Change Stand name."
-                      />
+                      <Form.Control type="name" value={this.props.store.name} />
                     </Form.Group>
-
-                    {/* <Form.Group className="form-group" controlId="imageUrl">
-                      <Form.Label>Image URL</Form.Label>
-
-                      <Form.Control
-                        type="text"
-                        placeholder=""
-                        onChange={this.props.onChange}
-                        value={this.props.store.imageUrl}
-                      />
-                    </Form.Group> */}
                     <Form.Group controlId="exampleForm.ControlTextarea1">
                       <Form.Label>Change Stand Description</Form.Label>
                       <Form.Control
@@ -73,14 +65,51 @@ class EditStandModal extends React.Component {
                           <FormControl placeholder="Item Price: $0.00" />
                           <FormControl placeholder="Img URL" />
                           <InputGroup.Append></InputGroup.Append>
-                          <Button variant="outline-secondary">+</Button>
-                          {/* <Button variant="outline-secondary">-</Button> */}
+                          <Button
+                            onClick={this.addItem}
+                            variant="outline-secondary">
+                            +
+                          </Button>
                         </InputGroup>
                       </div>
                     </Form.Group>
                   </Col>
                 </Form.Row>
               </Form>
+              <table class="table">
+                <thead>
+                  <th>Item Name</th>
+                  <th>Item Price</th>
+                  <th>Img</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4 Sheet</td>
+                    <td>60X60 Inches</td>
+                    <td>R500 - R10,000</td>
+                  </tr>
+                  <tr>
+                    <td>4 Sheet</td>
+                    <td>60X60 Inches</td>
+                    <td>R500 - R10,000</td>
+                  </tr>
+                  <tr>
+                    <td>4 Sheet</td>
+                    <td>60X60 Inches</td>
+                    <td>R500 - R10,000</td>
+                  </tr>
+                  <tr>
+                    <td>4 Sheet</td>
+                    <td>60X60 Inches</td>
+                    <td>R500 - R10,000</td>
+                  </tr>
+                  <tr>
+                    <td>4 Sheet</td>
+                    <td>60X60 Inches</td>
+                    <td>R500 - R10,000</td>
+                  </tr>
+                </tbody>
+              </table>
             </Container>
           </Modal.Body>
           <Modal.Footer>
@@ -92,7 +121,7 @@ class EditStandModal extends React.Component {
             </Button>
           </Modal.Footer>
         </Modal>
-      </div>
+      </>
     );
   }
 }
