@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import API from '../utils/API';
 import { logoutUser } from '../actions/authActions';
 import Nav from '../components/Nav/Nav';
 import UserInfo from '../components/UserInfo/UserInfo';
@@ -14,6 +15,7 @@ import Footer from '../components/Footer/Footer';
 
 class Profile extends Component {
   state = {
+    userId: this.props.auth.user.id,
     stores: [
       {
         _id: 12345,
@@ -49,12 +51,25 @@ class Profile extends Component {
     purchases: []
   };
 
+  grabStores = () => {
+    API.getUserStores({ userId: this.state.userId })
+      .then((res) => {
+        this.setState({ stores: res.data });
+      })
+      .catch((err) => console.log(err));
+  };
+
+  componentDidMount() {
+    this.grabStores();
+  }
+
   onChange = (e) => {
     this.setState({ user: { [e.target.id]: e.target.value } });
   };
 
   render() {
     const { user } = this.props.auth;
+
     return (
       <>
         <Nav />
@@ -66,7 +81,12 @@ class Profile extends Component {
             <Col md={1} xl={1}></Col>
             <br></br>
             <Col xl={true} lg={true} md={12} sm={true}>
-              <StoreInfo stores={this.state.stores} onChange={this.onChange} />
+              <StoreInfo
+                user={user}
+                stores={this.state.stores}
+                onChange={this.onChange}
+                grabStores={this.grabStores}
+              />
             </Col>
           </Row>
           <br></br>

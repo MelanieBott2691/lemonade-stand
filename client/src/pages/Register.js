@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { registerUser } from '../actions/authActions';
 import classnames from 'classnames';
+import Nav from '../components/Nav/Nav';
+import Footer from '../components/Footer/Footer';
+import { Card, Container } from 'react-bootstrap';
 
 class Register extends Component {
   constructor() {
@@ -22,7 +25,7 @@ class Register extends Component {
   componentDidMount() {
     // If logged in and user navigates to Register page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push('/dashboard');
+      this.props.history.push('/profile');
     }
   }
 
@@ -57,114 +60,126 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col s8 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to
-              home
-            </Link>
-            <div className="col s12" style={{ paddingLeft: '11.250px' }}>
-              <h4>
-                <b>Register</b> below
-              </h4>
-              <p className="grey-text text-darken-1">
-                Already have an account? <Link to="/login">Log in</Link>
-              </p>
+      <div>
+        <Nav />
+        <Container className="justify-content-center">
+          <Card className="justify-content-center">
+            <div className="contact-container">
+              <form className="justify-content-center">
+                <div className="container">
+                  <div className="form-group justify-content-center">
+                    <h4 className="justify-content-center">
+                      <b>Register</b> below
+                    </h4>
+                  </div>
+                  {/* <Card.Header>Send us a Message</Card.Header> */}
+                  <Card.Body>
+                    <Card.Text>
+                      <form
+                        className="justify-content-center"
+                        noValidate
+                        onSubmit={this.onSubmit}>
+                        <div className="form-group">
+                          <label htmlFor="userName">User Name</label>
+                          <input
+                            onChange={this.onChange}
+                            value={this.state.userName}
+                            error={errors.userName}
+                            id="userName"
+                            type="text"
+                            className="form-control"
+                          />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="firstName">First Name</label>
+                          <input
+                            onChange={this.onChange}
+                            value={this.state.firstName}
+                            error={errors.firstName}
+                            id="firstName"
+                            type="text"
+                            className="form-control"
+                          />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="lastName">Last Name</label>
+                          <input
+                            onChange={this.onChange}
+                            value={this.state.lastName}
+                            error={errors.lastName}
+                            id="lastName"
+                            type="text"
+                            className="form-control"
+                          />
+                        </div>
+                        <div>
+                          <span className="red-text">{errors.name}</span>
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="email">Email</label>
+                          <input
+                            onChange={this.onChange}
+                            value={this.state.email}
+                            error={errors.email}
+                            id="email"
+                            type="email"
+                            className="form-control"
+                          />
+                          <span className="red-text">{errors.email}</span>
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="password">Password</label>
+                          <input
+                            onChange={this.onChange}
+                            value={this.state.password}
+                            error={errors.password}
+                            id="password"
+                            type="password"
+                            className="form-control"
+                          />
+                          <span className="red-text">{errors.password}</span>
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="password2">Confirm Password</label>
+                          <input
+                            onChange={this.onChange}
+                            value={this.state.password2}
+                            error={errors.password2}
+                            id="password2"
+                            type="password"
+                            className="form-control"
+                          />
+                          <span className="red-text">{errors.password2}</span>
+                        </div>
+                        <div>
+                          <p className="grey-text text-darken-1 form-group">
+                            Already have an account?{' '}
+                            <Link to="/login">Log in</Link>
+                          </p>
+                        </div>
+                        <div className="form-group">
+                          <button
+                            style={{
+                              width: '150px',
+                              borderRadius: '3px',
+                              letterSpacing: '1.5px',
+                              marginTop: '1rem'
+                            }}
+                            type="submit"
+                            className="btn btn-large btn-primary waves-effect waves-light">
+                            Sign up
+                          </button>
+                        </div>
+                      </form>
+                    </Card.Text>
+                  </Card.Body>
+                </div>
+              </form>
             </div>
-            <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.userName}
-                  error={errors.userName}
-                  id="userName"
-                  type="text"
-                  className={classnames('', {
-                    invalid: errors.userName
-                  })}
-                />
-                <input
-                  onChange={this.onChange}
-                  value={this.state.firstName}
-                  error={errors.firstName}
-                  id="firstName"
-                  type="text"
-                  className={classnames('', {
-                    invalid: errors.firstName
-                  })}
-                />
-                <input
-                  onChange={this.onChange}
-                  value={this.state.lastName}
-                  error={errors.lastName}
-                  id="lastName"
-                  type="text"
-                  className={classnames('', {
-                    invalid: errors.lastName
-                  })}
-                />
-                <label htmlFor="name">Name</label>
-                <span className="red-text">{errors.name}</span>
-              </div>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.email}
-                  error={errors.email}
-                  id="email"
-                  type="email"
-                  className={classnames('', {
-                    invalid: errors.email
-                  })}
-                />
-                <label htmlFor="email">Email</label>
-                <span className="red-text">{errors.email}</span>
-              </div>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password}
-                  error={errors.password}
-                  id="password"
-                  type="password"
-                  className={classnames('', {
-                    invalid: errors.password
-                  })}
-                />
-                <label htmlFor="password">Password</label>
-                <span className="red-text">{errors.password}</span>
-              </div>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password2}
-                  error={errors.password2}
-                  id="password2"
-                  type="password"
-                  className={classnames('', {
-                    invalid: errors.password2
-                  })}
-                />
-                <label htmlFor="password2">Confirm Password</label>
-                <span className="red-text">{errors.password2}</span>
-              </div>
-              <div className="col s12" style={{ paddingLeft: '11.250px' }}>
-                <button
-                  style={{
-                    width: '150px',
-                    borderRadius: '3px',
-                    letterSpacing: '1.5px',
-                    marginTop: '1rem'
-                  }}
-                  type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3">
-                  Sign up
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
+          </Card>
+        </Container>
+        <br></br>
+        <Footer />
       </div>
     );
   }
