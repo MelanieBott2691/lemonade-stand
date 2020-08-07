@@ -1,5 +1,5 @@
 import React from 'react';
-import PaypalButton from './PayPalButton';
+import PayPalButton from './PayPalButton';
 import {
   Modal,
   Button,
@@ -62,7 +62,9 @@ class CheckoutModal extends React.Component {
               </Col>
 
               <Col>
-                <PaypalButton />
+                <div id="paypal-button-container">
+                  <PayPalButton />
+                </div>
               </Col>
             </Container>
           </Modal.Header>
