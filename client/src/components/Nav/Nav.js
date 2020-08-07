@@ -5,63 +5,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 
-// const NavItem = (props) => {
-//   const pageURI = window.location.pathname + window.location.search;
-//   const liClassName = props.path === pageURI ? 'nav-item active' : 'nav-item';
-//   const aClassName = props.disabled ? 'nav-link disabled' : 'nav-link';
-//   return (
-//     <li className={liClassName}>
-//       <a href={props.path} className={aClassName}>
-//         {props.name}
-//         {props.path === pageURI ? (
-//           <span className="sr-only">(current)</span>
-//         ) : (
-//           ''
-//         )}
-//       </a>
-//     </li>
-//   );
-// };
-
-// class NavDropdown extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       isToggleOn: false,
-//     };
-//   }
-//   showDropdown(e) {
-//     e.preventDefault();
-//     this.setState((prevState) => ({
-//       isToggleOn: !prevState.isToggleOn,
-//     }));
-//   }
-//   render() {
-//     const classDropdownMenu =
-//       'dropdown-menu' + (this.state.isToggleOn ? ' show' : '');
-//     return (
-//       <li className="nav-item dropdown">
-//         <a
-//           className="nav-link dropdown-toggle"
-//           href="/"
-//           id="navbarDropdown"
-//           role="button"
-//           data-toggle="dropdown"
-//           aria-haspopup="true"
-//           aria-expanded="false"
-//           onClick={(e) => {
-//             this.showDropdown(e);
-//           }}>
-//           {this.props.name}
-//         </a>
-//         <div className={classDropdownMenu} aria-labelledby="navbarDropdown">
-//           {this.props.children}
-//         </div>
-//       </li>
-//     );
-//   }
-// }
-
 class Navigation extends React.Component {
   onLogoutClick = (e) => {
     e.preventDefault();
@@ -159,50 +102,13 @@ class Navigation extends React.Component {
                 onChange={this.props.handleInputChange}></input>
 
               <button
-                className="btn btn-outline-success my-2 my-sm-0"
+                className="btn my-2 my-sm-0"
                 type="submit"
                 onClick={this.props.handleFormSubmit}>
                 Search
               </button>
             </form>
           </div>
-
-          {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <NavItem id="navitem" path="/" name="Home" />
-            <NavItem id="navitem" path="/about" name="About" />
-            <NavDropdown id="navitem" name="Menu">
-              <a className="dropdown-item" href="/login">
-                Sign In
-              </a>
-              <a
-                className="dropdown-item"
-                href="/"
-                onClick={this.onLogoutClick}>
-                Logout
-              </a>
-              <a className="dropdown-item" href="/register">
-                Register
-              </a>
-              <a className="dropdown-item" href="/profile">
-                Profile
-              </a>
-              <a className="dropdown-item" href="/contact">
-                Contact
-              </a>
-              <a className="dropdown-item" href="/storeitem">
-                TestItem
-              </a>
-              <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="/cart">
-                Cart
-              </a>
-              <a className="dropdown-item" href="/shoppingcart">
-                Shopping Cart
-              </a>
-            </NavDropdown>
-          </ul>
-        </div> */}
         </div>
       </nav>
     );
