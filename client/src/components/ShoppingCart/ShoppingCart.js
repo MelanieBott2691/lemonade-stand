@@ -30,7 +30,7 @@ export default class ShoppingCart extends Component {
               <tr className="table-row">
                 <td>Charity (Select Below)</td>
 
-                <td>
+                <td className="vertical-align-middle">
                   <input
                     id="input-price"
                     name="input-name"

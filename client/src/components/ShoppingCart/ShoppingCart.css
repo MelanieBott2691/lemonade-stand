@@ -31,3 +31,6 @@ input {
     text-align: center;
     width: 90px;
 }
+td {
+    vertical-align: middle !important;
+}
