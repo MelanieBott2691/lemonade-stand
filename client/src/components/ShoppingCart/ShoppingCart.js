@@ -40,9 +40,11 @@ export default class ShoppingCart extends Component {
                         src="https://cdn3.volusion.com/65wgp.sm6ue/v/vspfiles/photos/GT66AA-2.jpg?v-cache=1569508703"
                       />
                     </td>
-                    <td className="vertical-align-middle">Some name</td>
+                    <td className="vertical-align-middle">
+                      Friendship Bracelets
+                    </td>
 
-                    <td className="paddingtd vertical-align-middle">$12.50</td>
+                    <td className="paddingtd vertical-align-middle">$5</td>
 
                     <td>
                       {
@@ -51,9 +53,9 @@ export default class ShoppingCart extends Component {
                           className="mr-sm-2"
                           id="inlineFormCustomSelect"
                           custom>
-                          {/* <option value="0">Qty...</option>
-                      <option value="1">1</option> */}
-                          <option value="2">2</option>
+                          {/* <option value="0">Qty...</option> */}
+                          <option value="1">1</option>
+                          {/* <option value="2">2</option> */}
                           {/* <option value="3">3</option>
                       <option value="4">4</option>
                       <option value="5">5</option>
@@ -66,7 +68,7 @@ export default class ShoppingCart extends Component {
                         </Form.Control>
                       }
                     </td>
-                    <td>${25.67}</td>
+                    <td>${5}</td>
                   </tr>
 
                   <tr className="table-row">
@@ -75,11 +77,13 @@ export default class ShoppingCart extends Component {
                         alt="stuff"
                         className="img-size"
                         variant="top"
-                        src="https://cdn3.volusion.com/65wgp.sm6ue/v/vspfiles/photos/GT66AA-2.jpg?v-cache=1569508703"
+                        src="https://cdn.shopify.com/s/files/1/1133/3328/products/yummy-luv-sticker-pack-2019_800x.png?v=1564258685"
                       />
                     </td>
-                    <td className="vertical-align-middle">Some name</td>
-                    <td>
+                    <td className="vertical-align-middle">Cute Sticker Pack</td>
+                    <td className="paddingtd vertical-align-middle">$2</td>
+
+                    {/* <td>
                       <input
                         id="input-price"
                         name="input-name"
@@ -89,7 +93,7 @@ export default class ShoppingCart extends Component {
                         decimalsLimit={2}
                         onChange={(value, name) => console.log(value, name)}
                       />
-                    </td>
+                    </td> */}
 
                     <td>
                       {
@@ -98,22 +102,22 @@ export default class ShoppingCart extends Component {
                           className="mr-sm-2"
                           id="inlineFormCustomSelect"
                           custom>
-                          <option value="0">Qty...</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
+                          {/* <option value="0">Qty...</option> */}
+                          {/* <option value="1">1</option> */}
+                          {/* {/* <option value="2">2</option> */}
+                          {/* <option value="3">3</option> */}
+                          {/* <option value="4">4</option> */}
                           <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                          <option value="other">Other (add in notes)</option>
+                          {/* <option value="6">6</option> */}
+                          {/* <option value="7">7</option> */}
+                          {/* <option value="8">8</option> */}
+                          {/* <option value="9">9</option> */}
+                          {/* <option value="10">10</option> */} */}
+                          {/* <option value="other">Other (add in notes)</option> */}
                         </Form.Control>
                       }
                     </td>
-                    <td>${12.5}</td>
+                    <td>${10}</td>
                   </tr>
                   <tr className="table-row">
                     <td className="paddingtd">
@@ -121,11 +125,13 @@ export default class ShoppingCart extends Component {
                         alt="stuff"
                         className="img-size"
                         variant="top"
-                        src="https://cdn3.volusion.com/65wgp.sm6ue/v/vspfiles/photos/GT66AA-2.jpg?v-cache=1569508703"
+                        src="https://images-na.ssl-images-amazon.com/images/I/61LKtry2iOL._AC_SX425_.jpg"
                       />
                     </td>
-                    <td className="vertical-align-middle">Some name</td>
-                    <td>
+                    <td className="vertical-align-middle">Fluffy Slime</td>
+                    <td className="paddingtd vertical-align-middle">$6</td>
+
+                    {/* <td>
                       <input
                         id="input-price"
                         name="input-name"
@@ -135,7 +141,7 @@ export default class ShoppingCart extends Component {
                         decimalsLimit={2}
                         onChange={(value, name) => console.log(value, name)}
                       />
-                    </td>
+                    </td> */}
 
                     <td>
                       {
@@ -144,9 +150,9 @@ export default class ShoppingCart extends Component {
                           className="mr-sm-2"
                           id="inlineFormCustomSelect"
                           custom>
-                          <option value="0">Qty...</option>
+                          {/* <option value="0">Qty...</option> */}
                           <option value="1">1</option>
-                          <option value="2">2</option>
+                          {/* <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
@@ -155,11 +161,11 @@ export default class ShoppingCart extends Component {
                           <option value="8">8</option>
                           <option value="9">9</option>
                           <option value="10">10</option>
-                          <option value="other">Other (add in notes)</option>
+                          <option value="other">Other (add in notes)</option> */}
                         </Form.Control>
                       }
                     </td>
-                    <td>${12.5}</td>
+                    <td>${6}</td>
                   </tr>
                   <tr className="table-row">
                     <td className="paddingtd">
@@ -167,11 +173,16 @@ export default class ShoppingCart extends Component {
                         alt="stuff"
                         className="img-size"
                         variant="top"
-                        src="https://cdn3.volusion.com/65wgp.sm6ue/v/vspfiles/photos/GT66AA-2.jpg?v-cache=1569508703"
+                        // src="https://images.pexels.com/photos/4226726/pexels-photo-4226726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        // src="https://images.pexels.com/photos/922269/pexels-photo-922269.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        // src="https://images.pexels.com/photos/305530/pexels-photo-305530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        src="https://t3.ftcdn.net/jpg/02/72/40/36/240_F_272403645_eSJaajqqUPQ92Sr4wgT2h1uu9FMzRg6v.jpg"
                       />
                     </td>
-                    <td className="vertical-align-middle">Some name</td>
-                    <td>
+                    <td className="vertical-align-middle">Make A Wish</td>
+                    <td className="paddingtd vertical-align-middle">$25</td>
+
+                    {/* <td>
                       <input
                         id="input-price"
                         name="input-name"
@@ -181,7 +192,7 @@ export default class ShoppingCart extends Component {
                         decimalsLimit={2}
                         onChange={(value, name) => console.log(value, name)}
                       />
-                    </td>
+                    </td> */}
 
                     <td>
                       {
@@ -190,9 +201,9 @@ export default class ShoppingCart extends Component {
                           className="mr-sm-2"
                           id="inlineFormCustomSelect"
                           custom>
-                          <option value="0">Qty...</option>
+                          {/* <option value="0">Qty...</option> */}
                           <option value="1">1</option>
-                          <option value="2">2</option>
+                          {/* <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
@@ -201,11 +212,11 @@ export default class ShoppingCart extends Component {
                           <option value="8">8</option>
                           <option value="9">9</option>
                           <option value="10">10</option>
-                          <option value="other">Other (add in notes)</option>
+                          <option value="other">Other (add in notes)</option> */}
                         </Form.Control>
                       }
                     </td>
-                    <td>${12.5}</td>
+                    <td>${25}</td>
                   </tr>
                 </tbody>
               </Table>

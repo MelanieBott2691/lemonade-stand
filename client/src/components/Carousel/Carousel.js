@@ -17,8 +17,8 @@ export default function Carouselbanner() {
           <h2>CREATIVITY</h2>
           <blockquote className="blockquote mb-0 card-body">
             <small className="font-size">
-              "To know is nothing at all; To imagine is everything." 
-              <p>                     </p>
+              "To know is nothing at all; To imagine is everything."
+              <p> </p>
             </small>
             <footer>
               <small>
@@ -41,7 +41,7 @@ export default function Carouselbanner() {
           <blockquote className="blockquote mb-0 card-body">
             <small className="font-size">
               “No one has ever become poor by giving.”
-              <p>                     </p>
+              <p> </p>
             </small>
             <footer>
               <small>

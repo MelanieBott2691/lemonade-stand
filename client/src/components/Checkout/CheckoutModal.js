@@ -8,7 +8,7 @@ import {
   Row,
   Col,
   Container,
-  Form,
+  Form
 } from 'react-bootstrap';
 import header from '../../assets/images/purpleLGstand.png';
 import './CheckoutModal.css';
@@ -17,7 +17,7 @@ class CheckoutModal extends React.Component {
   constructor() {
     super();
     this.state = {
-      showHide: false,
+      showHide: false
     };
   }
   handleModalShowHide() {
@@ -31,7 +31,7 @@ class CheckoutModal extends React.Component {
           style={{
             justifyContent: 'center',
             display: 'flex',
-            alignItems: 'center',
+            alignItems: 'center'
           }}
           onClick={() => this.handleModalShowHide()}>
           Review for Checkout
@@ -54,12 +54,10 @@ class CheckoutModal extends React.Component {
                     width={400}
                     className="card-image"
                   />
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
+                  <hr />
+                  <br />
+                  <br />
+                  <br />
                   <hr />
                   <Modal.Title className="make">How You'll Pay</Modal.Title>
                 </Row>
@@ -76,12 +74,9 @@ class CheckoutModal extends React.Component {
             <Card.Body>
               <Card.Title></Card.Title>
               <ListGroup>
-                <Row>Item(s) total: ${} </Row>
-                <Row>Quantity total: {} </Row>
+                <Row>Item(s) total: $46 </Row>
+                <Row>Quantity total: 8 </Row>
                 <hr />
-                <Row>
-                  Total ({}item(s)) ${}
-                </Row>
               </ListGroup>
               <Form>
                 <Row>
@@ -93,12 +88,13 @@ class CheckoutModal extends React.Component {
                       </Form.Label>
                       <Form.Control as="select" custom>
                         <option>Standard Shipping $4.99</option>
-                        <option>FedEx Ground $12.98</option>
+                        {/* <option>FedEx Ground $12.98</option>
                         <option>FedEx 2-Day $15.99</option>
                         <option>FedEx Overnight $40.99</option>
-                        <option>Local Pickup</option>
+                        <option>Local Pickup</option> */}
                       </Form.Control>
                     </Form.Group>
+                    <Row>Total (cart): $50.99</Row>
                   </Col>
                 </Row>
                 {/* Leave a Message Box */}
