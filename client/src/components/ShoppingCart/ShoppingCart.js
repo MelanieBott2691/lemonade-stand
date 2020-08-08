@@ -3,9 +3,10 @@ import Nav from '../Nav/Nav';
 import './ShoppingCart.css';
 
 import CheckoutModal from '../Checkout/CheckoutModal';
-import { Form, Row, Col, Card, Table } from 'react-bootstrap';
+import { Form, Row, Col, Card, Table, Container } from 'react-bootstrap';
 import CharityModal from '../ShoppingCart/CharityModal';
 // import CurrencyInput from 'react-currency-input-field';
+import Footer from '../Footer/Footer';
 
 export default class ShoppingCart extends Component {
   render() {
@@ -13,46 +14,49 @@ export default class ShoppingCart extends Component {
       <>
         <Nav />
         <br />
-        <Card variant="outlined" className="shoppingCart-container">
-          <Card.Header>Review Order</Card.Header>
-          <br />
-          <Card.Title>My Shopping Cart</Card.Title>
-          <Table striped bordered hover size="sm" className="center">
-            <thead>
-              <tr className="table-row">
-                <th>Product</th>
-                <th>Price</th>
-                <th>Qauntity</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="table-row">
-                <td>Charity (Select Below)</td>
+        <Container>
+          <Card variant="outlined" className="shoppingCart-container">
+            <Card.Header>Review Order</Card.Header>
+            <br />
+            <Card.Title>My Shopping Cart</Card.Title>
+            <div className="table-responsive">
+              <Table striped bordered hover size="sm" className="center">
+                <thead>
+                  <tr className="table-row">
+                    <th>Item</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qauntity</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="table-row">
+                    <td className="paddingtd">
+                      <img
+                        alt="stuff"
+                        className="img-size"
+                        variant="top"
+                        src="https://cdn3.volusion.com/65wgp.sm6ue/v/vspfiles/photos/GT66AA-2.jpg?v-cache=1569508703"
+                      />
+                    </td>
+                    <td className="vertical-align-middle">
+                      Friendship Bracelets
+                    </td>
 
-                <td>
-                  <input
-                    id="input-price"
-                    name="input-name"
-                    placeholder="$ 00.00"
-                    // defaultValue={1.0}
-                    allowDecimals={true}
-                    decimalsLimit={2}
-                    onChange={(value, name) => console.log(value, name)}
-                  />
-                </td>
+                    <td className="paddingtd vertical-align-middle">$5</td>
 
-                <td>
-                  {
-                    <Form.Control
-                      as="select"
-                      className="mr-sm-2"
-                      id="inlineFormCustomSelect"
-                      custom>
-                      <option value="0">Qty...</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
+                    <td>
+                      {
+                        <Form.Control
+                          as="select"
+                          className="mr-sm-2"
+                          id="inlineFormCustomSelect"
+                          custom>
+                          {/* <option value="0">Qty...</option> */}
+                          <option value="1">1</option>
+                          {/* <option value="2">2</option> */}
+                          {/* <option value="3">3</option>
                       <option value="4">4</option>
                       <option value="5">5</option>
                       <option value="6">6</option>
@@ -60,163 +64,168 @@ export default class ShoppingCart extends Component {
                       <option value="8">8</option>
                       <option value="9">9</option>
                       <option value="10">10</option>
-                      <option value="other">Other (add in notes)</option>
-                    </Form.Control>
-                  }
-                </td>
-                <td>${}</td>
-              </tr>
-              <tr className="table-row">
-                <td>{}</td>
-                <td>{}</td>
-                <td>
-                  {
-                    <Form.Control
-                      as="select"
-                      className="mr-sm-2"
-                      id="inlineFormCustomSelect"
-                      custom>
-                      <option value="0">Qty...</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="other">Other (add in notes)</option>
-                    </Form.Control>
-                  }
-                </td>
-                <td>{}</td>
-              </tr>
-              <tr className="table-row">
-                <td>{}</td>
-                <td>{}</td>
-                <td>
-                  {
-                    <Form.Control
-                      as="select"
-                      className="mr-sm-2"
-                      id="inlineFormCustomSelect"
-                      custom>
-                      <option value="0">Qty...</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="other">Other (add in notes)</option>
-                    </Form.Control>
-                  }
-                </td>
-                <td>{}</td>
-              </tr>
-              <tr className="table-row">
-                <td>{}</td>
-                <td>{}</td>
-                <td>
-                  {
-                    <Form.Control
-                      as="select"
-                      className="mr-sm-2"
-                      id="inlineFormCustomSelect"
-                      custom>
-                      <option value="0">Qty...</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="other">Other (add in notes)</option>
-                    </Form.Control>
-                  }
-                </td>
-                <td>{}</td>
-              </tr>
-            </tbody>
-          </Table>
-        </Card>
+                      <option value="other">Other (add in notes)</option> */}
+                        </Form.Control>
+                      }
+                    </td>
+                    <td>${5}</td>
+                  </tr>
+
+                  <tr className="table-row">
+                    <td className="paddingtd">
+                      <img
+                        alt="stuff"
+                        className="img-size"
+                        variant="top"
+                        src="https://cdn.shopify.com/s/files/1/1133/3328/products/yummy-luv-sticker-pack-2019_800x.png?v=1564258685"
+                      />
+                    </td>
+                    <td className="vertical-align-middle">Cute Sticker Pack</td>
+                    <td className="paddingtd vertical-align-middle">$2</td>
+
+                    {/* <td>
+                      <input
+                        id="input-price"
+                        name="input-name"
+                        placeholder="$ 00.00"
+                        // defaultValue={1.0}
+                        allowDecimals={true}
+                        decimalsLimit={2}
+                        onChange={(value, name) => console.log(value, name)}
+                      />
+                    </td> */}
+
+                    <td>
+                      {
+                        <Form.Control
+                          as="select"
+                          className="mr-sm-2"
+                          id="inlineFormCustomSelect"
+                          custom>
+                          {/* <option value="0">Qty...</option> */}
+                          {/* <option value="1">1</option> */}
+                          {/* {/* <option value="2">2</option> */}
+                          {/* <option value="3">3</option> */}
+                          {/* <option value="4">4</option> */}
+                          <option value="5">5</option>
+                          {/* <option value="6">6</option> */}
+                          {/* <option value="7">7</option> */}
+                          {/* <option value="8">8</option> */}
+                          {/* <option value="9">9</option> */}
+                          {/* <option value="10">10</option> */} */}
+                          {/* <option value="other">Other (add in notes)</option> */}
+                        </Form.Control>
+                      }
+                    </td>
+                    <td>${10}</td>
+                  </tr>
+                  <tr className="table-row">
+                    <td className="paddingtd">
+                      <img
+                        alt="stuff"
+                        className="img-size"
+                        variant="top"
+                        src="https://images-na.ssl-images-amazon.com/images/I/61LKtry2iOL._AC_SX425_.jpg"
+                      />
+                    </td>
+                    <td className="vertical-align-middle">Fluffy Slime</td>
+                    <td className="paddingtd vertical-align-middle">$6</td>
+
+                    {/* <td>
+                      <input
+                        id="input-price"
+                        name="input-name"
+                        placeholder="$ 00.00"
+                        // defaultValue={1.0}
+                        allowDecimals={true}
+                        decimalsLimit={2}
+                        onChange={(value, name) => console.log(value, name)}
+                      />
+                    </td> */}
+
+                    <td>
+                      {
+                        <Form.Control
+                          as="select"
+                          className="mr-sm-2"
+                          id="inlineFormCustomSelect"
+                          custom>
+                          {/* <option value="0">Qty...</option> */}
+                          <option value="1">1</option>
+                          {/* <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="other">Other (add in notes)</option> */}
+                        </Form.Control>
+                      }
+                    </td>
+                    <td>${6}</td>
+                  </tr>
+                  <tr className="table-row">
+                    <td className="paddingtd">
+                      <img
+                        alt="stuff"
+                        className="img-size"
+                        variant="top"
+                        // src="https://images.pexels.com/photos/4226726/pexels-photo-4226726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        // src="https://images.pexels.com/photos/922269/pexels-photo-922269.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        // src="https://images.pexels.com/photos/305530/pexels-photo-305530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        src="https://t3.ftcdn.net/jpg/02/72/40/36/240_F_272403645_eSJaajqqUPQ92Sr4wgT2h1uu9FMzRg6v.jpg"
+                      />
+                    </td>
+                    <td className="vertical-align-middle">Make A Wish</td>
+                    <td className="paddingtd vertical-align-middle">$25</td>
+
+                    {/* <td>
+                      <input
+                        id="input-price"
+                        name="input-name"
+                        placeholder="$ 00.00"
+                        // defaultValue={1.0}
+                        allowDecimals={true}
+                        decimalsLimit={2}
+                        onChange={(value, name) => console.log(value, name)}
+                      />
+                    </td> */}
+
+                    <td>
+                      {
+                        <Form.Control
+                          as="select"
+                          className="mr-sm-2"
+                          id="inlineFormCustomSelect"
+                          custom>
+                          {/* <option value="0">Qty...</option> */}
+                          <option value="1">1</option>
+                          {/* <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="other">Other (add in notes)</option> */}
+                        </Form.Control>
+                      }
+                    </td>
+                    <td>${25}</td>
+                  </tr>
+                </tbody>
+              </Table>
+              <CheckoutModal />
+            </div>
+          </Card>
+        </Container>
         <br />
-
-        <Card>
-          <br></br>
-          <Form>
-            <Row>
-              <Col>
-                <CharityModal />
-                {/* <Form.Group controlId="exampleForm.SelectCustom">
-                  <Form.Label>Select Charity</Form.Label>
-                  <Form.Control as="select" custom>
-                    <option>
-                      Red Cross<a href="redcross.org"></a>
-                    </option>
-                    <option>Best Friends Animal Society</option>
-                    <option>Make A Wish</option>
-                    <option>Habitat for Humanity</option>
-                    <option>Local Charity</option>
-
-                    <div className="testing-container">
-                      <button
-                        type="button"
-                        onClick={() => this.handleClick('/')}>
-                        Red Cross
-                      </button>
-                      <div className="test">Test</div>
-                    </div>
-                  </Form.Control>
-                </Form.Group> */}
-              </Col>
-            </Row>
-          </Form>
-
-          <Form>
-            <Row>
-              <Col>
-                {/* Shipping Options */}
-                <Form.Group controlId="exampleForm.SelectCustom">
-                  <Form.Label style={{ fontWeight: 'bold' }}>
-                    Shipping
-                  </Form.Label>
-                  <Form.Control as="select" custom>
-                    <option>Standard Shipping $4.99</option>
-                    <option>FedEx Ground $12.98</option>
-                    <option>FedEx 2-Day $15.99</option>
-                    <option>FedEx Overnight $40.99</option>
-                    <option>Local Pickup</option>
-                  </Form.Control>
-                </Form.Group>
-              </Col>
-            </Row>
-            {/* Leave a Message Box */}
-            <Row>
-              <Col>
-                <Form.Group controlId="exampleForm.ControlTextarea1">
-                  <Form.Label></Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    placeholder="Add a note or request quantity (optional)..."
-                    rows="3"
-                  />
-                </Form.Group>
-              </Col>
-            </Row>
-          </Form>
-          <CheckoutModal />
-        </Card>
+        <Footer />
       </>
     );
   }

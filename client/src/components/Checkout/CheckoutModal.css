@@ -1,40 +1,58 @@
+Button.checkout-btn {
+  border-radius: 30px;
+  width: 240px;
+  background-color: black;
+  color: whitesmoke;
+  border-color: black;
+}
+Button.cancel-btn {
+  background-color: rgb(110, 32, 32);
+  border-color: rgb(110, 32, 32);
+  color: whitesmoke;
+  border-radius: 30px;
+}
+#checkoutModal {
+  background-color: teal;
+  border-color: teal;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+.card-image {
+  /* background-image: url("../../assets/images/purpleLGstand.png"); */
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
-Button.checkout-btn  {
-    border-radius: 30px;
-    width: 240px;
-    background-color: black;
-    color: whitesmoke;
-    border-color: black;
+.make {
+  padding-left: 10px !important;
+}
+
+label.form-label {
+  margin-left: 0;
+}
+
+i.fab {
+  size: 7px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 500px) {
+  #mobile {
+    width: 230px !important;
   }
-  Button.cancel-btn {
-    background-color: rgb(110, 32, 32);
-    border-color: rgb(110, 32, 32);
-    color: whitesmoke;
-    border-radius: 30px;
-  }
-  #checkoutModal {
-    background-color: teal;
-    border-color: teal;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    margin: 0 auto;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
-  }
+}
+
+@media (max-width: 556px) {
   .card-image {
-    /* background-image: url("../../assets/images/purpleLGstand.png"); */
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 20px;
-  
+    width: 310px !important;
   }
-          
-  i.fab {
-size: 7px;
-justify-content: flex-end;
-  }
+}

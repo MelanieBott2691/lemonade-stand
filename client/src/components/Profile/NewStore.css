@@ -6,3 +6,19 @@
 .modal-title {
   padding-left: 45px;
 }
+
+@media screen and (max-width: 576px) {
+  input#name.form-control,
+  input#price.form-control,
+  input#quantity.form-control,
+  input#email.form-control,
+  input#imageUrl.form-control,
+  input#charityName.form-control,
+  input#charityUrl.form-control,
+  textarea#description.form-control,
+  textarea#charityDescription.form-control,
+  label {
+    width: 50%;
+    margin-left: 35px;
+  }
+}

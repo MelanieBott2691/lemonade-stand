@@ -65,6 +65,7 @@ class Profile extends Component {
             </Col>
           </Row>
         </Container>
+        <br />
         <Footer />
       </>
     );
