@@ -114,9 +114,7 @@ export default class NewItem extends React.Component {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="exampleFormControlTextarea1">
-                    Tell us about your stand!
-                  </label>
+                  <label htmlFor="itemDescription">Describe the item</label>
                   <textarea
                     onChange={this.onChange}
                     value={this.state.description}
