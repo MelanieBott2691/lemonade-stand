@@ -7,7 +7,8 @@ import {
   Card,
   Row,
   Col,
-  Container
+  Container,
+  Form
 } from 'react-bootstrap';
 import header from '../../assets/images/purpleLGstand.png';
 import './CheckoutModal.css';
@@ -38,10 +39,13 @@ class CheckoutModal extends React.Component {
         <br />
 
         <Modal id="modal" show={this.state.showHide} className="modal-checkout">
-          <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
+          <Modal.Header
+            className="center"
+            closeButton
+            onClick={() => this.handleModalShowHide()}>
             <Container>
               <Col>
-                <Row>
+                <Row className="center">
                   <img
                     src={header}
                     alt="header"
@@ -57,7 +61,7 @@ class CheckoutModal extends React.Component {
                   <br></br>
                   <br></br>
                   <hr />
-                  <Modal.Title>How You'll Pay</Modal.Title>
+                  <Modal.Title className="make">How You'll Pay</Modal.Title>
                 </Row>
               </Col>
 
@@ -79,6 +83,40 @@ class CheckoutModal extends React.Component {
                   Total ({}item(s)) ${}
                 </Row>
               </ListGroup>
+              <Form>
+                <Row>
+                  <Col>
+                    {/* Shipping Options */}
+                    <Form.Group controlId="mobile">
+                      <Form.Label style={{ fontWeight: 'bold' }}>
+                        Shipping
+                      </Form.Label>
+                      <Form.Control as="select" custom>
+                        <option>Standard Shipping $4.99</option>
+                        <option>FedEx Ground $12.98</option>
+                        <option>FedEx 2-Day $15.99</option>
+                        <option>FedEx Overnight $40.99</option>
+                        <option>Local Pickup</option>
+                      </Form.Control>
+                    </Form.Group>
+                  </Col>
+                </Row>
+                {/* Leave a Message Box */}
+                <Row>
+                  <Col>
+                    <Form.Group controlId="mobile">
+                      <Form.Label style={{ fontWeight: 'bold' }}>
+                        Add a Note
+                      </Form.Label>
+                      <Form.Control
+                        as="textarea"
+                        placeholder="Add a note or request quantity (optional)..."
+                        rows="3"
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+              </Form>
             </Card.Body>
           </Modal.Body>
           <Modal.Footer>
@@ -89,7 +127,7 @@ class CheckoutModal extends React.Component {
               Cancel
             </Button>
             <Button
-              className="checkout-btn"
+              className="primary-btn"
               variant="primary"
               onClick={() => this.handleModalShowHide()}>
               Place Order
