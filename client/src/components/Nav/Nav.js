@@ -118,7 +118,7 @@ class Navigation extends React.Component {
                 type="search"
                 placeholder="Search..."
                 aria-label="Search"
-                value={this.props.Search}
+                value={this.props.inputSearch}
                 onChange={this.props.handleInputChange}></input>
 
               <button

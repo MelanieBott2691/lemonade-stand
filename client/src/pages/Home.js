@@ -30,13 +30,20 @@ export default class Home extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.inputSearch);
-    API.getSearch({ name: this.state.inputSearch })
-      .then((res) => {
-        console.log(res);
-        this.setState({ data: res.data });
-      })
-      .catch((err) => console.log(err));
+    console.log('form submit');
+    console.log(this.state.inputSearc);
+    if (this.state.inputSearch) {
+      API.getSearch({ name: this.state.inputSearch })
+        .then((res) => {
+          console.log(res);
+          this.setState({ data: res.data });
+        })
+        .catch((err) => console.log(err));
+    } else {
+      API.getItems()
+        .then((res) => this.setState({ data: res.data }))
+        .catch((err) => console.log(err));
+    }
   };
 
   render() {

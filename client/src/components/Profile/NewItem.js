@@ -40,10 +40,11 @@ export default class NewItem extends React.Component {
     };
 
     API.createItem(newItem)
-      .then((res) => {})
+      .then((res) => {
+        this.props.grabItems();
+        this.handleModalShowHide();
+      })
       .catch((err) => console.log(err));
-    this.props.grabItems();
-    this.handleModalShowHide();
   };
 
   render() {
