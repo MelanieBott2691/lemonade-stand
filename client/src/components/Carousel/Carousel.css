@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-.d-block {
+/* .d-block {
   opacity: 0.8;
-}
+} */
 
 .carouselSize {
   height: 255px;
@@ -13,7 +13,6 @@ h2 {
   font-family: 'Fredoka One', cursive;
 }
 
-
 .font-size {
-    font-weight: 425;
+  font-weight: 425;
 }
