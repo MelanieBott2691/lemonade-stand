@@ -1,33 +1,37 @@
 .shoppingCart-container {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    margin: 0 auto;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
-    width: 500;
-    align-content: center;
-    /* justify-content: center; */
-    /* margin-left: 10%; */
-    /* margin-right: 50%; */
-    float: center;
-    /* display: inline-block; */
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  width: 500;
+  align-content: center;
+  /* justify-content: center; */
+  /* margin-left: 10%; */
+  /* margin-right: 50%; */
+  float: center;
+  /* display: inline-block; */
 }
 #inlineFormCustomSelect {
-    width: 80px;
+  width: 80px;
 }
 .table-row {
-    width: 20px;
+  width: 20px;
 }
 #charity {
-    color: black;
-    
+  color: black;
 }
 input {
-    border-color: white;
-    background-color: whitesmoke;
-    text-align: center;
-    width: 90px;
+  border-color: white;
+  background-color: whitesmoke;
+  text-align: center;
+  width: 90px;
+}
+
+td {
+  vertical-align: middle !important;
+  margin-top: 20;
 }
