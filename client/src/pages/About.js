@@ -5,6 +5,7 @@ import '../assets/css/style.css';
 import { about } from '../assets/images/img7.jpg';
 import { Container, Row, CardDeck, Card } from 'react-bootstrap';
 import inspire from '../assets/images/inspire.png';
+import charity from '../assets/images/charity.png';
 
 export default class About extends Component {
   render() {
@@ -123,6 +124,23 @@ export default class About extends Component {
                 </p>
                 <div className="text-muted">-Sandra Meucci</div>
               </Card.Body>
+            </Card>
+          </CardDeck>
+          <br />
+          <CardDeck>
+            <Card>
+              <Card.Body className="quote-container">
+                {/* <Card.Title className="quote">Inspire Others, Lead!</Card.Title> */}
+                <Card.Text>
+                  "Happiness is when you want nothing and you want to give.
+                  Where the wanting and desires end and the sharing begins,
+                  happiness is there."
+                  <div className="text-muted">-The Coach</div>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card>
+              <Card.Img className="about-image" src={charity} />
             </Card>
           </CardDeck>
         </Container>
