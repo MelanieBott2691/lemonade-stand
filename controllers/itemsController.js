@@ -9,7 +9,9 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   find: function (req, res) {
-    db.Item.find({ name: req.params.query })
+    console.log(req.body);
+    console.log(req.params);
+    db.Item.find(req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
