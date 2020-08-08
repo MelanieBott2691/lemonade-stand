@@ -123,6 +123,7 @@ class CheckoutModal extends React.Component {
               Cancel
             </Button>
             <Button
+              href="/"
               className="primary-btn"
               variant="primary"
               onClick={() => this.handleModalShowHide()}>
