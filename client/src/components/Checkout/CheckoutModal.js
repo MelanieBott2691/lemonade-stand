@@ -74,8 +74,8 @@ class CheckoutModal extends React.Component {
             <Card.Body>
               <Card.Title></Card.Title>
               <ListGroup>
-                <Row>Item(s) total: $63.17 </Row>
-                <Row>Quantity total: 5 </Row>
+                <Row>Item(s) total: $46 </Row>
+                <Row>Quantity total: 8 </Row>
                 <hr />
               </ListGroup>
               <Form>
@@ -88,13 +88,13 @@ class CheckoutModal extends React.Component {
                       </Form.Label>
                       <Form.Control as="select" custom>
                         <option>Standard Shipping $4.99</option>
-                        <option>FedEx Ground $12.98</option>
+                        {/* <option>FedEx Ground $12.98</option>
                         <option>FedEx 2-Day $15.99</option>
                         <option>FedEx Overnight $40.99</option>
-                        <option>Local Pickup</option>
+                        <option>Local Pickup</option> */}
                       </Form.Control>
                     </Form.Group>
-                    <Row>Total ({}item(s)) $68.16</Row>
+                    <Row>Total (cart): $50.99</Row>
                   </Col>
                 </Row>
                 {/* Leave a Message Box */}
