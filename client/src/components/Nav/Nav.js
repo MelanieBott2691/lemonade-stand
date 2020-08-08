@@ -106,9 +106,6 @@ class Navigation extends React.Component {
                   <a className="dropdown-item" href="/contact">
                     Contact
                   </a>
-                  <a className="dropdown-item" href="/about">
-                    About
-                  </a>
                 </div>
               </li>
             </ul>
@@ -122,7 +119,7 @@ class Navigation extends React.Component {
                 onChange={this.props.handleInputChange}></input>
 
               <button
-                className="btn btn-outline-success my-2 my-sm-0"
+                className="btn btn-primary my-2 my-sm-0"
                 type="submit"
                 onClick={this.props.handleFormSubmit}>
                 Search

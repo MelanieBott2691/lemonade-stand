@@ -125,10 +125,10 @@ export default class ShoppingCart extends Component {
                         alt="stuff"
                         className="img-size"
                         variant="top"
-                        src="https://images-na.ssl-images-amazon.com/images/I/61LKtry2iOL._AC_SX425_.jpg"
+                        src="https://cdn.shopify.com/s/files/1/2012/3849/files/wwtfobxfl9vlqhios0zm_2048x_206929a3-95cc-485b-9304-3d3bf6b80530_2048x.jpg?v=1583182272"
                       />
                     </td>
-                    <td className="vertical-align-middle">Fluffy Slime</td>
+                    <td className="vertical-align-middle">Stuffed Animal</td>
                     <td className="paddingtd vertical-align-middle">$6</td>
 
                     {/* <td>
