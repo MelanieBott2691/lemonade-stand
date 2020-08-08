@@ -16,7 +16,7 @@ export default class NewItem extends React.Component {
     charityName: '',
     charityDescription: '',
     charityUrl: '',
-    imageUrl: ''
+    imageUrl: '',
   };
   handleModalShowHide() {
     this.setState({ showHide: !this.state.showHide });
@@ -36,7 +36,7 @@ export default class NewItem extends React.Component {
       charityName: this.state.charityName,
       charityDescription: this.state.charityDescription,
       charityUrl: this.state.charityUrl,
-      imageUrl: this.state.imageUrl
+      imageUrl: this.state.imageUrl,
     };
 
     API.createItem(newItem)
@@ -60,9 +60,7 @@ export default class NewItem extends React.Component {
           show={this.state.showHide}
           style={{ display: 'flex', justifyContent: 'center' }}>
           <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
-            <Modal.Title className="modal-title">
-              Create Your Stand!
-            </Modal.Title>
+            <Modal.Title className="modal-title">Add an Item!</Modal.Title>
           </Modal.Header>
           <Modal.Body className="modal-container">
             <Container>
@@ -161,10 +159,10 @@ export default class NewItem extends React.Component {
           </Modal.Body>
           <Modal.Footer>
             <Button
-              className="checkout-btn"
+              className="btn-primary"
               variant="primary"
               onClick={this.onSubmit}>
-              Save Stand
+              Save Item
             </Button>
           </Modal.Footer>
         </Modal>
