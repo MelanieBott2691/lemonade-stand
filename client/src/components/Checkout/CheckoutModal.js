@@ -54,12 +54,10 @@ class CheckoutModal extends React.Component {
                     width={400}
                     className="card-image"
                   />
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
+                  <hr />
+                  <br />
+                  <br />
+                  <br />
                   <hr />
                   <Modal.Title className="make">How You'll Pay</Modal.Title>
                 </Row>
@@ -76,12 +74,9 @@ class CheckoutModal extends React.Component {
             <Card.Body>
               <Card.Title></Card.Title>
               <ListGroup>
-                <Row>Item(s) total: ${} </Row>
-                <Row>Quantity total: {} </Row>
+                <Row>Item(s) total: $63.17 </Row>
+                <Row>Quantity total: 5 </Row>
                 <hr />
-                <Row>
-                  Total ({}item(s)) ${}
-                </Row>
               </ListGroup>
               <Form>
                 <Row>
@@ -99,6 +94,7 @@ class CheckoutModal extends React.Component {
                         <option>Local Pickup</option>
                       </Form.Control>
                     </Form.Group>
+                    <Row>Total ({}item(s)) $68.16</Row>
                   </Col>
                 </Row>
                 {/* Leave a Message Box */}
