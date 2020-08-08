@@ -122,7 +122,7 @@ class Navigation extends React.Component {
                 onChange={this.props.handleInputChange}></input>
 
               <button
-                className="btn btn-outline-success my-2 my-sm-0"
+                className="btn my-2 my-sm-0"
                 type="submit"
                 onClick={this.props.handleFormSubmit}>
                 Search
