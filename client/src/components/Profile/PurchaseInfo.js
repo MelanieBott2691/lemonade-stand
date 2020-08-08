@@ -11,7 +11,7 @@ export default function PurchaseInfo(props) {
           <table className="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">#</th>  
                 <th scope="col">Product</th>
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
