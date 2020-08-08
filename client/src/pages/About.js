@@ -4,6 +4,7 @@ import Footer from '../components/Footer/Footer';
 import '../assets/css/style.css';
 import { about } from '../assets/images/img7.jpg';
 import { Container, Row, CardDeck, Card } from 'react-bootstrap';
+import inspire from '../assets/images/inspire.png';
 
 export default class About extends Component {
   render() {
@@ -22,12 +23,12 @@ export default class About extends Component {
           <br />
           <CardDeck>
             <Card>
-              <Card.Img className="about-image" src={about} />
+              <Card.Img className="about-image" src={inspire} />
             </Card>
             <Card>
               <Card.Body>
-                <Card.Title>Inspire Others, Lead!</Card.Title>
-                <Card.Text>
+                <Card.Title className="quote">Inspire Others, Lead!</Card.Title>
+                <Card.Text className="adams-quote">
                   "If your actions inspire others to dream more, learn more, do
                   more and become more, you are a leader."
                   <div className="text-muted">– John Quincy Adams</div>
@@ -81,7 +82,10 @@ export default class About extends Component {
           <CardDeck>
             <Card className="bottom-container">
               <Card.Body>
-                <h4>Introducing Lemonade Stand</h4>
+                <Card.Title className="quote">
+                  Introducing Lemonade Stand
+                </Card.Title>
+                {/* <h4>Introducing Lemonade Stand</h4> */}
                 <p>
                   At lemonade-stand, we saw an opportunity to create an online
                   space for kids where they can not only take their creations to

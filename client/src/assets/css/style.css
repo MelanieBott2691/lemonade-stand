@@ -46,16 +46,22 @@
     text-align: right;
 }
 .platform-container{
-    background-color: rgb(67, 67, 116, 0.2);
+    background-color: rgb(79, 182, 218, 0.2);
+    color: rgb(33, 78, 94);
     /* opacity: .1;
     color: black; */
 }
 .bottom-container {
-    background-color: rgb(67, 67, 116, 0.5);
-    color: black;
+    background-color: rgb(79, 182, 218, 0.4);
+    color: rgb(63, 148, 179);
     /* opacity: .1; */
 }
-
+.quote {
+    color: rgb(33, 78, 94);
+}
+.adams-quote {
+    color: rgb(33, 78, 94);
+}
 /* CART */
 .checkoutModal {
     align-items: center;
