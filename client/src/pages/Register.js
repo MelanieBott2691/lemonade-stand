@@ -7,6 +7,7 @@ import classnames from 'classnames';
 import Nav from '../components/Nav/Nav';
 import Footer from '../components/Footer/Footer';
 import { Card, Container } from 'react-bootstrap';
+import './Register.css';
 
 class Register extends Component {
   constructor() {
@@ -62,23 +63,21 @@ class Register extends Component {
     return (
       <div>
         <Nav />
-        <Container className="justify-content-center">
-          <Card className="justify-content-center">
+        <br></br>
+        <div className="justify-content-center container">
+          <div className="justify-content-center card">
             <div className="contact-container">
               <form className="justify-content-center">
-                <div className="container">
-                  <div className="form-group justify-content-center">
-                    <h4 className="justify-content-center">
+                <div className="container-center">
+                  <br></br>
+                  <div className="center">
+                    <h4 className="">
                       <b>Register</b> below
                     </h4>
                   </div>
-                  {/* <Card.Header>Send us a Message</Card.Header> */}
-                  <Card.Body>
-                    <Card.Text>
-                      <form
-                        className="justify-content-center"
-                        noValidate
-                        onSubmit={this.onSubmit}>
+                  <div className="card.body">
+                    <div className="card.text">
+                      <form className="" noValidate onSubmit={this.onSubmit}>
                         <div className="form-group">
                           <label htmlFor="userName">User Name</label>
                           <input
@@ -151,13 +150,13 @@ class Register extends Component {
                           />
                           <span className="red-text">{errors.password2}</span>
                         </div>
-                        <div>
-                          <p className="grey-text text-darken-1 form-group">
+                        <div className="center align-content-center">
+                          <p className="grey-text text-darken-1 center">
                             Already have an account?{' '}
                             <Link to="/login">Log in</Link>
                           </p>
                         </div>
-                        <div className="form-group">
+                        <div className="center">
                           <button
                             style={{
                               width: '150px',
@@ -169,15 +168,17 @@ class Register extends Component {
                             className="btn btn-large btn-primary waves-effect waves-light">
                             Sign up
                           </button>
+                          <br></br>
                         </div>
                       </form>
-                    </Card.Text>
-                  </Card.Body>
+                      <br></br>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
-          </Card>
-        </Container>
+          </div>
+        </div>
         <br></br>
         <Footer />
       </div>

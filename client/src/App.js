@@ -14,10 +14,7 @@ import Login from './pages/Login.js';
 import Register from './pages/Register.js';
 import Cart from './pages/Cart.js';
 import Profile from './pages/Profile.js';
-import CreateStore from './pages/CreateStore.js';
-import StoreItem from './components/Store/StoreItem.js';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart.js';
-import Store from './pages/Store';
 import About from './pages/About';
 import Footer from './components/Footer/Footer.js';
 
@@ -54,9 +51,6 @@ function App() {
             <Route exact path="/register" component={Register} />
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/shoppingcart" component={ShoppingCart} />
-            <Route exact path="/createstore" component={CreateStore} />
-            <Route exact path="/storeitem" component={StoreItem} />
-            <Route exact path="/storetest" component={Store} />
             <Switch>
               <PrivateRoute exact path="/profile" component={Profile} />
             </Switch>

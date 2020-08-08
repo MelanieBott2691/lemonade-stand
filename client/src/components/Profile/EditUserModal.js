@@ -1,7 +1,5 @@
 import React from 'react';
 import './EditUserModal.css';
-// import InputGroup from 'react-bootstrap/InputGroup';
-// import FormControl from 'react-bootstrap/FormControl';
 
 import { Modal, Button, Col, Form, Container } from 'react-bootstrap';
 

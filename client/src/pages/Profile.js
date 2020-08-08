@@ -1,66 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import API from '../utils/API';
 import { logoutUser } from '../actions/authActions';
-import Nav from '../components/Nav/Nav';
-import UserInfo from '../components/UserInfo/UserInfo';
-import StoreInfo from '../components/StoreInfo/StoreInfo';
-import PurchaseInfo from '../components/PurchaseInfo/PurchaseInfo';
+import API from '../utils/API';
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+import Nav from '../components/Nav/Nav';
+import UserInfo from '../components/Profile/UserInfo';
+import UserItems from '../components/Profile/UserItems';
+import PurchaseInfo from '../components/Profile/PurchaseInfo';
 import Footer from '../components/Footer/Footer';
-// import NewStore from '../components/NewStore/NewStore';
 
 class Profile extends Component {
   state = {
     userId: this.props.auth.user.id,
-    stores: [
-      {
-        _id: 12345,
-        name: 'Fun Store',
-        description: 'stuff'
-      },
-      {
-        _id: 12346,
-        name: 'Kids Store',
-        description: 'stuff2'
-      },
-      {
-        _id: 12347,
-        name: 'Best Store',
-        description: 'stuff2'
-      },
-      {
-        _id: 12348,
-        name: 'Fun Store',
-        description: 'stuff'
-      },
-      {
-        _id: 12349,
-        name: 'Kids Store',
-        description: 'stuff2'
-      },
-      {
-        _id: 12341,
-        name: 'Best Store',
-        description: 'stuff2'
-      }
-    ],
-    purchases: []
+    items: []
   };
 
-  grabStores = () => {
-    API.getUserStores({ userId: this.state.userId })
+  grabItems = () => {
+    API.getUser(this.state.userId)
       .then((res) => {
-        this.setState({ stores: res.data });
+        this.setState({ items: res.data.items });
       })
       .catch((err) => console.log(err));
   };
 
   componentDidMount() {
-    this.grabStores();
+    this.grabItems();
   }
 
   onChange = (e) => {
@@ -81,11 +50,11 @@ class Profile extends Component {
             <Col md={1} xl={1}></Col>
             <br></br>
             <Col xl={true} lg={true} md={12} sm={true}>
-              <StoreInfo
+              <UserItems
                 user={user}
-                stores={this.state.stores}
+                grabItems={this.grabItems}
+                items={this.state.items}
                 onChange={this.onChange}
-                grabStores={this.grabStores}
               />
             </Col>
           </Row>

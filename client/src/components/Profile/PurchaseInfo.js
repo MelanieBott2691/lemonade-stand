@@ -1,7 +1,6 @@
 import React from 'react';
 import './PurchaseInfo.css';
 import Card from 'react-bootstrap/Card';
-// import ListGroup from 'react-bootstrap/ListGroup';
 
 export default function PurchaseInfo(props) {
   return (

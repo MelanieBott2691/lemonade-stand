@@ -5,63 +5,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 
-// const NavItem = (props) => {
-//   const pageURI = window.location.pathname + window.location.search;
-//   const liClassName = props.path === pageURI ? 'nav-item active' : 'nav-item';
-//   const aClassName = props.disabled ? 'nav-link disabled' : 'nav-link';
-//   return (
-//     <li className={liClassName}>
-//       <a href={props.path} className={aClassName}>
-//         {props.name}
-//         {props.path === pageURI ? (
-//           <span className="sr-only">(current)</span>
-//         ) : (
-//           ''
-//         )}
-//       </a>
-//     </li>
-//   );
-// };
-
-// class NavDropdown extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       isToggleOn: false,
-//     };
-//   }
-//   showDropdown(e) {
-//     e.preventDefault();
-//     this.setState((prevState) => ({
-//       isToggleOn: !prevState.isToggleOn,
-//     }));
-//   }
-//   render() {
-//     const classDropdownMenu =
-//       'dropdown-menu' + (this.state.isToggleOn ? ' show' : '');
-//     return (
-//       <li className="nav-item dropdown">
-//         <a
-//           className="nav-link dropdown-toggle"
-//           href="/"
-//           id="navbarDropdown"
-//           role="button"
-//           data-toggle="dropdown"
-//           aria-haspopup="true"
-//           aria-expanded="false"
-//           onClick={(e) => {
-//             this.showDropdown(e);
-//           }}>
-//           {this.props.name}
-//         </a>
-//         <div className={classDropdownMenu} aria-labelledby="navbarDropdown">
-//           {this.props.children}
-//         </div>
-//       </li>
-//     );
-//   }
-// }
-
 class Navigation extends React.Component {
   onLogoutClick = (e) => {
     e.preventDefault();
@@ -69,6 +12,40 @@ class Navigation extends React.Component {
   };
 
   render() {
+    let register;
+    let login;
+    let logout;
+    let cart;
+    let profile;
+    if (!this.props.auth.isAuthenticated) {
+      register = (
+        <a className="dropdown-item" href="/register">
+          Register
+        </a>
+      );
+      login = (
+        <a className="dropdown-item" href="/login">
+          Sign In
+        </a>
+      );
+    } else {
+      logout = (
+        <a className="dropdown-item" href="/" onClick={this.onLogoutClick}>
+          Logout
+        </a>
+      );
+      profile = (
+        <a className="dropdown-item" href="/profile">
+          Profile
+        </a>
+      );
+      cart = (
+        <a className="dropdown-item" href="/shoppingcart">
+          Shopping Cart
+        </a>
+      );
+    }
+
     return (
       <nav className="navbar navbar-expand-lg">
         <div className="container">
@@ -90,7 +67,9 @@ class Navigation extends React.Component {
             aria-expanded="false"
             aria-label="Toggle navigation">
             {/* <span className="navbar-toggler-icon"></span> */}
-            Menu
+            <div className="icon"></div>
+            <div className="icon"></div>
+            <div className="icon"></div>
           </button>
           {/* Dropdown */}
 
@@ -118,33 +97,17 @@ class Navigation extends React.Component {
                   Menu
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="/login">
-                    Sign In
-                  </a>
-                  <a
-                    className="dropdown-item"
-                    href="/"
-                    onClick={this.onLogoutClick}>
-                    Logout
-                  </a>
-                  <a className="dropdown-item" href="/register">
-                    Register
-                  </a>
-                  <a className="dropdown-item" href="/profile">
-                    Profile
-                  </a>
+                  {login}
+                  {logout}
+                  {register}
+                  {profile}
+                  <div className="dropdown-divider"></div>
+                  {cart}
                   <a className="dropdown-item" href="/contact">
                     Contact
                   </a>
-                  <a className="dropdown-item" href="/storeitem">
-                    TestItem
-                  </a>
-                  <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="/cart">
-                    Cart
-                  </a>
-                  <a className="dropdown-item" href="/shoppingcart">
-                    Shopping Cart
+                  <a className="dropdown-item" href="/about">
+                    About
                   </a>
                 </div>
               </li>
@@ -166,43 +129,6 @@ class Navigation extends React.Component {
               </button>
             </form>
           </div>
-
-          {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <NavItem id="navitem" path="/" name="Home" />
-            <NavItem id="navitem" path="/about" name="About" />
-            <NavDropdown id="navitem" name="Menu">
-              <a className="dropdown-item" href="/login">
-                Sign In
-              </a>
-              <a
-                className="dropdown-item"
-                href="/"
-                onClick={this.onLogoutClick}>
-                Logout
-              </a>
-              <a className="dropdown-item" href="/register">
-                Register
-              </a>
-              <a className="dropdown-item" href="/profile">
-                Profile
-              </a>
-              <a className="dropdown-item" href="/contact">
-                Contact
-              </a>
-              <a className="dropdown-item" href="/storeitem">
-                TestItem
-              </a>
-              <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="/cart">
-                Cart
-              </a>
-              <a className="dropdown-item" href="/shoppingcart">
-                Shopping Cart
-              </a>
-            </NavDropdown>
-          </ul>
-        </div> */}
         </div>
       </nav>
     );
@@ -211,11 +137,11 @@ class Navigation extends React.Component {
 
 Navigation.propTypes = {
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
-  auth: state.auth,
+  auth: state.auth
 });
 
 export default connect(mapStateToProps, { logoutUser })(Navigation);
